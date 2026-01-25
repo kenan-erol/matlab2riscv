@@ -1,0 +1,701 @@
+Wed Dec 21 13:56:10 EST 2022
+bbl loader
+
+
+matlab_geM
+
+Accuracy checking: ENABLED
+int size: 4
+double size: 8
+complex size: 16
+Epsilon (equality threshold): 0.00000000222044604925
+
+
+Size: (1,1)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1, 1);  ; time: 485 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1, 1);  ; time: 5597 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (1, 1);  ; vectorized time / reference time: 0.08665356440950509886
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1, 1);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1, 1);  ; time: 609 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (1, 1);  ; vectorized time / reference time: 0.79802955665024633003
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1, 1);  ; time: 489 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1, 1);  ; time: 610 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (1, 1);  ; vectorized time / reference time: 0.80163934426229510599
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1, 1);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1, 1);  ; time: 609 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (1, 1);  ; vectorized time / reference time: 0.79802955665024633003
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (1, 1);  ; time: 481 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (1, 1);  ; time: 605 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (1, 1);  ; vectorized time / reference time: 0.79504132231404955888
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1, 1);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1, 1);  ; time: 607 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (1, 1);  ; vectorized time / reference time: 0.80065897858319601266
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1, 1);  ; time: 489 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1, 1);  ; time: 610 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (1, 1);  ; vectorized time / reference time: 0.80163934426229510599
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1, 1);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1, 1);  ; time: 607 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (1, 1);  ; vectorized time / reference time: 0.80065897858319601266
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1, 1);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1, 1);  ; time: 608 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (1, 1);  ; vectorized time / reference time: 0.79934210526315785383
+
+
+Size: (1,2)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1, 2);  ; time: 485 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1, 2);  ; time: 479 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (1, 2);  ; vectorized time / reference time: 1.01252609603340282263
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1, 2);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1, 2);  ; time: 618 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (1, 2);  ; vectorized time / reference time: 0.78640776699029124597
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1, 2);  ; time: 489 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1, 2);  ; time: 619 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (1, 2);  ; vectorized time / reference time: 0.78998384491114703732
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1, 2);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1, 2);  ; time: 619 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (1, 2);  ; vectorized time / reference time: 0.78513731825525034935
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (1, 2);  ; time: 481 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (1, 2);  ; time: 614 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (1, 2);  ; vectorized time / reference time: 0.78338762214983714838
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1, 2);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1, 2);  ; time: 616 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (1, 2);  ; vectorized time / reference time: 0.78896103896103897402
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1, 2);  ; time: 489 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1, 2);  ; time: 620 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (1, 2);  ; vectorized time / reference time: 0.78870967741935482653
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1, 2);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1, 2);  ; time: 616 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (1, 2);  ; vectorized time / reference time: 0.78896103896103897402
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1, 2);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1, 2);  ; time: 617 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (1, 2);  ; vectorized time / reference time: 0.78768233387358188580
+
+
+Size: (1,3)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1, 3);  ; time: 485 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1, 3);  ; time: 486 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (1, 3);  ; vectorized time / reference time: 0.99794238683127567402
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1, 3);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1, 3);  ; time: 627 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (1, 3);  ; vectorized time / reference time: 0.77511961722488043058
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1, 3);  ; time: 489 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1, 3);  ; time: 628 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (1, 3);  ; vectorized time / reference time: 0.77866242038216559873
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1, 3);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1, 3);  ; time: 629 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (1, 3);  ; vectorized time / reference time: 0.77265500794912556071
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (1, 3);  ; time: 481 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (1, 3);  ; time: 623 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (1, 3);  ; vectorized time / reference time: 0.77207062600321030299
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1, 3);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1, 3);  ; time: 625 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (1, 3);  ; vectorized time / reference time: 0.77759999999999995790
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1, 3);  ; time: 489 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1, 3);  ; time: 630 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (1, 3);  ; vectorized time / reference time: 0.77619047619047620845
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1, 3);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1, 3);  ; time: 625 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (1, 3);  ; vectorized time / reference time: 0.77759999999999995790
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1, 3);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1, 3);  ; time: 626 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (1, 3);  ; vectorized time / reference time: 0.77635782747603832021
+
+
+Size: (2,2)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (2, 2);  ; time: 485 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (2, 2);  ; time: 494 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (2, 2);  ; vectorized time / reference time: 0.98178137651821861809
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (2, 2);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (2, 2);  ; time: 636 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (2, 2);  ; vectorized time / reference time: 0.76415094339622646746
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (2, 2);  ; time: 489 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (2, 2);  ; time: 637 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (2, 2);  ; vectorized time / reference time: 0.76766091051805340761
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (2, 2);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (2, 2);  ; time: 639 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (2, 2);  ; vectorized time / reference time: 0.76056338028169012677
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (2, 2);  ; time: 481 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (2, 2);  ; time: 632 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (2, 2);  ; vectorized time / reference time: 0.76107594936708855560
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (2, 2);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (2, 2);  ; time: 634 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (2, 2);  ; vectorized time / reference time: 0.76656151419558360427
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (2, 2);  ; time: 489 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (2, 2);  ; time: 640 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (2, 2);  ; vectorized time / reference time: 0.76406249999999997780
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (2, 2);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (2, 2);  ; time: 634 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (2, 2);  ; vectorized time / reference time: 0.76656151419558360427
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (2, 2);  ; time: 486 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (2, 2);  ; time: 635 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (2, 2);  ; vectorized time / reference time: 0.76535433070866143446
+
+
+Size: (2,3)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (2, 3);  ; time: 493 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (2, 3);  ; time: 517 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (2, 3);  ; vectorized time / reference time: 0.95357833655705992459
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (2, 3);  ; time: 494 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (2, 3);  ; time: 662 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (2, 3);  ; vectorized time / reference time: 0.74622356495468278315
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (2, 3);  ; time: 497 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (2, 3);  ; time: 663 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (2, 3);  ; vectorized time / reference time: 0.74962292609351433015
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (2, 3);  ; time: 494 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (2, 3);  ; time: 667 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (2, 3);  ; vectorized time / reference time: 0.74062968515742133579
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (2, 3);  ; time: 489 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (2, 3);  ; time: 658 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (2, 3);  ; vectorized time / reference time: 0.74316109422492404590
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (2, 3);  ; time: 494 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (2, 3);  ; time: 660 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (2, 3);  ; vectorized time / reference time: 0.74848484848484853060
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (2, 3);  ; time: 497 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (2, 3);  ; time: 668 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (2, 3);  ; vectorized time / reference time: 0.74401197604790414442
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (2, 3);  ; time: 494 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (2, 3);  ; time: 660 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (2, 3);  ; vectorized time / reference time: 0.74848484848484853060
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (2, 3);  ; time: 494 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (2, 3);  ; time: 661 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (2, 3);  ; vectorized time / reference time: 0.74735249621785171392
+
+
+Size: (3,3)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (3, 3);  ; time: 499 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (3, 3);  ; time: 545 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (3, 3);  ; vectorized time / reference time: 0.91559633027522935311
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (3, 3);  ; time: 500 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (3, 3);  ; time: 699 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (3, 3);  ; vectorized time / reference time: 0.71530758226037194358
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (3, 3);  ; time: 503 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (3, 3);  ; time: 700 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (3, 3);  ; vectorized time / reference time: 0.71857142857142852765
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (3, 3);  ; time: 500 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (3, 3);  ; time: 707 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (3, 3);  ; vectorized time / reference time: 0.70721357850070720730
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (3, 3);  ; time: 495 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (3, 3);  ; time: 695 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (3, 3);  ; vectorized time / reference time: 0.71223021582733814228
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (3, 3);  ; time: 500 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (3, 3);  ; time: 697 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (3, 3);  ; vectorized time / reference time: 0.71736011477761840727
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (3, 3);  ; time: 503 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (3, 3);  ; time: 708 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (3, 3);  ; vectorized time / reference time: 0.71045197740112997487
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (3, 3);  ; time: 500 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (3, 3);  ; time: 697 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (3, 3);  ; vectorized time / reference time: 0.71736011477761840727
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (3, 3);  ; time: 500 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (3, 3);  ; time: 698 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (3, 3);  ; vectorized time / reference time: 0.71633237822349571378
+
+
+Size: (127,127)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (127, 127);  ; time: 48300 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (127, 127);  ; time: 167986 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (127, 127);  ; vectorized time / reference time: 0.28752396033002752818
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (127, 127);  ; time: 49939 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (127, 127);  ; time: 192337 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (127, 127);  ; vectorized time / reference time: 0.25964323037169134700
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (127, 127);  ; time: 50068 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (127, 127);  ; time: 192338 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (127, 127);  ; vectorized time / reference time: 0.26031257473822128068
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (127, 127);  ; time: 49939 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (127, 127);  ; time: 208465 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (127, 127);  ; vectorized time / reference time: 0.23955580073393614726
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (127, 127);  ; time: 49682 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (127, 127);  ; time: 192333 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (127, 127);  ; vectorized time / reference time: 0.25831240608735889230
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (127, 127);  ; time: 49939 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (127, 127);  ; time: 192335 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (127, 127);  ; vectorized time / reference time: 0.25964593027790056068
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (127, 127);  ; time: 50068 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (127, 127);  ; time: 208466 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (127, 127);  ; vectorized time / reference time: 0.24017345754223709542
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (127, 127);  ; time: 49939 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (127, 127);  ; time: 192335 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (127, 127);  ; vectorized time / reference time: 0.25964593027790056068
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (127, 127);  ; time: 49813 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (127, 127);  ; time: 192336 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (127, 127);  ; vectorized time / reference time: 0.25898947674902256244
+
+
+Size: (127,128)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (127, 128);  ; time: 48428 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (127, 128);  ; time: 169067 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (127, 128);  ; vectorized time / reference time: 0.28644265291275056162
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (127, 128);  ; time: 50067 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (127, 128);  ; time: 193608 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (127, 128);  ; vectorized time / reference time: 0.25859985124581630345
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (127, 128);  ; time: 50196 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (127, 128);  ; time: 193609 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (127, 128);  ; vectorized time / reference time: 0.25926480690463771239
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (127, 128);  ; time: 50067 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (127, 128);  ; time: 209863 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (127, 128);  ; vectorized time / reference time: 0.23856992418863734451
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (127, 128);  ; time: 49810 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (127, 128);  ; time: 193604 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (127, 128);  ; vectorized time / reference time: 0.25727774219540916478
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (127, 128);  ; time: 50067 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (127, 128);  ; time: 193606 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (127, 128);  ; vectorized time / reference time: 0.25860252264909144859
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (127, 128);  ; time: 50196 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (127, 128);  ; time: 209864 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (127, 128);  ; vectorized time / reference time: 0.23918347120039645803
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (127, 128);  ; time: 50067 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (127, 128);  ; time: 193606 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (127, 128);  ; vectorized time / reference time: 0.25860252264909144859
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (127, 128);  ; time: 49941 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (127, 128);  ; time: 193607 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (127, 128);  ; vectorized time / reference time: 0.25795038402537096012
+
+
+Size: (127,129)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (127, 129);  ; time: 48604 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (127, 129);  ; time: 170188 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (127, 129);  ; vectorized time / reference time: 0.28559005335276282933
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (127, 129);  ; time: 50266 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (127, 129);  ; time: 194920 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (127, 129);  ; vectorized time / reference time: 0.25788015596142005448
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (127, 129);  ; time: 50396 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (127, 129);  ; time: 194921 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (127, 129);  ; vectorized time / reference time: 0.25854576982469823498
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (127, 129);  ; time: 50266 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (127, 129);  ; time: 211302 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (127, 129);  ; vectorized time / reference time: 0.23788700532886578043
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (127, 129);  ; time: 50007 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (127, 129);  ; time: 194916 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (127, 129);  ; vectorized time / reference time: 0.25655667056578218554
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (127, 129);  ; time: 50266 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (127, 129);  ; time: 194918 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (127, 129);  ; vectorized time / reference time: 0.25788280199878921284
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (127, 129);  ; time: 50396 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (127, 129);  ; time: 211303 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (127, 129);  ; vectorized time / reference time: 0.23850110978074140489
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (127, 129);  ; time: 50266 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (127, 129);  ; time: 194918 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (127, 129);  ; vectorized time / reference time: 0.25788280199878921284
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (127, 129);  ; time: 50139 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (127, 129);  ; time: 194919 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (127, 129);  ; vectorized time / reference time: 0.25722992627706892099
+
+
+Size: (128,128)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (128, 128);  ; time: 48604 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (128, 128);  ; time: 170196 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (128, 128);  ; vectorized time / reference time: 0.28557662929798582896
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (128, 128);  ; time: 50266 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (128, 128);  ; time: 194929 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (128, 128);  ; vectorized time / reference time: 0.25786824946518988044
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (128, 128);  ; time: 50396 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (128, 128);  ; time: 194930 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (128, 128);  ; vectorized time / reference time: 0.25853383265787716061
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (128, 128);  ; time: 50266 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (128, 128);  ; time: 211312 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (128, 128);  ; vectorized time / reference time: 0.23787574770954797443
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (128, 128);  ; time: 50007 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (128, 128);  ; time: 194925 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (128, 128);  ; vectorized time / reference time: 0.25654482493266639320
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (128, 128);  ; time: 50266 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (128, 128);  ; time: 194927 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (128, 128);  ; vectorized time / reference time: 0.25787089525822487479
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (128, 128);  ; time: 50396 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (128, 128);  ; time: 211313 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (128, 128);  ; vectorized time / reference time: 0.23848982315333178139
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (128, 128);  ; time: 50266 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (128, 128);  ; time: 194927 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (128, 128);  ; vectorized time / reference time: 0.25787089525822487479
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (128, 128);  ; time: 50139 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (128, 128);  ; time: 194928 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (128, 128);  ; vectorized time / reference time: 0.25721804974144296674
+
+
+Size: (128,129)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (128, 129);  ; time: 48752 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (128, 129);  ; time: 171284 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (128, 129);  ; vectorized time / reference time: 0.28462670185189509198
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (128, 129);  ; time: 50417 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (128, 129);  ; time: 196209 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (128, 129);  ; vectorized time / reference time: 0.25695559327044120712
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (128, 129);  ; time: 50548 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (128, 129);  ; time: 196210 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (128, 129);  ; vectorized time / reference time: 0.25762193568115793196
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (128, 129);  ; time: 50417 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (128, 129);  ; time: 212720 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (128, 129);  ; vectorized time / reference time: 0.23701109439638962106
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (128, 129);  ; time: 50156 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (128, 129);  ; time: 196205 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (128, 129);  ; vectorized time / reference time: 0.25563059045386204993
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (128, 129);  ; time: 50417 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (128, 129);  ; time: 196207 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (128, 129);  ; vectorized time / reference time: 0.25695821250006373182
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (128, 129);  ; time: 50548 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (128, 129);  ; time: 212721 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (128, 129);  ; vectorized time / reference time: 0.23762581033372351391
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (128, 129);  ; time: 50417 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (128, 129);  ; time: 196207 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (128, 129);  ; vectorized time / reference time: 0.25695821250006373182
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (128, 129);  ; time: 50289 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (128, 129);  ; time: 196208 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (128, 129);  ; vectorized time / reference time: 0.25630453396395663779
+
+
+Size: (129,129)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (129, 129);  ; time: 48893 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (129, 129);  ; time: 174214 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (129, 129);  ; vectorized time / reference time: 0.28064908675536981431
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (129, 129);  ; time: 50584 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (129, 129);  ; time: 199333 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (129, 129);  ; vectorized time / reference time: 0.25376631064600441157
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (129, 129);  ; time: 50717 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (129, 129);  ; time: 199334 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (129, 129);  ; vectorized time / reference time: 0.25443225942388153493
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (129, 129);  ; time: 50584 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (129, 129);  ; time: 215973 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (129, 129);  ; vectorized time / reference time: 0.23421446199293430301
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (129, 129);  ; time: 50319 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (129, 129);  ; time: 199329 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (129, 129);  ; vectorized time / reference time: 0.25244194271781827954
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (129, 129);  ; time: 50584 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (129, 129);  ; time: 199331 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (129, 129);  ; vectorized time / reference time: 0.25376885682608324446
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (129, 129);  ; time: 50717 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (129, 129);  ; time: 215974 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (129, 129);  ; vectorized time / reference time: 0.23482919240278921080
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (129, 129);  ; time: 50584 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (129, 129);  ; time: 199331 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (129, 129);  ; vectorized time / reference time: 0.25376885682608324446
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (129, 129);  ; time: 50454 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (129, 129);  ; time: 199332 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (129, 129);  ; vectorized time / reference time: 0.25311540545421706838
+
+
+Size: (1023,1023)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1023);  ; time: 3046504 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1023);  ; time: 10813683 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1023);  ; vectorized time / reference time: 0.28172677153565534036
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1023);  ; time: 3152793 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1023);  ; time: 12383638 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (1023, 1023);  ; vectorized time / reference time: 0.25459344015062457256
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1023);  ; time: 3160972 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1023);  ; time: 12383639 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1023);  ; vectorized time / reference time: 0.25525388781116764569
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1023);  ; time: 3152793 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1023);  ; time: 13430166 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (1023, 1023);  ; vectorized time / reference time: 0.23475458158893941496
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (1023, 1023);  ; time: 3136436 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (1023, 1023);  ; time: 12383634 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (1023, 1023);  ; vectorized time / reference time: 0.25327266616568289148
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1023);  ; time: 3152793 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1023);  ; time: 12383636 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (1023, 1023);  ; vectorized time / reference time: 0.25459348126834480119
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1023);  ; time: 3160972 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1023);  ; time: 13430167 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1023);  ; vectorized time / reference time: 0.23536356621626522423
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1023);  ; time: 3152793 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1023);  ; time: 12383636 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (1023, 1023);  ; vectorized time / reference time: 0.25459348126834480119
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1023);  ; time: 3144617 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1023);  ; time: 12383637 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1023);  ; vectorized time / reference time: 0.25393323463857991884
+
+
+Size: (1023,1024)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1024);  ; time: 3049464 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1024);  ; time: 10824256 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1024);  ; vectorized time / reference time: 0.28172504419703303657
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1024);  ; time: 3155854 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1024);  ; time: 12395745 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (1023, 1024);  ; vectorized time / reference time: 0.25459171675441855109
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1024);  ; time: 3164040 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1024);  ; time: 12395746 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1024);  ; vectorized time / reference time: 0.25525208406174182407
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1024);  ; time: 3155854 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1024);  ; time: 13443296 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (1023, 1024);  ; vectorized time / reference time: 0.23475299509882099902
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (1023, 1024);  ; time: 3139483 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (1023, 1024);  ; time: 12395741 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (1023, 1024);  ; vectorized time / reference time: 0.25327110335719338341
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1024);  ; time: 3155854 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1024);  ; time: 12395743 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (1023, 1024);  ; vectorized time / reference time: 0.25459175783170079344
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1024);  ; time: 3164040 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1024);  ; time: 13443297 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1024);  ; vectorized time / reference time: 0.23536190563966563616
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1024);  ; time: 3155854 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1024);  ; time: 12395743 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (1023, 1024);  ; vectorized time / reference time: 0.25459175783170079344
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1024);  ; time: 3147671 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1024);  ; time: 12395744 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1024);  ; vectorized time / reference time: 0.25393159135909876278
+
+
+Size: (1023,1025)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1025);  ; time: 3052444 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1025);  ; time: 10834828 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1025);  ; vectorized time / reference time: 0.28172519213041496977
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1025);  ; time: 3158938 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1025);  ; time: 12407852 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (1023, 1025);  ; vectorized time / reference time: 0.25459185038635212539
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1025);  ; time: 3167132 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1025);  ; time: 12407853 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1025);  ; vectorized time / reference time: 0.25525221809123627148
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1025);  ; time: 3158938 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1025);  ; time: 13456426 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (1023, 1025);  ; vectorized time / reference time: 0.23475312092527392260
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (1023, 1025);  ; time: 3142551 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (1023, 1025);  ; time: 12407848 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (1023, 1025);  ; vectorized time / reference time: 0.25327123607574819619
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1025);  ; time: 3158938 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1025);  ; time: 12407850 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (1023, 1025);  ; vectorized time / reference time: 0.25459189142357457891
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1025);  ; time: 3167132 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1025);  ; time: 13456427 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1025);  ; vectorized time / reference time: 0.23536203183802059669
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1025);  ; time: 3158938 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1025);  ; time: 12407850 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (1023, 1025);  ; vectorized time / reference time: 0.25459189142357457891
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1025);  ; time: 3150747 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1025);  ; time: 12407851 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1025);  ; vectorized time / reference time: 0.25393172435742500381
+
+
+Size: (1024,1024)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1024);  ; time: 3052444 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1024);  ; time: 10834836 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1024);  ; vectorized time / reference time: 0.28172498411604940394
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1024, 1024);  ; time: 3158938 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1024, 1024);  ; time: 12407861 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (1024, 1024);  ; vectorized time / reference time: 0.25459166571901475917
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1024);  ; time: 3167132 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1024);  ; time: 12407862 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1024);  ; vectorized time / reference time: 0.25525203294491832784
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1024, 1024);  ; time: 3158938 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1024, 1024);  ; time: 13456436 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (1024, 1024);  ; vectorized time / reference time: 0.23475294647111613622
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (1024, 1024);  ; time: 3142551 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (1024, 1024);  ; time: 12407857 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (1024, 1024);  ; vectorized time / reference time: 0.25327105236625468976
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1024, 1024);  ; time: 3158938 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1024, 1024);  ; time: 12407859 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (1024, 1024);  ; vectorized time / reference time: 0.25459170675617770474
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1024);  ; time: 3167132 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1024);  ; time: 13456437 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1024);  ; vectorized time / reference time: 0.23536185693137046115
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1024, 1024);  ; time: 3158938 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1024, 1024);  ; time: 12407859 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (1024, 1024);  ; vectorized time / reference time: 0.25459170675617770474
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1024);  ; time: 3150747 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1024);  ; time: 12407860 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1024);  ; vectorized time / reference time: 0.25393154016889296631
+
+
+Size: (1024,1025)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1025);  ; time: 3055424 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1025);  ; time: 10845416 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1025);  ; vectorized time / reference time: 0.28172492415228700402
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1024, 1025);  ; time: 3162022 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1024, 1025);  ; time: 12419977 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (1024, 1025);  ; vectorized time / reference time: 0.25459161478318359517
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1025);  ; time: 3170224 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1025);  ; time: 12419978 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1025);  ; vectorized time / reference time: 0.25525198192782627693
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1024, 1025);  ; time: 3162022 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1024, 1025);  ; time: 13469576 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (1024, 1025);  ; vectorized time / reference time: 0.23475289793828699181
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (1024, 1025);  ; time: 3145619 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (1024, 1025);  ; time: 12419973 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (1024, 1025);  ; vectorized time / reference time: 0.25327100147480191561
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1024, 1025);  ; time: 3162022 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1024, 1025);  ; time: 12419975 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (1024, 1025);  ; vectorized time / reference time: 0.25459165578030551469
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1025);  ; time: 3170224 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1025);  ; time: 13469577 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1025);  ; vectorized time / reference time: 0.23536180831810829539
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1024, 1025);  ; time: 3162022 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1024, 1025);  ; time: 12419975 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (1024, 1025);  ; vectorized time / reference time: 0.25459165578030551469
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1025);  ; time: 3153823 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1025);  ; time: 12419976 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1025);  ; vectorized time / reference time: 0.25393148907856183394
+
+
+Size: (1025,1025)
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1025, 1025);  ; time: 3058424 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1025, 1025);  ; time: 10856003 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: integer; size: (1025, 1025);  ; vectorized time / reference time: 0.28172652494661248879
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1025, 1025);  ; time: 3165129 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1025, 1025);  ; time: 12432102 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: double; size: (1025, 1025);  ; vectorized time / reference time: 0.25459322968875253146
+
+matlab_geM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1025, 1025);  ; time: 3173340 cycles
+matlab_geM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1025, 1025);  ; time: 12432103 cycles
+matlab_geM;     matrix 1 type: integer; matrix 2 type: complex; size: (1025, 1025);  ; vectorized time / reference time: 0.25525367671101178990
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1025, 1025);  ; time: 3165129 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1025, 1025);  ; time: 13482726 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: integer; size: (1025, 1025);  ; vectorized time / reference time: 0.23475438127274855793
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: double; size: (1025, 1025);  ; time: 3148708 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: double; size: (1025, 1025);  ; time: 12432098 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: double; size: (1025, 1025);  ; vectorized time / reference time: 0.25327245650734092619
+
+matlab_geM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1025, 1025);  ; time: 3165129 cycles
+matlab_geM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1025, 1025);  ; time: 12432100 cycles
+matlab_geM;     matrix 1 type: double; matrix 2 type: complex; size: (1025, 1025);  ; vectorized time / reference time: 0.25459327064614989400
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1025, 1025);  ; time: 3173340 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1025, 1025);  ; time: 13482727 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: integer; size: (1025, 1025);  ; vectorized time / reference time: 0.23536336528952933600
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1025, 1025);  ; time: 3165129 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1025, 1025);  ; time: 12432100 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: double; size: (1025, 1025);  ; vectorized time / reference time: 0.25459327064614989400
+
+matlab_geM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1025, 1025);  ; time: 3156921 cycles
+matlab_geM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1025, 1025);  ; time: 12432101 cycles
+matlab_geM;     matrix 1 type: complex; matrix 2 type: complex; size: (1025, 1025);  ; vectorized time / reference time: 0.25393302387102550943
+
+
+
+
+Total program runtime: 5128214011 cycles
+Accuracy test: PASSED

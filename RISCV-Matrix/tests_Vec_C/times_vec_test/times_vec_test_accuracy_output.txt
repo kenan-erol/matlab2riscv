@@ -1,0 +1,896 @@
+Wed Dec 21 15:34:20 EST 2022
+bbl loader
+
+
+timesM
+
+Accuracy checking: ENABLED
+int size: 4
+double size: 8
+complex size: 16
+Epsilon (equality threshold): 0.00000000222044604925
+
+
+Size: (1,1)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1, 1);  ; time: 996 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1, 1);  ; time: 7897 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1, 1);  ; vectorized time / reference time: 0.12612384449791058660
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1, 1);  ; time: 475 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1, 1);  ; time: 596 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (1, 1);  ; vectorized time / reference time: 0.79697986577181212375
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1, 1);  ; time: 490 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1, 1);  ; time: 609 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (1, 1);  ; vectorized time / reference time: 0.80459770114942530395
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1, 1);  ; time: 475 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1, 1);  ; time: 596 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (1, 1);  ; vectorized time / reference time: 0.79697986577181212375
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (1, 1);  ; time: 463 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (1, 1);  ; time: 591 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (1, 1);  ; vectorized time / reference time: 0.78341793570219964149
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1, 1);  ; time: 485 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1, 1);  ; time: 605 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (1, 1);  ; vectorized time / reference time: 0.80165289256198346557
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1, 1);  ; time: 490 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1, 1);  ; time: 609 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (1, 1);  ; vectorized time / reference time: 0.80459770114942530395
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1, 1);  ; time: 485 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1, 1);  ; time: 605 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (1, 1);  ; vectorized time / reference time: 0.80165289256198346557
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1, 1);  ; time: 507 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1, 1);  ; time: 606 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (1, 1);  ; vectorized time / reference time: 0.83663366336633659959
+
+
+Size: (1,2)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1, 2);  ; time: 1003 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1, 2);  ; time: 487 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1, 2);  ; vectorized time / reference time: 2.05954825462012314219
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1, 2);  ; time: 475 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1, 2);  ; time: 605 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (1, 2);  ; vectorized time / reference time: 0.78512396694214880988
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1, 2);  ; time: 498 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1, 2);  ; time: 635 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (1, 2);  ; vectorized time / reference time: 0.78425196850393696923
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1, 2);  ; time: 475 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1, 2);  ; time: 609 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (1, 2);  ; vectorized time / reference time: 0.77996715927750415176
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (1, 2);  ; time: 463 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (1, 2);  ; time: 599 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (1, 2);  ; vectorized time / reference time: 0.77295492487479133814
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1, 2);  ; time: 493 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1, 2);  ; time: 630 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (1, 2);  ; vectorized time / reference time: 0.78253968253968253510
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1, 2);  ; time: 498 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1, 2);  ; time: 639 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (1, 2);  ; vectorized time / reference time: 0.77934272300469487060
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1, 2);  ; time: 493 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1, 2);  ; time: 634 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (1, 2);  ; vectorized time / reference time: 0.77760252365930604412
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1, 2);  ; time: 515 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1, 2);  ; time: 636 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (1, 2);  ; vectorized time / reference time: 0.80974842767295596158
+
+
+Size: (1,3)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1, 3);  ; time: 1018 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1, 3);  ; time: 502 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1, 3);  ; vectorized time / reference time: 2.02788844621513941746
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1, 3);  ; time: 483 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1, 3);  ; time: 622 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (1, 3);  ; vectorized time / reference time: 0.77652733118971062343
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1, 3);  ; time: 498 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1, 3);  ; time: 653 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (1, 3);  ; vectorized time / reference time: 0.76263399693721289907
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1, 3);  ; time: 483 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1, 3);  ; time: 626 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (1, 3);  ; vectorized time / reference time: 0.77156549520766770645
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (1, 3);  ; time: 471 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (1, 3);  ; time: 615 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (1, 3);  ; vectorized time / reference time: 0.76585365853658537993
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1, 3);  ; time: 493 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1, 3);  ; time: 647 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (1, 3);  ; vectorized time / reference time: 0.76197836166924270973
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1, 3);  ; time: 498 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1, 3);  ; time: 657 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (1, 3);  ; vectorized time / reference time: 0.75799086757990863372
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1, 3);  ; time: 493 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1, 3);  ; time: 651 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (1, 3);  ; vectorized time / reference time: 0.75729646697388630638
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1, 3);  ; time: 515 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1, 3);  ; time: 654 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (1, 3);  ; vectorized time / reference time: 0.78746177370030578935
+
+
+Size: (2,2)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (2, 2);  ; time: 1025 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (2, 2);  ; time: 517 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (2, 2);  ; vectorized time / reference time: 1.98259187620889743009
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (2, 2);  ; time: 483 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (2, 2);  ; time: 631 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (2, 2);  ; vectorized time / reference time: 0.76545166402535658179
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (2, 2);  ; time: 498 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (2, 2);  ; time: 675 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (2, 2);  ; vectorized time / reference time: 0.73777777777777775459
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (2, 2);  ; time: 483 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (2, 2);  ; time: 639 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (2, 2);  ; vectorized time / reference time: 0.75586854460093899633
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (2, 2);  ; time: 471 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (2, 2);  ; time: 627 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (2, 2);  ; vectorized time / reference time: 0.75119617224880386175
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (2, 2);  ; time: 493 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (2, 2);  ; time: 668 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (2, 2);  ; vectorized time / reference time: 0.73802395209580839985
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (2, 2);  ; time: 498 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (2, 2);  ; time: 679 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (2, 2);  ; vectorized time / reference time: 0.73343151693667152369
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (2, 2);  ; time: 493 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (2, 2);  ; time: 672 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (2, 2);  ; vectorized time / reference time: 0.73363095238095232808
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (2, 2);  ; time: 515 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (2, 2);  ; time: 676 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (2, 2);  ; vectorized time / reference time: 0.76183431952662716835
+
+
+Size: (2,3)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (2, 3);  ; time: 1047 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (2, 3);  ; time: 555 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (2, 3);  ; vectorized time / reference time: 1.88648648648648653570
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (2, 3);  ; time: 483 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (2, 3);  ; time: 649 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (2, 3);  ; vectorized time / reference time: 0.74422187981510012911
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (2, 3);  ; time: 498 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (2, 3);  ; time: 711 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (2, 3);  ; vectorized time / reference time: 0.70042194092827003704
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (2, 3);  ; time: 483 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (2, 3);  ; time: 662 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (2, 3);  ; vectorized time / reference time: 0.72960725075528698458
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (2, 3);  ; time: 471 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (2, 3);  ; time: 643 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (2, 3);  ; vectorized time / reference time: 0.73250388802488330953
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (2, 3);  ; time: 493 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (2, 3);  ; time: 702 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (2, 3);  ; vectorized time / reference time: 0.70227920227920226370
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (2, 3);  ; time: 498 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (2, 3);  ; time: 720 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (2, 3);  ; vectorized time / reference time: 0.69166666666666665186
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (2, 3);  ; time: 493 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (2, 3);  ; time: 711 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (2, 3);  ; vectorized time / reference time: 0.69338959212376938268
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (2, 3);  ; time: 515 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (2, 3);  ; time: 717 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (2, 3);  ; vectorized time / reference time: 0.71827057182705722482
+
+
+Size: (3,3)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (3, 3);  ; time: 1068 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (3, 3);  ; time: 600 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (3, 3);  ; vectorized time / reference time: 1.78000000000000002665
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (3, 3);  ; time: 483 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (3, 3);  ; time: 680 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (3, 3);  ; vectorized time / reference time: 0.71029411764705885357
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (3, 3);  ; time: 498 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (3, 3);  ; time: 769 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (3, 3);  ; vectorized time / reference time: 0.64759427828348503642
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (3, 3);  ; time: 483 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (3, 3);  ; time: 693 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (3, 3);  ; vectorized time / reference time: 0.69696969696969701680
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (3, 3);  ; time: 471 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (3, 3);  ; time: 671 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (3, 3);  ; vectorized time / reference time: 0.70193740685543959401
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (3, 3);  ; time: 493 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (3, 3);  ; time: 757 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (3, 3);  ; vectorized time / reference time: 0.65125495376486131072
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (3, 3);  ; time: 498 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (3, 3);  ; time: 778 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (3, 3);  ; vectorized time / reference time: 0.64010282776349614053
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (3, 3);  ; time: 493 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (3, 3);  ; time: 766 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (3, 3);  ; vectorized time / reference time: 0.64360313315926898081
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (3, 3);  ; time: 515 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (3, 3);  ; time: 775 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (3, 3);  ; vectorized time / reference time: 0.66451612903225809603
+
+
+Size: (127,127)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (127, 127);  ; time: 208713 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (127, 127);  ; time: 272799 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (127, 127);  ; vectorized time / reference time: 0.76507978401680354352
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (127, 127);  ; time: 63292 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (127, 127);  ; time: 204357 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (127, 127);  ; vectorized time / reference time: 0.30971290437812259988
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (127, 127);  ; time: 125485 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (127, 127);  ; time: 409556 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (127, 127);  ; vectorized time / reference time: 0.30639277656779534409
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (127, 127);  ; time: 63292 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (127, 127);  ; time: 204361 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (127, 127);  ; vectorized time / reference time: 0.30970684230357065081
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (127, 127);  ; time: 62902 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (127, 127);  ; time: 188224 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (127, 127);  ; vectorized time / reference time: 0.33418692621557294364
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (127, 127);  ; time: 122642 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (127, 127);  ; time: 393424 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (127, 127);  ; vectorized time / reference time: 0.31172983854569114026
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (127, 127);  ; time: 122899 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (127, 127);  ; time: 409560 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (127, 127);  ; vectorized time / reference time: 0.30007569098544778496
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (127, 127);  ; time: 122642 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (127, 127);  ; time: 393428 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (127, 127);  ; vectorized time / reference time: 0.31172666917453767388
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (127, 127);  ; time: 124176 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (127, 127);  ; time: 409557 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (127, 127);  ; vectorized time / reference time: 0.30319589214688064116
+
+
+Size: (127,128)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (127, 128);  ; time: 209602 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (127, 128);  ; time: 274704 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (127, 128);  ; vectorized time / reference time: 0.76301036752286099940
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (127, 128);  ; time: 63292 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (127, 128);  ; time: 205500 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (127, 128);  ; vectorized time / reference time: 0.30799026763990267064
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (127, 128);  ; time: 124853 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (127, 128);  ; time: 411842 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (127, 128);  ; vectorized time / reference time: 0.30315752157380743137
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (127, 128);  ; time: 63292 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (127, 128);  ; time: 205504 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (127, 128);  ; vectorized time / reference time: 0.30798427281220802643
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (127, 128);  ; time: 62902 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (127, 128);  ; time: 189240 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (127, 128);  ; vectorized time / reference time: 0.33239272880997672299
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (127, 128);  ; time: 124470 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (127, 128);  ; time: 395583 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (127, 128);  ; vectorized time / reference time: 0.31464951729472701025
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (127, 128);  ; time: 124727 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (127, 128);  ; time: 411846 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (127, 128);  ; vectorized time / reference time: 0.30284863759754859780
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (127, 128);  ; time: 124470 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (127, 128);  ; time: 395587 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (127, 128);  ; vectorized time / reference time: 0.31464633569859473683
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (127, 128);  ; time: 126004 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (127, 128);  ; time: 411843 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (127, 128);  ; vectorized time / reference time: 0.30595153978579214815
+
+
+Size: (127,129)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (127, 129);  ; time: 212530 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (127, 129);  ; time: 276650 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (127, 129);  ; vectorized time / reference time: 0.76822700162660406686
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (127, 129);  ; time: 63359 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (127, 129);  ; time: 208519 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (127, 129);  ; vectorized time / reference time: 0.30385240673511765275
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (127, 129);  ; time: 124890 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (127, 129);  ; time: 416004 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (127, 129);  ; vectorized time / reference time: 0.30021345948596650510
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (127, 129);  ; time: 63359 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (127, 129);  ; time: 208523 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (127, 129);  ; vectorized time / reference time: 0.30384657807532022833
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (127, 129);  ; time: 62966 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (127, 129);  ; time: 192132 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (127, 129);  ; vectorized time / reference time: 0.32772260737409697473
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (127, 129);  ; time: 124546 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (127, 129);  ; time: 399618 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (127, 129);  ; vectorized time / reference time: 0.31166263781911723862
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (127, 129);  ; time: 124805 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (127, 129);  ; time: 416008 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (127, 129);  ; vectorized time / reference time: 0.30000624987981000524
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (127, 129);  ; time: 124546 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (127, 129);  ; time: 399622 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (127, 129);  ; vectorized time / reference time: 0.31165951824474130705
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (127, 129);  ; time: 126092 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (127, 129);  ; time: 416005 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (127, 129);  ; vectorized time / reference time: 0.30310212617636805854
+
+
+Size: (128,128)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (128, 128);  ; time: 214322 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (128, 128);  ; time: 276665 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (128, 128);  ; vectorized time / reference time: 0.77466249796685526796
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (128, 128);  ; time: 65187 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (128, 128);  ; time: 208528 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (128, 128);  ; vectorized time / reference time: 0.31260550141947363034
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (128, 128);  ; time: 126674 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (128, 128);  ; time: 416022 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (128, 128);  ; vectorized time / reference time: 0.30448870492425883505
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (128, 128);  ; time: 65187 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (128, 128);  ; time: 208532 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (128, 128);  ; vectorized time / reference time: 0.31259950511192524658
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (128, 128);  ; time: 64794 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (128, 128);  ; time: 192140 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (128, 128);  ; vectorized time / reference time: 0.33722285833246590236
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (128, 128);  ; time: 126374 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (128, 128);  ; time: 399635 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (128, 128);  ; vectorized time / reference time: 0.31622355399301860235
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (128, 128);  ; time: 126633 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (128, 128);  ; time: 416026 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (128, 128);  ; vectorized time / reference time: 0.30438722579838761728
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (128, 128);  ; time: 126374 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (128, 128);  ; time: 399639 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (128, 128);  ; vectorized time / reference time: 0.31622038890098314035
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (128, 128);  ; time: 127920 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (128, 128);  ; time: 416023 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (128, 128);  ; vectorized time / reference time: 0.30748299973799525509
+
+
+Size: (128,129)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (128, 129);  ; time: 217141 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (128, 129);  ; time: 278585 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (128, 129);  ; vectorized time / reference time: 0.77944253997882151364
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (128, 129);  ; time: 65206 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (128, 129);  ; time: 209680 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (128, 129);  ; vectorized time / reference time: 0.31097863410911863458
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (128, 129);  ; time: 124913 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (128, 129);  ; time: 420161 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (128, 129);  ; vectorized time / reference time: 0.29729794055136005149
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (128, 129);  ; time: 65206 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (128, 129);  ; time: 209684 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (128, 129);  ; vectorized time / reference time: 0.31097270177982105910
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (128, 129);  ; time: 64810 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (128, 129);  ; time: 193164 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (128, 129);  ; vectorized time / reference time: 0.33551800542544157890
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (128, 129);  ; time: 124567 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (128, 129);  ; time: 403646 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (128, 129);  ; vectorized time / reference time: 0.30860456935037133830
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (128, 129);  ; time: 124828 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (128, 129);  ; time: 420165 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (128, 129);  ; vectorized time / reference time: 0.29709280877750410266
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (128, 129);  ; time: 124567 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (128, 129);  ; time: 403650 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (128, 129);  ; vectorized time / reference time: 0.30860151121020684695
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (128, 129);  ; time: 126125 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (128, 129);  ; time: 420162 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (128, 129);  ; vectorized time / reference time: 0.30018183462569197895
+
+
+Size: (129,129)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (129, 129);  ; time: 218102 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (129, 129);  ; time: 280520 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (129, 129);  ; vectorized time / reference time: 0.77749180094110936778
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (129, 129);  ; time: 65244 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (129, 129);  ; time: 210841 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (129, 129);  ; vectorized time / reference time: 0.30944645491152100725
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (129, 129);  ; time: 126897 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (129, 129);  ; time: 422524 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (129, 129);  ; vectorized time / reference time: 0.30033086877905162959
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (129, 129);  ; time: 65244 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (129, 129);  ; time: 210845 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (129, 129);  ; vectorized time / reference time: 0.30944058431549242849
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (129, 129);  ; time: 64842 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (129, 129);  ; time: 194196 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (129, 129);  ; vectorized time / reference time: 0.33389977136501264310
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (129, 129);  ; time: 126506 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (129, 129);  ; time: 405880 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (129, 129);  ; vectorized time / reference time: 0.31168325613481817626
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (129, 129);  ; time: 126771 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (129, 129);  ; time: 422528 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (129, 129);  ; vectorized time / reference time: 0.30002982050893667321
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (129, 129);  ; time: 126506 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (129, 129);  ; time: 405884 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (129, 129);  ; vectorized time / reference time: 0.31168018448620787852
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (129, 129);  ; time: 128088 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (129, 129);  ; time: 422525 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (129, 129);  ; vectorized time / reference time: 0.30314892609904736664
+
+
+Size: (1023,1023)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1023);  ; time: 13423146 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1023);  ; time: 17616096 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1023);  ; vectorized time / reference time: 0.76198188293251811753
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1023);  ; time: 3992671 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1023);  ; time: 13254349 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (1023, 1023);  ; vectorized time / reference time: 0.30123478716306623104
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1023);  ; time: 8097776 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1023);  ; time: 26507658 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1023);  ; vectorized time / reference time: 0.30548817251226040304
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1023);  ; time: 3992630 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1023);  ; time: 13254349 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (1023, 1023);  ; vectorized time / reference time: 0.30123169383875436633
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (1023, 1023);  ; time: 3968090 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (1023, 1023);  ; time: 12207816 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (1023, 1023);  ; vectorized time / reference time: 0.32504503672073692400
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1023);  ; time: 7900768 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1023);  ; time: 25461126 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (1023, 1023);  ; vectorized time / reference time: 0.31030709325267075149
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1023);  ; time: 7917125 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1023);  ; time: 26507658 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1023);  ; vectorized time / reference time: 0.29867312306504029129
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1023);  ; time: 7900768 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1023);  ; time: 25461126 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (1023, 1023);  ; vectorized time / reference time: 0.31030709325267075149
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1023);  ; time: 7998902 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1023);  ; time: 26507655 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1023);  ; vectorized time / reference time: 0.30175819022844535544
+
+
+Size: (1023,1024)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1024);  ; time: 13436232 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1024);  ; time: 17633317 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1024);  ; vectorized time / reference time: 0.76197983623841158973
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1024);  ; time: 3996515 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1024);  ; time: 13267308 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (1023, 1024);  ; vectorized time / reference time: 0.30123028725948020057
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1024);  ; time: 7925744 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1024);  ; time: 26533576 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1024);  ; vectorized time / reference time: 0.29870621283765141918
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1024);  ; time: 3996515 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1024);  ; time: 13267308 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (1023, 1024);  ; vectorized time / reference time: 0.30123028725948020057
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (1023, 1024);  ; time: 3971954 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (1023, 1024);  ; time: 12219752 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (1023, 1024);  ; vectorized time / reference time: 0.32504374884203868223
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1024);  ; time: 7908468 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1024);  ; time: 25486021 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (1023, 1024);  ; vectorized time / reference time: 0.31030610859184332151
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1024);  ; time: 7924839 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1024);  ; time: 26533576 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1024);  ; vectorized time / reference time: 0.29867210510939046220
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1024);  ; time: 7908468 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1024);  ; time: 25486021 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (1023, 1024);  ; vectorized time / reference time: 0.31030610859184332151
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1024);  ; time: 8006686 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1024);  ; time: 26533573 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1024);  ; vectorized time / reference time: 0.30175679694551504895
+
+
+Size: (1023,1025)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1025);  ; time: 13447570 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1025);  ; time: 17650538 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1025);  ; vectorized time / reference time: 0.76187875972959007154
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1025);  ; time: 3998591 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1025);  ; time: 13280267 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (1023, 1025);  ; vectorized time / reference time: 0.30109266628449565806
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1025);  ; time: 7931619 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1025);  ; time: 26559494 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1025);  ; vectorized time / reference time: 0.29863592280786677158
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1025);  ; time: 3998591 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1025);  ; time: 13280267 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (1023, 1025);  ; vectorized time / reference time: 0.30109266628449565806
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (1023, 1025);  ; time: 3974006 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (1023, 1025);  ; time: 12231688 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (1023, 1025);  ; vectorized time / reference time: 0.32489432366162379617
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1025);  ; time: 7914368 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1025);  ; time: 25510916 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (1023, 1025);  ; vectorized time / reference time: 0.31023456782186886738
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1025);  ; time: 7930755 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1025);  ; time: 26559494 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1025);  ; vectorized time / reference time: 0.29860339206763503173
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1025);  ; time: 7914368 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1025);  ; time: 25510916 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (1023, 1025);  ; vectorized time / reference time: 0.31023456782186886738
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1025);  ; time: 8012682 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1025);  ; time: 26559491 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1025);  ; vectorized time / reference time: 0.30168808581459638507
+
+
+Size: (1024,1024)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1024);  ; time: 13449362 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1024);  ; time: 17650553 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1024);  ; vectorized time / reference time: 0.76197963882491381860
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1024, 1024);  ; time: 4000419 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1024, 1024);  ; time: 13280276 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (1024, 1024);  ; vectorized time / reference time: 0.30123010997663002275
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1024);  ; time: 7932624 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1024);  ; time: 26559512 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1024);  ; vectorized time / reference time: 0.29867355996601141488
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1024, 1024);  ; time: 4000419 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1024, 1024);  ; time: 13280276 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (1024, 1024);  ; vectorized time / reference time: 0.30123010997663002275
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (1024, 1024);  ; time: 3975834 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (1024, 1024);  ; time: 12231696 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (1024, 1024);  ; vectorized time / reference time: 0.32504355896353209765
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1024, 1024);  ; time: 7916196 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1024, 1024);  ; time: 25510933 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (1024, 1024);  ; vectorized time / reference time: 0.31030601664000295736
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1024);  ; time: 7932583 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1024);  ; time: 26559512 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1024);  ; vectorized time / reference time: 0.29867201626294942463
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1024, 1024);  ; time: 7916196 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1024, 1024);  ; time: 25510933 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (1024, 1024);  ; vectorized time / reference time: 0.31030601664000295736
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1024);  ; time: 8014510 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1024);  ; time: 26559509 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1024);  ; vectorized time / reference time: 0.30175670792709308188
+
+
+Size: (1024,1025)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1025);  ; time: 13462492 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1025);  ; time: 17667789 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1025);  ; vectorized time / reference time: 0.76197944179659382602
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1024, 1025);  ; time: 4004323 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1024, 1025);  ; time: 13293244 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (1024, 1025);  ; vectorized time / reference time: 0.30122993303967038337
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1025);  ; time: 7941232 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1025);  ; time: 26585448 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1025);  ; vectorized time / reference time: 0.29870596876908001027
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1024, 1025);  ; time: 4004323 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1024, 1025);  ; time: 13293244 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (1024, 1025);  ; vectorized time / reference time: 0.30122993303967038337
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (1024, 1025);  ; time: 3979714 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (1024, 1025);  ; time: 12243640 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (1024, 1025);  ; vectorized time / reference time: 0.32504336945548872873
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1024, 1025);  ; time: 7923924 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1024, 1025);  ; time: 25535845 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (1024, 1025);  ; vectorized time / reference time: 0.31030592486757341275
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1025);  ; time: 7940327 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1025);  ; time: 26585448 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1025);  ; vectorized time / reference time: 0.29867192758986044199
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1024, 1025);  ; time: 7923924 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1024, 1025);  ; time: 25535845 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (1024, 1025);  ; vectorized time / reference time: 0.31030592486757341275
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1025);  ; time: 8022334 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1025);  ; time: 26585445 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1025);  ; vectorized time / reference time: 0.30175661908235879016
+
+
+Size: (1025,1025)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1025, 1025);  ; time: 13475666 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1025, 1025);  ; time: 17685040 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1025, 1025);  ; vectorized time / reference time: 0.76198108683949827835
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1025, 1025);  ; time: 4008246 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1025, 1025);  ; time: 13306221 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: double; size: (1025, 1025);  ; vectorized time / reference time: 0.30123098060674025067
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1025, 1025);  ; time: 7949006 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1025, 1025);  ; time: 26611402 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: complex; size: (1025, 1025);  ; vectorized time / reference time: 0.29870677238275533671
+
+timesM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1025, 1025);  ; time: 4008246 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1025, 1025);  ; time: 13306221 cycles
+timesM;     matrix 1 type: double; matrix 2 type: integer; size: (1025, 1025);  ; vectorized time / reference time: 0.30123098060674025067
+
+timesM_vec; matrix 1 type: double; matrix 2 type: double; size: (1025, 1025);  ; time: 3983610 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: double; size: (1025, 1025);  ; time: 12255592 cycles
+timesM;     matrix 1 type: double; matrix 2 type: double; size: (1025, 1025);  ; vectorized time / reference time: 0.32504427366707377978
+
+timesM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1025, 1025);  ; time: 7931680 cycles
+timesM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1025, 1025);  ; time: 25560774 cycles
+timesM;     matrix 1 type: double; matrix 2 type: complex; size: (1025, 1025);  ; vectorized time / reference time: 0.31030672232382322528
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1025, 1025);  ; time: 7948101 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1025, 1025);  ; time: 26611402 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: integer; size: (1025, 1025);  ; vectorized time / reference time: 0.29867276440376949731
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1025, 1025);  ; time: 7931680 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1025, 1025);  ; time: 25560774 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: double; size: (1025, 1025);  ; vectorized time / reference time: 0.31030672232382322528
+
+timesM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1025, 1025);  ; time: 8030198 cycles
+timesM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1025, 1025);  ; time: 26611399 cycles
+timesM;     matrix 1 type: complex; matrix 2 type: complex; size: (1025, 1025);  ; vectorized time / reference time: 0.30175782941738615861
+
+
+
+
+Total program runtime: 5949067998 cycles
+Accuracy test: PASSED
+
+
+timesM
+
+Accuracy checking: ENABLED
+int size: 4
+double size: 8
+complex size: 16
+Epsilon (equality threshold): 0.00000000222044604925
+
+
+Size: (1,1)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1, 1); (Overflow) ; time: 996 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1, 1); (Overflow) ; time: 949 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1, 1); (Overflow) ; vectorized time / reference time: 1.04952581664910438164
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1, 1); (Overflow) ; time: 996 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1, 1); (Overflow) ; time: 1089 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1, 1); (Overflow) ; vectorized time / reference time: 0.91460055096418735321
+
+
+Size: (1,2)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1, 2); (Overflow) ; time: 507 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1, 2); (Overflow) ; time: 959 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1, 2); (Overflow) ; vectorized time / reference time: 0.52867570385818563050
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1, 2); (Overflow) ; time: 505 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1, 2); (Overflow) ; time: 1099 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1, 2); (Overflow) ; vectorized time / reference time: 0.45950864422202003512
+
+
+Size: (1,3)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1, 3); (Overflow) ; time: 515 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1, 3); (Overflow) ; time: 977 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1, 3); (Overflow) ; vectorized time / reference time: 0.52712384851586491230
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1, 3); (Overflow) ; time: 513 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1, 3); (Overflow) ; time: 1117 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1, 3); (Overflow) ; vectorized time / reference time: 0.45926589077887197687
+
+
+Size: (2,2)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (2, 2); (Overflow) ; time: 515 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (2, 2); (Overflow) ; time: 987 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (2, 2); (Overflow) ; vectorized time / reference time: 0.52178318135764945040
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (2, 2); (Overflow) ; time: 513 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (2, 2); (Overflow) ; time: 1131 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (2, 2); (Overflow) ; vectorized time / reference time: 0.45358090185676391837
+
+
+Size: (2,3)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (2, 3); (Overflow) ; time: 515 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (2, 3); (Overflow) ; time: 1015 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (2, 3); (Overflow) ; vectorized time / reference time: 0.50738916256157640117
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (2, 3); (Overflow) ; time: 513 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (2, 3); (Overflow) ; time: 1159 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (2, 3); (Overflow) ; vectorized time / reference time: 0.44262295081967212296
+
+
+Size: (3,3)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (3, 3); (Overflow) ; time: 515 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (3, 3); (Overflow) ; time: 1045 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (3, 3); (Overflow) ; vectorized time / reference time: 0.49282296650717705155
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (3, 3); (Overflow) ; time: 513 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (3, 3); (Overflow) ; time: 1193 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (3, 3); (Overflow) ; vectorized time / reference time: 0.43000838222967308067
+
+
+Size: (127,127)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (127, 127); (Overflow) ; time: 63576 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (127, 127); (Overflow) ; time: 193419 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (127, 127); (Overflow) ; vectorized time / reference time: 0.32869573309757571522
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (127, 127); (Overflow) ; time: 63574 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (127, 127); (Overflow) ; time: 162420 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (127, 127); (Overflow) ; vectorized time / reference time: 0.39141731313877603515
+
+
+Size: (127,128)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (127, 128); (Overflow) ; time: 63576 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (127, 128); (Overflow) ; time: 194682 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (127, 128); (Overflow) ; vectorized time / reference time: 0.32656331864270965459
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (127, 128); (Overflow) ; time: 63574 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (127, 128); (Overflow) ; time: 225235 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (127, 128); (Overflow) ; vectorized time / reference time: 0.28225631007614271351
+
+
+Size: (127,129)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (127, 129); (Overflow) ; time: 63645 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (127, 129); (Overflow) ; time: 196007 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (127, 129); (Overflow) ; vectorized time / reference time: 0.32470779104827890427
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (127, 129); (Overflow) ; time: 63643 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (127, 129); (Overflow) ; time: 226601 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (127, 129); (Overflow) ; vectorized time / reference time: 0.28085930777004514125
+
+
+Size: (128,128)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (128, 128); (Overflow) ; time: 63645 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (128, 128); (Overflow) ; time: 196017 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (128, 128); (Overflow) ; vectorized time / reference time: 0.32469122576103093269
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (128, 128); (Overflow) ; time: 63643 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (128, 128); (Overflow) ; time: 226611 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (128, 128); (Overflow) ; vectorized time / reference time: 0.28084691387443683208
+
+
+Size: (128,129)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (128, 129); (Overflow) ; time: 63666 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (128, 129); (Overflow) ; time: 197297 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (128, 129); (Overflow) ; vectorized time / reference time: 0.32269117117847712084
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (128, 129); (Overflow) ; time: 63664 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (128, 129); (Overflow) ; time: 227891 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (128, 129); (Overflow) ; vectorized time / reference time: 0.27936162463633928965
+
+
+Size: (129,129)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (129, 129); (Overflow) ; time: 63708 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (129, 129); (Overflow) ; time: 200415 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (129, 129); (Overflow) ; vectorized time / reference time: 0.31788039817378938023
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (129, 129); (Overflow) ; time: 63706 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (129, 129); (Overflow) ; time: 231009 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (129, 129); (Overflow) ; vectorized time / reference time: 0.27577280538853465863
+
+
+Size: (1023,1023)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1023); (Overflow) ; time: 4007186 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1023); (Overflow) ; time: 14397066 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1023); (Overflow) ; vectorized time / reference time: 0.27833351600944250537
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1023); (Overflow) ; time: 4007184 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1023); (Overflow) ; time: 14397231 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1023); (Overflow) ; vectorized time / reference time: 0.27833018724225511153
+
+
+Size: (1023,1024)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1024); (Overflow) ; time: 4011085 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1024); (Overflow) ; time: 14411139 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1024); (Overflow) ; vectorized time / reference time: 0.27833226783809383864
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1024); (Overflow) ; time: 4011083 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1024); (Overflow) ; time: 14411304 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1024); (Overflow) ; vectorized time / reference time: 0.27832894233582194943
+
+
+Size: (1023,1025)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1025); (Overflow) ; time: 4015005 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1025); (Overflow) ; time: 14425212 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1025); (Overflow) ; vectorized time / reference time: 0.27833247788663351141
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1025); (Overflow) ; time: 4015003 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1025); (Overflow) ; time: 14425377 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1025); (Overflow) ; vectorized time / reference time: 0.27832915562622728700
+
+
+Size: (1024,1024)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1024); (Overflow) ; time: 4015005 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1024); (Overflow) ; time: 14425222 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1024); (Overflow) ; vectorized time / reference time: 0.27833228493814515803
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1024); (Overflow) ; time: 4015003 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1024); (Overflow) ; time: 14425387 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1024); (Overflow) ; vectorized time / reference time: 0.27832896268224899261
+
+
+Size: (1024,1025)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1025); (Overflow) ; time: 4018925 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1025); (Overflow) ; time: 14439305 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1025); (Overflow) ; vectorized time / reference time: 0.27833230200484027073
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1025); (Overflow) ; time: 4018923 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1025); (Overflow) ; time: 14439470 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1025); (Overflow) ; vectorized time / reference time: 0.27832898298898783862
+
+
+Size: (1025,1025)
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1025, 1025); (Overflow) ; time: 4022866 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1025, 1025); (Overflow) ; time: 14453398 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1025, 1025); (Overflow) ; vectorized time / reference time: 0.27833357941156811055
+
+timesM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1025, 1025); (Overflow) ; time: 4022864 cycles
+timesM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1025, 1025); (Overflow) ; time: 14453563 cycles
+timesM;     matrix 1 type: integer; matrix 2 type: integer; size: (1025, 1025); (Overflow) ; vectorized time / reference time: 0.27833026361735163645
+
+
+
+
+Total program runtime: 1479563381 cycles
+Accuracy test: PASSED

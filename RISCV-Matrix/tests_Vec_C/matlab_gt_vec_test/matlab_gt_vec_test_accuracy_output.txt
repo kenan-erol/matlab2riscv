@@ -1,0 +1,701 @@
+Wed Dec 21 13:57:49 EST 2022
+bbl loader
+
+
+matlab_gtM
+
+Accuracy checking: ENABLED
+int size: 4
+double size: 8
+complex size: 16
+Epsilon (equality threshold): 0.00000000222044604925
+
+
+Size: (1,1)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1, 1);  ; time: 485 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1, 1);  ; time: 5596 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (1, 1);  ; vectorized time / reference time: 0.08666904932094353364
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1, 1);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1, 1);  ; time: 608 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (1, 1);  ; vectorized time / reference time: 0.79934210526315785383
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1, 1);  ; time: 489 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1, 1);  ; time: 609 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (1, 1);  ; vectorized time / reference time: 0.80295566502463056047
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1, 1);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1, 1);  ; time: 608 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (1, 1);  ; vectorized time / reference time: 0.79934210526315785383
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (1, 1);  ; time: 481 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (1, 1);  ; time: 604 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (1, 1);  ; vectorized time / reference time: 0.79635761589403974980
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1, 1);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1, 1);  ; time: 606 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (1, 1);  ; vectorized time / reference time: 0.80198019801980202637
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1, 1);  ; time: 489 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1, 1);  ; time: 609 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (1, 1);  ; vectorized time / reference time: 0.80295566502463056047
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1, 1);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1, 1);  ; time: 606 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (1, 1);  ; vectorized time / reference time: 0.80198019801980202637
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1, 1);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1, 1);  ; time: 608 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (1, 1);  ; vectorized time / reference time: 0.79934210526315785383
+
+
+Size: (1,2)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1, 2);  ; time: 485 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1, 2);  ; time: 478 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (1, 2);  ; vectorized time / reference time: 1.01464435146443521241
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1, 2);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1, 2);  ; time: 617 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (1, 2);  ; vectorized time / reference time: 0.78768233387358188580
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1, 2);  ; time: 489 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1, 2);  ; time: 618 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (1, 2);  ; vectorized time / reference time: 0.79126213592233007876
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1, 2);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1, 2);  ; time: 618 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (1, 2);  ; vectorized time / reference time: 0.78640776699029124597
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (1, 2);  ; time: 481 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (1, 2);  ; time: 613 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (1, 2);  ; vectorized time / reference time: 0.78466557911908640932
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1, 2);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1, 2);  ; time: 614 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (1, 2);  ; vectorized time / reference time: 0.79153094462540718457
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1, 2);  ; time: 489 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1, 2);  ; time: 619 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (1, 2);  ; vectorized time / reference time: 0.78998384491114703732
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1, 2);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1, 2);  ; time: 614 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (1, 2);  ; vectorized time / reference time: 0.79153094462540718457
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1, 2);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1, 2);  ; time: 617 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (1, 2);  ; vectorized time / reference time: 0.78768233387358188580
+
+
+Size: (1,3)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1, 3);  ; time: 485 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1, 3);  ; time: 485 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (1, 3);  ; vectorized time / reference time: 1.00000000000000000000
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1, 3);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1, 3);  ; time: 626 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (1, 3);  ; vectorized time / reference time: 0.77635782747603832021
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1, 3);  ; time: 489 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1, 3);  ; time: 627 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (1, 3);  ; vectorized time / reference time: 0.77990430622009565553
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1, 3);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1, 3);  ; time: 628 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (1, 3);  ; vectorized time / reference time: 0.77388535031847138779
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (1, 3);  ; time: 481 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (1, 3);  ; time: 622 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (1, 3);  ; vectorized time / reference time: 0.77331189710610936938
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1, 3);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1, 3);  ; time: 622 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (1, 3);  ; vectorized time / reference time: 0.78135048231511250449
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1, 3);  ; time: 489 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1, 3);  ; time: 629 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (1, 3);  ; vectorized time / reference time: 0.77742448330683622260
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1, 3);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1, 3);  ; time: 622 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (1, 3);  ; vectorized time / reference time: 0.78135048231511250449
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1, 3);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1, 3);  ; time: 626 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (1, 3);  ; vectorized time / reference time: 0.77635782747603832021
+
+
+Size: (2,2)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (2, 2);  ; time: 485 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (2, 2);  ; time: 493 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (2, 2);  ; vectorized time / reference time: 0.98377281947261663309
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (2, 2);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (2, 2);  ; time: 635 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (2, 2);  ; vectorized time / reference time: 0.76535433070866143446
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (2, 2);  ; time: 489 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (2, 2);  ; time: 636 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (2, 2);  ; vectorized time / reference time: 0.76886792452830188260
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (2, 2);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (2, 2);  ; time: 638 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (2, 2);  ; vectorized time / reference time: 0.76175548589341690597
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (2, 2);  ; time: 481 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (2, 2);  ; time: 631 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (2, 2);  ; vectorized time / reference time: 0.76228209191759110919
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (2, 2);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (2, 2);  ; time: 630 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (2, 2);  ; vectorized time / reference time: 0.77142857142857146346
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (2, 2);  ; time: 489 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (2, 2);  ; time: 639 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (2, 2);  ; vectorized time / reference time: 0.76525821596244136824
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (2, 2);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (2, 2);  ; time: 630 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (2, 2);  ; vectorized time / reference time: 0.77142857142857146346
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (2, 2);  ; time: 486 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (2, 2);  ; time: 635 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (2, 2);  ; vectorized time / reference time: 0.76535433070866143446
+
+
+Size: (2,3)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (2, 3);  ; time: 493 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (2, 3);  ; time: 516 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (2, 3);  ; vectorized time / reference time: 0.95542635658914731867
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (2, 3);  ; time: 494 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (2, 3);  ; time: 661 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (2, 3);  ; vectorized time / reference time: 0.74735249621785171392
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (2, 3);  ; time: 497 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (2, 3);  ; time: 662 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (2, 3);  ; vectorized time / reference time: 0.75075528700906346558
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (2, 3);  ; time: 494 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (2, 3);  ; time: 666 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (2, 3);  ; vectorized time / reference time: 0.74174174174174178908
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (2, 3);  ; time: 489 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (2, 3);  ; time: 657 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (2, 3);  ; vectorized time / reference time: 0.74429223744292238862
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (2, 3);  ; time: 494 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (2, 3);  ; time: 654 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (2, 3);  ; vectorized time / reference time: 0.75535168195718649375
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (2, 3);  ; time: 497 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (2, 3);  ; time: 667 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (2, 3);  ; vectorized time / reference time: 0.74512743628185906797
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (2, 3);  ; time: 494 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (2, 3);  ; time: 654 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (2, 3);  ; vectorized time / reference time: 0.75535168195718649375
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (2, 3);  ; time: 494 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (2, 3);  ; time: 661 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (2, 3);  ; vectorized time / reference time: 0.74735249621785171392
+
+
+Size: (3,3)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (3, 3);  ; time: 499 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (3, 3);  ; time: 544 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (3, 3);  ; vectorized time / reference time: 0.91727941176470584317
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (3, 3);  ; time: 500 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (3, 3);  ; time: 698 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (3, 3);  ; vectorized time / reference time: 0.71633237822349571378
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (3, 3);  ; time: 503 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (3, 3);  ; time: 699 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (3, 3);  ; vectorized time / reference time: 0.71959942775393415104
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (3, 3);  ; time: 500 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (3, 3);  ; time: 706 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (3, 3);  ; vectorized time / reference time: 0.70821529745042488546
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (3, 3);  ; time: 495 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (3, 3);  ; time: 694 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (3, 3);  ; vectorized time / reference time: 0.71325648414985587387
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (3, 3);  ; time: 500 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (3, 3);  ; time: 688 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (3, 3);  ; vectorized time / reference time: 0.72674418604651158660
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (3, 3);  ; time: 503 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (3, 3);  ; time: 707 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (3, 3);  ; vectorized time / reference time: 0.71145685997171148607
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (3, 3);  ; time: 500 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (3, 3);  ; time: 688 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (3, 3);  ; vectorized time / reference time: 0.72674418604651158660
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (3, 3);  ; time: 500 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (3, 3);  ; time: 698 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (3, 3);  ; vectorized time / reference time: 0.71633237822349571378
+
+
+Size: (127,127)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (127, 127);  ; time: 48300 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (127, 127);  ; time: 167985 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (127, 127);  ; vectorized time / reference time: 0.28752567193499417586
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (127, 127);  ; time: 49939 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (127, 127);  ; time: 192336 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (127, 127);  ; vectorized time / reference time: 0.25964458031777720715
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (127, 127);  ; time: 50068 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (127, 127);  ; time: 192337 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (127, 127);  ; vectorized time / reference time: 0.26031392815734882840
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (127, 127);  ; time: 49939 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (127, 127);  ; time: 208464 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (127, 127);  ; vectorized time / reference time: 0.23955694988103462539
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (127, 127);  ; time: 49682 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (127, 127);  ; time: 192332 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (127, 127);  ; vectorized time / reference time: 0.25831374914210841753
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (127, 127);  ; time: 49939 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (127, 127);  ; time: 176206 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (127, 127);  ; vectorized time / reference time: 0.28341259661986539786
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (127, 127);  ; time: 50068 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (127, 127);  ; time: 208465 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (127, 127);  ; vectorized time / reference time: 0.24017460964670328538
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (127, 127);  ; time: 49939 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (127, 127);  ; time: 176206 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (127, 127);  ; vectorized time / reference time: 0.28341259661986539786
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (127, 127);  ; time: 49813 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (127, 127);  ; time: 192336 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (127, 127);  ; vectorized time / reference time: 0.25898947674902256244
+
+
+Size: (127,128)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (127, 128);  ; time: 48428 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (127, 128);  ; time: 169066 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (127, 128);  ; vectorized time / reference time: 0.28644434717802513823
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (127, 128);  ; time: 50067 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (127, 128);  ; time: 193607 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (127, 128);  ; vectorized time / reference time: 0.25860118694055483912
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (127, 128);  ; time: 50196 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (127, 128);  ; time: 193608 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (127, 128);  ; vectorized time / reference time: 0.25926614602702369172
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (127, 128);  ; time: 50067 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (127, 128);  ; time: 209862 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (127, 128);  ; vectorized time / reference time: 0.23857106098293165419
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (127, 128);  ; time: 49810 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (127, 128);  ; time: 193603 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (127, 128);  ; vectorized time / reference time: 0.25727907108877445808
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (127, 128);  ; time: 50067 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (127, 128);  ; time: 177350 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (127, 128);  ; vectorized time / reference time: 0.28230617423174514391
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (127, 128);  ; time: 50196 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (127, 128);  ; time: 209863 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (127, 128);  ; vectorized time / reference time: 0.23918461091283360620
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (127, 128);  ; time: 50067 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (127, 128);  ; time: 177350 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (127, 128);  ; vectorized time / reference time: 0.28230617423174514391
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (127, 128);  ; time: 49941 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (127, 128);  ; time: 193607 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (127, 128);  ; vectorized time / reference time: 0.25795038402537096012
+
+
+Size: (127,129)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (127, 129);  ; time: 48604 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (127, 129);  ; time: 170187 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (127, 129);  ; vectorized time / reference time: 0.28559173144834798519
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (127, 129);  ; time: 50266 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (127, 129);  ; time: 194919 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (127, 129);  ; vectorized time / reference time: 0.25788147897331714642
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (127, 129);  ; time: 50396 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (127, 129);  ; time: 194920 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (127, 129);  ; vectorized time / reference time: 0.25854709624461319484
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (127, 129);  ; time: 50266 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (127, 129);  ; time: 211301 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (127, 129);  ; vectorized time / reference time: 0.23788813114940299265
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (127, 129);  ; time: 50007 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (127, 129);  ; time: 194915 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (127, 129);  ; vectorized time / reference time: 0.25655798681476543743
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (127, 129);  ; time: 50266 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (127, 129);  ; time: 178535 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (127, 129);  ; vectorized time / reference time: 0.28154703559526145229
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (127, 129);  ; time: 50396 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (127, 129);  ; time: 211302 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (127, 129);  ; vectorized time / reference time: 0.23850223850223850608
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (127, 129);  ; time: 50266 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (127, 129);  ; time: 178535 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (127, 129);  ; vectorized time / reference time: 0.28154703559526145229
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (127, 129);  ; time: 50139 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (127, 129);  ; time: 194919 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (127, 129);  ; vectorized time / reference time: 0.25722992627706892099
+
+
+Size: (128,128)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (128, 128);  ; time: 48604 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (128, 128);  ; time: 170195 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (128, 128);  ; vectorized time / reference time: 0.28557830723581772991
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (128, 128);  ; time: 50266 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (128, 128);  ; time: 194928 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (128, 128);  ; vectorized time / reference time: 0.25786957235492080631
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (128, 128);  ; time: 50396 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (128, 128);  ; time: 194929 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (128, 128);  ; vectorized time / reference time: 0.25853515895531192781
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (128, 128);  ; time: 50266 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (128, 128);  ; time: 211311 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (128, 128);  ; vectorized time / reference time: 0.23787687342353214248
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (128, 128);  ; time: 50007 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (128, 128);  ; time: 194924 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (128, 128);  ; vectorized time / reference time: 0.25654614106010548147
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (128, 128);  ; time: 50266 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (128, 128);  ; time: 178543 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (128, 128);  ; vectorized time / reference time: 0.28153442027970854156
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (128, 128);  ; time: 50396 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (128, 128);  ; time: 211312 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (128, 128);  ; vectorized time / reference time: 0.23849095176800180762
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (128, 128);  ; time: 50266 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (128, 128);  ; time: 178543 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (128, 128);  ; vectorized time / reference time: 0.28153442027970854156
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (128, 128);  ; time: 50139 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (128, 128);  ; time: 194928 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (128, 128);  ; vectorized time / reference time: 0.25721804974144296674
+
+
+Size: (128,129)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (128, 129);  ; time: 48752 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (128, 129);  ; time: 171283 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (128, 129);  ; vectorized time / reference time: 0.28462836358541127035
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (128, 129);  ; time: 50417 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (128, 129);  ; time: 196208 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (128, 129);  ; vectorized time / reference time: 0.25695690287857780865
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (128, 129);  ; time: 50548 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (128, 129);  ; time: 196209 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (128, 129);  ; vectorized time / reference time: 0.25762324867870484146
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (128, 129);  ; time: 50417 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (128, 129);  ; time: 212719 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (128, 129);  ; vectorized time / reference time: 0.23701220859443677957
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (128, 129);  ; time: 50156 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (128, 129);  ; time: 196204 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (128, 129);  ; vectorized time / reference time: 0.25563189333550795368
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (128, 129);  ; time: 50417 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (128, 129);  ; time: 179695 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (128, 129);  ; vectorized time / reference time: 0.28056985447563925762
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (128, 129);  ; time: 50548 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (128, 129);  ; time: 212720 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (128, 129);  ; vectorized time / reference time: 0.23762692741632193694
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (128, 129);  ; time: 50417 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (128, 129);  ; time: 179695 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (128, 129);  ; vectorized time / reference time: 0.28056985447563925762
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (128, 129);  ; time: 50289 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (128, 129);  ; time: 196208 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (128, 129);  ; vectorized time / reference time: 0.25630453396395663779
+
+
+Size: (129,129)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (129, 129);  ; time: 48893 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (129, 129);  ; time: 174213 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (129, 129);  ; vectorized time / reference time: 0.28065069770912620672
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (129, 129);  ; time: 50584 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (129, 129);  ; time: 199332 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (129, 129);  ; vectorized time / reference time: 0.25376758372965707578
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (129, 129);  ; time: 50717 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (129, 129);  ; time: 199333 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (129, 129);  ; vectorized time / reference time: 0.25443353584203315387
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (129, 129);  ; time: 50584 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (129, 129);  ; time: 215972 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (129, 129);  ; vectorized time / reference time: 0.23421554645972625375
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (129, 129);  ; time: 50319 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (129, 129);  ; time: 199328 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (129, 129);  ; vectorized time / reference time: 0.25244320918285440003
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (129, 129);  ; time: 50584 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (129, 129);  ; time: 182690 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (129, 129);  ; vectorized time / reference time: 0.27688433959165797971
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (129, 129);  ; time: 50717 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (129, 129);  ; time: 215973 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (129, 129);  ; vectorized time / reference time: 0.23483027971088979435
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (129, 129);  ; time: 50584 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (129, 129);  ; time: 182690 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (129, 129);  ; vectorized time / reference time: 0.27688433959165797971
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (129, 129);  ; time: 50454 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (129, 129);  ; time: 199332 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (129, 129);  ; vectorized time / reference time: 0.25311540545421706838
+
+
+Size: (1023,1023)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1023);  ; time: 3046504 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1023);  ; time: 10813682 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1023);  ; vectorized time / reference time: 0.28172679758846247422
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1023);  ; time: 3152793 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1023);  ; time: 12383637 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (1023, 1023);  ; vectorized time / reference time: 0.25459346070948302154
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1023);  ; time: 3160972 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1023);  ; time: 12383638 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1023);  ; vectorized time / reference time: 0.25525390842335671238
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1023);  ; time: 3152793 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1023);  ; time: 13430165 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (1023, 1023);  ; vectorized time / reference time: 0.23475459906858925363
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (1023, 1023);  ; time: 3136436 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (1023, 1023);  ; time: 12383633 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (1023, 1023);  ; vectorized time / reference time: 0.25327268661789315018
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1023);  ; time: 3152793 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1023);  ; time: 11337107 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (1023, 1023);  ; vectorized time / reference time: 0.27809502018460263706
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1023);  ; time: 3160972 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1023);  ; time: 13430166 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1023);  ; vectorized time / reference time: 0.23536358374125829207
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1023);  ; time: 3152793 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1023);  ; time: 11337107 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (1023, 1023);  ; vectorized time / reference time: 0.27809502018460263706
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1023);  ; time: 3144617 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1023);  ; time: 12383637 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1023);  ; vectorized time / reference time: 0.25393323463857991884
+
+
+Size: (1023,1024)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1024);  ; time: 3049464 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1024);  ; time: 10824255 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1024);  ; vectorized time / reference time: 0.28172507022423254330
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1024);  ; time: 3155854 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1024);  ; time: 12395744 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (1023, 1024);  ; vectorized time / reference time: 0.25459173729305800693
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1024);  ; time: 3164040 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1024);  ; time: 12395745 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1024);  ; vectorized time / reference time: 0.25525210465365333334
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1024);  ; time: 3155854 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1024);  ; time: 13443295 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (1023, 1024);  ; vectorized time / reference time: 0.23475301256128056071
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (1023, 1024);  ; time: 3139483 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (1023, 1024);  ; time: 12395740 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (1023, 1024);  ; vectorized time / reference time: 0.25327112378930183301
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1024);  ; time: 3155854 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1024);  ; time: 11348191 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (1023, 1024);  ; vectorized time / reference time: 0.27809313396293733334
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1024);  ; time: 3164040 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1024);  ; time: 13443296 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1024);  ; vectorized time / reference time: 0.23536192314741860576
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1024);  ; time: 3155854 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1024);  ; time: 11348191 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (1023, 1024);  ; vectorized time / reference time: 0.27809313396293733334
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1024);  ; time: 3147671 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1024);  ; time: 12395744 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1024);  ; vectorized time / reference time: 0.25393159135909876278
+
+
+Size: (1023,1025)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1025);  ; time: 3052444 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1025);  ; time: 10834827 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (1023, 1025);  ; vectorized time / reference time: 0.28172521813223228015
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1025);  ; time: 3158938 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1023, 1025);  ; time: 12407851 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (1023, 1025);  ; vectorized time / reference time: 0.25459187090496171457
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1025);  ; time: 3167132 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1025);  ; time: 12407852 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (1023, 1025);  ; vectorized time / reference time: 0.25525223866306595566
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1025);  ; time: 3158938 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1023, 1025);  ; time: 13456425 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (1023, 1025);  ; vectorized time / reference time: 0.23475313837070396761
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (1023, 1025);  ; time: 3142551 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (1023, 1025);  ; time: 12407847 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (1023, 1025);  ; vectorized time / reference time: 0.25327125648793058499
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1025);  ; time: 3158938 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1023, 1025);  ; time: 11359275 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (1023, 1025);  ; vectorized time / reference time: 0.27809327619940532594
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1025);  ; time: 3167132 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1025);  ; time: 13456426 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (1023, 1025);  ; vectorized time / reference time: 0.23536204932869991824
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1025);  ; time: 3158938 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1023, 1025);  ; time: 11359275 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (1023, 1025);  ; vectorized time / reference time: 0.27809327619940532594
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1025);  ; time: 3150747 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1025);  ; time: 12407851 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (1023, 1025);  ; vectorized time / reference time: 0.25393172435742500381
+
+
+Size: (1024,1024)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1024);  ; time: 3052444 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1024);  ; time: 10834835 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1024);  ; vectorized time / reference time: 0.28172501011782830060
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1024, 1024);  ; time: 3158938 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1024, 1024);  ; time: 12407860 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (1024, 1024);  ; vectorized time / reference time: 0.25459168623759453887
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1024);  ; time: 3167132 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1024);  ; time: 12407861 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1024);  ; vectorized time / reference time: 0.25525205351671814702
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1024, 1024);  ; time: 3158938 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1024, 1024);  ; time: 13456435 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (1024, 1024);  ; vectorized time / reference time: 0.23475296391652022976
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (1024, 1024);  ; time: 3142551 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (1024, 1024);  ; time: 12407856 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (1024, 1024);  ; vectorized time / reference time: 0.25327107277840749111
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1024, 1024);  ; time: 3158938 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1024, 1024);  ; time: 11359283 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (1024, 1024);  ; vectorized time / reference time: 0.27809308034670848775
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1024);  ; time: 3167132 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1024);  ; time: 13456436 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1024);  ; vectorized time / reference time: 0.23536187442202377573
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1024, 1024);  ; time: 3158938 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1024, 1024);  ; time: 11359283 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (1024, 1024);  ; vectorized time / reference time: 0.27809308034670848775
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1024);  ; time: 3150747 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1024);  ; time: 12407860 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1024);  ; vectorized time / reference time: 0.25393154016889296631
+
+
+Size: (1024,1025)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1025);  ; time: 3055424 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1025);  ; time: 10845415 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (1024, 1025);  ; vectorized time / reference time: 0.28172495012869491759
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1024, 1025);  ; time: 3162022 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1024, 1025);  ; time: 12419976 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (1024, 1025);  ; vectorized time / reference time: 0.25459163528174288960
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1025);  ; time: 3170224 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1025);  ; time: 12419977 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (1024, 1025);  ; vectorized time / reference time: 0.25525200247955370791
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1024, 1025);  ; time: 3162022 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1024, 1025);  ; time: 13469575 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (1024, 1025);  ; vectorized time / reference time: 0.23475291536666895165
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (1024, 1025);  ; time: 3145619 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (1024, 1025);  ; time: 12419972 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (1024, 1025);  ; vectorized time / reference time: 0.25327102186703803754
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1024, 1025);  ; time: 3162022 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1024, 1025);  ; time: 11370375 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (1024, 1025);  ; vectorized time / reference time: 0.27809302683508679843
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1025);  ; time: 3170224 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1025);  ; time: 13469576 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (1024, 1025);  ; vectorized time / reference time: 0.23536182579169528939
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1024, 1025);  ; time: 3162022 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1024, 1025);  ; time: 11370375 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (1024, 1025);  ; vectorized time / reference time: 0.27809302683508679843
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1025);  ; time: 3153823 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1025);  ; time: 12419976 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (1024, 1025);  ; vectorized time / reference time: 0.25393148907856183394
+
+
+Size: (1025,1025)
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: integer; size: (1025, 1025);  ; time: 3058424 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: integer; size: (1025, 1025);  ; time: 10856002 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: integer; size: (1025, 1025);  ; vectorized time / reference time: 0.28172655089783515958
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: double; size: (1025, 1025);  ; time: 3165129 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: double; size: (1025, 1025);  ; time: 12432101 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: double; size: (1025, 1025);  ; vectorized time / reference time: 0.25459325016744954739
+
+matlab_gtM_vec; matrix 1 type: integer; matrix 2 type: complex; size: (1025, 1025);  ; time: 3173340 cycles
+matlab_gtM_ref; matrix 1 type: integer; matrix 2 type: complex; size: (1025, 1025);  ; time: 12432102 cycles
+matlab_gtM;     matrix 1 type: integer; matrix 2 type: complex; size: (1025, 1025);  ; vectorized time / reference time: 0.25525369724283147876
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: integer; size: (1025, 1025);  ; time: 3165129 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: integer; size: (1025, 1025);  ; time: 13482725 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: integer; size: (1025, 1025);  ; vectorized time / reference time: 0.23475439868424224921
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: double; size: (1025, 1025);  ; time: 3148708 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: double; size: (1025, 1025);  ; time: 12432097 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: double; size: (1025, 1025);  ; vectorized time / reference time: 0.25327247687980553037
+
+matlab_gtM_vec; matrix 1 type: double; matrix 2 type: complex; size: (1025, 1025);  ; time: 3165129 cycles
+matlab_gtM_ref; matrix 1 type: double; matrix 2 type: complex; size: (1025, 1025);  ; time: 11381475 cycles
+matlab_gtM;     matrix 1 type: double; matrix 2 type: complex; size: (1025, 1025);  ; vectorized time / reference time: 0.27809479878486753623
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: integer; size: (1025, 1025);  ; time: 3173340 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: integer; size: (1025, 1025);  ; time: 13482726 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: integer; size: (1025, 1025);  ; vectorized time / reference time: 0.23536338274618945343
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: double; size: (1025, 1025);  ; time: 3165129 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: double; size: (1025, 1025);  ; time: 11381475 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: double; size: (1025, 1025);  ; vectorized time / reference time: 0.27809479878486753623
+
+matlab_gtM_vec; matrix 1 type: complex; matrix 2 type: complex; size: (1025, 1025);  ; time: 3156921 cycles
+matlab_gtM_ref; matrix 1 type: complex; matrix 2 type: complex; size: (1025, 1025);  ; time: 12432101 cycles
+matlab_gtM;     matrix 1 type: complex; matrix 2 type: complex; size: (1025, 1025);  ; vectorized time / reference time: 0.25393302387102550943
+
+
+
+
+Total program runtime: 5115348825 cycles
+Accuracy test: PASSED

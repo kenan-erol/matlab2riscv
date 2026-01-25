@@ -1,0 +1,125 @@
+Wed Dec 21 15:01:31 EST 2022
+bbl loader
+
+
+onesM
+
+Accuracy checking: ENABLED
+int size: 4
+double size: 8
+complex size: 16
+Epsilon (equality threshold): 0.00000000222044604925
+
+
+Size: (1,1)
+onesM_vec; matrix type: integer; size: (1, 1);  ; time: 350 cycles
+onesM_ref; matrix type: integer; size: (1, 1);  ; time: 7773 cycles
+onesM;     matrix type: integer; size: (1, 1);  ; vectorized time / reference time: 0.04502765984819245837
+
+
+Size: (1,2)
+onesM_vec; matrix type: integer; size: (1, 2);  ; time: 350 cycles
+onesM_ref; matrix type: integer; size: (1, 2);  ; time: 489 cycles
+onesM;     matrix type: integer; size: (1, 2);  ; vectorized time / reference time: 0.71574642126789367325
+
+
+Size: (1,3)
+onesM_vec; matrix type: integer; size: (1, 3);  ; time: 350 cycles
+onesM_ref; matrix type: integer; size: (1, 3);  ; time: 492 cycles
+onesM;     matrix type: integer; size: (1, 3);  ; vectorized time / reference time: 0.71138211382113825110
+
+
+Size: (2,2)
+onesM_vec; matrix type: integer; size: (2, 2);  ; time: 350 cycles
+onesM_ref; matrix type: integer; size: (2, 2);  ; time: 495 cycles
+onesM;     matrix type: integer; size: (2, 2);  ; vectorized time / reference time: 0.70707070707070707183
+
+
+Size: (2,3)
+onesM_vec; matrix type: integer; size: (2, 3);  ; time: 358 cycles
+onesM_ref; matrix type: integer; size: (2, 3);  ; time: 509 cycles
+onesM;     matrix type: integer; size: (2, 3);  ; vectorized time / reference time: 0.70333988212180742483
+
+
+Size: (3,3)
+onesM_vec; matrix type: integer; size: (3, 3);  ; time: 358 cycles
+onesM_ref; matrix type: integer; size: (3, 3);  ; time: 518 cycles
+onesM;     matrix type: integer; size: (3, 3);  ; vectorized time / reference time: 0.69111969111969107082
+
+
+Size: (127,127)
+onesM_vec; matrix type: integer; size: (127, 127);  ; time: 32046 cycles
+onesM_ref; matrix type: integer; size: (127, 127);  ; time: 78064 cycles
+onesM;     matrix type: integer; size: (127, 127);  ; vectorized time / reference time: 0.41050932568149212099
+
+
+Size: (127,128)
+onesM_vec; matrix type: integer; size: (127, 128);  ; time: 31387 cycles
+onesM_ref; matrix type: integer; size: (127, 128);  ; time: 80099 cycles
+onesM;     matrix type: integer; size: (127, 128);  ; vectorized time / reference time: 0.39185258242924381200
+
+
+Size: (127,129)
+onesM_vec; matrix type: integer; size: (127, 129);  ; time: 31479 cycles
+onesM_ref; matrix type: integer; size: (127, 129);  ; time: 82356 cycles
+onesM;     matrix type: integer; size: (127, 129);  ; vectorized time / reference time: 0.38223080285589394745
+
+
+Size: (128,128)
+onesM_vec; matrix type: integer; size: (128, 128);  ; time: 31435 cycles
+onesM_ref; matrix type: integer; size: (128, 128);  ; time: 82359 cycles
+onesM;     matrix type: integer; size: (128, 128);  ; vectorized time / reference time: 0.38168263334911789464
+
+
+Size: (128,129)
+onesM_vec; matrix type: integer; size: (128, 129);  ; time: 31445 cycles
+onesM_ref; matrix type: integer; size: (128, 129);  ; time: 82743 cycles
+onesM;     matrix type: integer; size: (128, 129);  ; vectorized time / reference time: 0.38003214773455157305
+
+
+Size: (129,129)
+onesM_vec; matrix type: integer; size: (129, 129);  ; time: 31455 cycles
+onesM_ref; matrix type: integer; size: (129, 129);  ; time: 83130 cycles
+onesM;     matrix type: integer; size: (129, 129);  ; vectorized time / reference time: 0.37838325514254783632
+
+
+Size: (1023,1023)
+onesM_vec; matrix type: integer; size: (1023, 1023);  ; time: 2004106 cycles
+onesM_ref; matrix type: integer; size: (1023, 1023);  ; time: 5103903 cycles
+onesM;     matrix type: integer; size: (1023, 1023);  ; vectorized time / reference time: 0.39266145927930057313
+
+
+Size: (1023,1024)
+onesM_vec; matrix type: integer; size: (1023, 1024);  ; time: 1960932 cycles
+onesM_ref; matrix type: integer; size: (1023, 1024);  ; time: 5064999 cycles
+onesM;     matrix type: integer; size: (1023, 1024);  ; vectorized time / reference time: 0.38715348216258282932
+
+
+Size: (1023,1025)
+onesM_vec; matrix type: integer; size: (1023, 1025);  ; time: 1962848 cycles
+onesM_ref; matrix type: integer; size: (1023, 1025);  ; time: 5069944 cycles
+onesM;     matrix type: integer; size: (1023, 1025);  ; vectorized time / reference time: 0.38715378315815718313
+
+
+Size: (1024,1024)
+onesM_vec; matrix type: integer; size: (1024, 1024);  ; time: 1962763 cycles
+onesM_ref; matrix type: integer; size: (1024, 1024);  ; time: 5069947 cycles
+onesM;     matrix type: integer; size: (1024, 1024);  ; vectorized time / reference time: 0.38713678860942729587
+
+
+Size: (1024,1025)
+onesM_vec; matrix type: integer; size: (1024, 1025);  ; time: 1964764 cycles
+onesM_ref; matrix type: integer; size: (1024, 1025);  ; time: 5074895 cycles
+onesM;     matrix type: integer; size: (1024, 1025);  ; vectorized time / reference time: 0.38715362583856416379
+
+
+Size: (1025,1025)
+onesM_vec; matrix type: integer; size: (1025, 1025);  ; time: 1966690 cycles
+onesM_ref; matrix type: integer; size: (1025, 1025);  ; time: 5079846 cycles
+onesM;     matrix type: integer; size: (1025, 1025);  ; vectorized time / reference time: 0.38715543738924368400
+
+
+
+
+Total program runtime: 130688837 cycles
+Accuracy test: PASSED

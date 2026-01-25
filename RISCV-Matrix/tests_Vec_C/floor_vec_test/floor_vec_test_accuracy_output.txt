@@ -1,0 +1,269 @@
+Wed Dec 21 13:52:04 EST 2022
+bbl loader
+
+
+floorM
+
+Accuracy checking: ENABLED
+int size: 4
+double size: 8
+complex size: 16
+Epsilon (equality threshold): 0.00000000222044604925
+
+
+Size: (1,1)
+floorM_vec; matrix type: integer; size: (1, 1);  ; time: 423 cycles
+floorM_ref; matrix type: integer; size: (1, 1);  ; time: 5576 cycles
+floorM;     matrix type: integer; size: (1, 1);  ; vectorized time / reference time: 0.07586083213773314737
+
+floorM_vec; matrix type: double; size: (1, 1);  ; time: 403 cycles
+floorM_ref; matrix type: double; size: (1, 1);  ; time: 552 cycles
+floorM;     matrix type: double; size: (1, 1);  ; vectorized time / reference time: 0.73007246376811596456
+
+floorM_vec; matrix type: complex; size: (1, 1);  ; time: 407 cycles
+floorM_ref; matrix type: complex; size: (1, 1);  ; time: 597 cycles
+floorM;     matrix type: complex; size: (1, 1);  ; vectorized time / reference time: 0.68174204355108880549
+
+
+Size: (1,2)
+floorM_vec; matrix type: integer; size: (1, 2);  ; time: 423 cycles
+floorM_ref; matrix type: integer; size: (1, 2);  ; time: 449 cycles
+floorM;     matrix type: integer; size: (1, 2);  ; vectorized time / reference time: 0.94209354120267263522
+
+floorM_vec; matrix type: double; size: (1, 2);  ; time: 403 cycles
+floorM_ref; matrix type: double; size: (1, 2);  ; time: 586 cycles
+floorM;     matrix type: double; size: (1, 2);  ; vectorized time / reference time: 0.68771331058020479521
+
+floorM_vec; matrix type: complex; size: (1, 2);  ; time: 415 cycles
+floorM_ref; matrix type: complex; size: (1, 2);  ; time: 674 cycles
+floorM;     matrix type: complex; size: (1, 2);  ; vectorized time / reference time: 0.61572700296735904946
+
+
+Size: (1,3)
+floorM_vec; matrix type: integer; size: (1, 3);  ; time: 423 cycles
+floorM_ref; matrix type: integer; size: (1, 3);  ; time: 469 cycles
+floorM;     matrix type: integer; size: (1, 3);  ; vectorized time / reference time: 0.90191897654584218813
+
+floorM_vec; matrix type: double; size: (1, 3);  ; time: 411 cycles
+floorM_ref; matrix type: double; size: (1, 3);  ; time: 619 cycles
+floorM;     matrix type: double; size: (1, 3);  ; vectorized time / reference time: 0.66397415185783525970
+
+floorM_vec; matrix type: complex; size: (1, 3);  ; time: 415 cycles
+floorM_ref; matrix type: complex; size: (1, 3);  ; time: 743 cycles
+floorM;     matrix type: complex; size: (1, 3);  ; vectorized time / reference time: 0.55854643337819653848
+
+
+Size: (2,2)
+floorM_vec; matrix type: integer; size: (2, 2);  ; time: 423 cycles
+floorM_ref; matrix type: integer; size: (2, 2);  ; time: 454 cycles
+floorM;     matrix type: integer; size: (2, 2);  ; vectorized time / reference time: 0.93171806167400883503
+
+floorM_vec; matrix type: double; size: (2, 2);  ; time: 411 cycles
+floorM_ref; matrix type: double; size: (2, 2);  ; time: 660 cycles
+floorM;     matrix type: double; size: (2, 2);  ; vectorized time / reference time: 0.62272727272727268488
+
+floorM_vec; matrix type: complex; size: (2, 2);  ; time: 415 cycles
+floorM_ref; matrix type: complex; size: (2, 2);  ; time: 807 cycles
+floorM;     matrix type: complex; size: (2, 2);  ; vectorized time / reference time: 0.51425030978934327397
+
+
+Size: (2,3)
+floorM_vec; matrix type: integer; size: (2, 3);  ; time: 431 cycles
+floorM_ref; matrix type: integer; size: (2, 3);  ; time: 467 cycles
+floorM;     matrix type: integer; size: (2, 3);  ; vectorized time / reference time: 0.92291220556745179326
+
+floorM_vec; matrix type: double; size: (2, 3);  ; time: 411 cycles
+floorM_ref; matrix type: double; size: (2, 3);  ; time: 740 cycles
+floorM;     matrix type: double; size: (2, 3);  ; vectorized time / reference time: 0.55540540540540539460
+
+floorM_vec; matrix type: complex; size: (2, 3);  ; time: 415 cycles
+floorM_ref; matrix type: complex; size: (2, 3);  ; time: 961 cycles
+floorM;     matrix type: complex; size: (2, 3);  ; vectorized time / reference time: 0.43184183142559834367
+
+
+Size: (3,3)
+floorM_vec; matrix type: integer; size: (3, 3);  ; time: 431 cycles
+floorM_ref; matrix type: integer; size: (3, 3);  ; time: 492 cycles
+floorM;     matrix type: integer; size: (3, 3);  ; vectorized time / reference time: 0.87601626016260158991
+
+floorM_vec; matrix type: double; size: (3, 3);  ; time: 411 cycles
+floorM_ref; matrix type: double; size: (3, 3);  ; time: 849 cycles
+floorM;     matrix type: double; size: (3, 3);  ; vectorized time / reference time: 0.48409893992932861995
+
+floorM_vec; matrix type: complex; size: (3, 3);  ; time: 415 cycles
+floorM_ref; matrix type: complex; size: (3, 3);  ; time: 1181 cycles
+floorM;     matrix type: complex; size: (3, 3);  ; vectorized time / reference time: 0.35139712108382725742
+
+
+Size: (127,127)
+floorM_vec; matrix type: integer; size: (127, 127);  ; time: 29688 cycles
+floorM_ref; matrix type: integer; size: (127, 127);  ; time: 49680 cycles
+floorM;     matrix type: integer; size: (127, 127);  ; vectorized time / reference time: 0.59758454106280189944
+
+floorM_vec; matrix type: double; size: (127, 127);  ; time: 63850 cycles
+floorM_ref; matrix type: double; size: (127, 127);  ; time: 647826 cycles
+floorM;     matrix type: double; size: (127, 127);  ; vectorized time / reference time: 0.09856041591414978209
+
+floorM_vec; matrix type: complex; size: (127, 127);  ; time: 127670 cycles
+floorM_ref; matrix type: complex; size: (127, 127);  ; time: 1239903 cycles
+floorM;     matrix type: complex; size: (127, 127);  ; vectorized time / reference time: 0.10296773215324102335
+
+
+Size: (127,128)
+floorM_vec; matrix type: integer; size: (127, 128);  ; time: 31523 cycles
+floorM_ref; matrix type: integer; size: (127, 128);  ; time: 49820 cycles
+floorM;     matrix type: integer; size: (127, 128);  ; vectorized time / reference time: 0.63273785628261747238
+
+floorM_vec; matrix type: double; size: (127, 128);  ; time: 62015 cycles
+floorM_ref; matrix type: double; size: (127, 128);  ; time: 654294 cycles
+floorM;     matrix type: double; size: (127, 128);  ; vectorized time / reference time: 0.09478155080132172339
+
+floorM_vec; matrix type: complex; size: (127, 128);  ; time: 127018 cycles
+floorM_ref; matrix type: complex; size: (127, 128);  ; time: 1305834 cycles
+floorM;     matrix type: complex; size: (127, 128);  ; vectorized time / reference time: 0.09726963764153789826
+
+
+Size: (127,129)
+floorM_vec; matrix type: integer; size: (127, 129);  ; time: 31571 cycles
+floorM_ref; matrix type: integer; size: (127, 129);  ; time: 50028 cycles
+floorM;     matrix type: integer; size: (127, 129);  ; vectorized time / reference time: 0.63106660270248660094
+
+floorM_vec; matrix type: double; size: (127, 129);  ; time: 63922 cycles
+floorM_ref; matrix type: double; size: (127, 129);  ; time: 658966 cycles
+floorM;     matrix type: double; size: (127, 129);  ; vectorized time / reference time: 0.09700348728158963985
+
+floorM_vec; matrix type: complex; size: (127, 129);  ; time: 127114 cycles
+floorM_ref; matrix type: complex; size: (127, 129);  ; time: 1316994 cycles
+floorM;     matrix type: complex; size: (127, 129);  ; vectorized time / reference time: 0.09651828330273334866
+
+
+Size: (128,128)
+floorM_vec; matrix type: integer; size: (128, 128);  ; time: 31571 cycles
+floorM_ref; matrix type: integer; size: (128, 128);  ; time: 50013 cycles
+floorM;     matrix type: integer; size: (128, 128);  ; vectorized time / reference time: 0.63125587347289702222
+
+floorM_vec; matrix type: double; size: (128, 128);  ; time: 63922 cycles
+floorM_ref; matrix type: double; size: (128, 128);  ; time: 659007 cycles
+floorM;     matrix type: double; size: (128, 128);  ; vectorized time / reference time: 0.09699745222736633199
+
+floorM_vec; matrix type: complex; size: (128, 128);  ; time: 127032 cycles
+floorM_ref; matrix type: complex; size: (128, 128);  ; time: 1317054 cycles
+floorM;     matrix type: complex; size: (128, 128);  ; vectorized time / reference time: 0.09645162612922476841
+
+
+Size: (128,129)
+floorM_vec; matrix type: integer; size: (128, 129);  ; time: 31582 cycles
+floorM_ref; matrix type: integer; size: (128, 129);  ; time: 50165 cycles
+floorM;     matrix type: integer; size: (128, 129);  ; vectorized time / reference time: 0.62956244393501448187
+
+floorM_vec; matrix type: double; size: (128, 129);  ; time: 63946 cycles
+floorM_ref; matrix type: double; size: (128, 129);  ; time: 663679 cycles
+floorM;     matrix type: double; size: (128, 129);  ; vectorized time / reference time: 0.09635079609268938639
+
+floorM_vec; matrix type: complex; size: (128, 129);  ; time: 128990 cycles
+floorM_ref; matrix type: complex; size: (128, 129);  ; time: 1326398 cycles
+floorM;     matrix type: complex; size: (128, 129);  ; vectorized time / reference time: 0.09724833722608146325
+
+
+Size: (129,129)
+floorM_vec; matrix type: integer; size: (129, 129);  ; time: 31586 cycles
+floorM_ref; matrix type: integer; size: (129, 129);  ; time: 52172 cycles
+floorM;     matrix type: integer; size: (129, 129);  ; vectorized time / reference time: 0.60542053208617652160
+
+floorM_vec; matrix type: double; size: (129, 129);  ; time: 63987 cycles
+floorM_ref; matrix type: double; size: (129, 129);  ; time: 670225 cycles
+floorM;     matrix type: double; size: (129, 129);  ; vectorized time / reference time: 0.09547092394345182975
+
+floorM_vec; matrix type: complex; size: (129, 129);  ; time: 129069 cycles
+floorM_ref; matrix type: complex; size: (129, 129);  ; time: 1337696 cycles
+floorM;     matrix type: complex; size: (129, 129);  ; vectorized time / reference time: 0.09648604765208237954
+
+
+Size: (1023,1023)
+floorM_vec; matrix type: integer; size: (1023, 1023);  ; time: 1963102 cycles
+floorM_ref; matrix type: integer; size: (1023, 1023);  ; time: 3139129 cycles
+floorM;     matrix type: integer; size: (1023, 1023);  ; vectorized time / reference time: 0.62536518887882597273
+
+floorM_vec; matrix type: double; size: (1023, 1023);  ; time: 4031610 cycles
+floorM_ref; matrix type: double; size: (1023, 1023);  ; time: 42033818 cycles
+floorM;     matrix type: double; size: (1023, 1023);  ; vectorized time / reference time: 0.09591348566052219915
+
+floorM_vec; matrix type: complex; size: (1023, 1023);  ; time: 8243033 cycles
+floorM_ref; matrix type: complex; size: (1023, 1023);  ; time: 84066670 cycles
+floorM;     matrix type: complex; size: (1023, 1023);  ; vectorized time / reference time: 0.09805352109224738100
+
+
+Size: (1023,1024)
+floorM_vec; matrix type: integer; size: (1023, 1024);  ; time: 1965011 cycles
+floorM_ref; matrix type: integer; size: (1023, 1024);  ; time: 3142177 cycles
+floorM;     matrix type: integer; size: (1023, 1024);  ; vectorized time / reference time: 0.62536610763811206759
+
+floorM_vec; matrix type: double; size: (1023, 1024);  ; time: 4035530 cycles
+floorM_ref; matrix type: double; size: (1023, 1024);  ; time: 42074907 cycles
+floorM;     matrix type: double; size: (1023, 1024);  ; vectorized time / reference time: 0.09591298680707720237
+
+floorM_vec; matrix type: complex; size: (1023, 1024);  ; time: 8070864 cycles
+floorM_ref; matrix type: complex; size: (1023, 1024);  ; time: 84148848 cycles
+floorM;     matrix type: complex; size: (1023, 1024);  ; vectorized time / reference time: 0.09591175864938757123
+
+
+Size: (1023,1025)
+floorM_vec; matrix type: integer; size: (1023, 1025);  ; time: 1966931 cycles
+floorM_ref; matrix type: integer; size: (1023, 1025);  ; time: 3145260 cycles
+floorM;     matrix type: integer; size: (1023, 1025);  ; vectorized time / reference time: 0.62536356294869099859
+
+floorM_vec; matrix type: double; size: (1023, 1025);  ; time: 4039474 cycles
+floorM_ref; matrix type: double; size: (1023, 1025);  ; time: 42115994 cycles
+floorM;     matrix type: double; size: (1023, 1025);  ; vectorized time / reference time: 0.09591306333646072713
+
+floorM_vec; matrix type: complex; size: (1023, 1025);  ; time: 8078752 cycles
+floorM_ref; matrix type: complex; size: (1023, 1025);  ; time: 84231044 cycles
+floorM;     matrix type: complex; size: (1023, 1025);  ; vectorized time / reference time: 0.09591181132694971689
+
+
+Size: (1024,1024)
+floorM_vec; matrix type: integer; size: (1024, 1024);  ; time: 1966931 cycles
+floorM_ref; matrix type: integer; size: (1024, 1024);  ; time: 3145245 cycles
+floorM;     matrix type: integer; size: (1024, 1024);  ; vectorized time / reference time: 0.62536654537245905949
+
+floorM_vec; matrix type: double; size: (1024, 1024);  ; time: 4039474 cycles
+floorM_ref; matrix type: double; size: (1024, 1024);  ; time: 42116035 cycles
+floorM;     matrix type: double; size: (1024, 1024);  ; vectorized time / reference time: 0.09591296996500263405
+
+floorM_vec; matrix type: complex; size: (1024, 1024);  ; time: 8078134 cycles
+floorM_ref; matrix type: complex; size: (1024, 1024);  ; time: 84231104 cycles
+floorM;     matrix type: complex; size: (1024, 1024);  ; vectorized time / reference time: 0.09590440604933778146
+
+
+Size: (1024,1025)
+floorM_vec; matrix type: integer; size: (1024, 1025);  ; time: 1968851 cycles
+floorM_ref; matrix type: integer; size: (1024, 1025);  ; time: 3148313 cycles
+floorM;     matrix type: integer; size: (1024, 1025);  ; vectorized time / reference time: 0.62536698225367048920
+
+floorM_vec; matrix type: double; size: (1024, 1025);  ; time: 4043418 cycles
+floorM_ref; matrix type: double; size: (1024, 1025);  ; time: 42157163 cycles
+floorM;     matrix type: double; size: (1024, 1025);  ; vectorized time / reference time: 0.09591295315578991787
+
+floorM_vec; matrix type: complex; size: (1024, 1025);  ; time: 8086640 cycles
+floorM_ref; matrix type: complex; size: (1024, 1025);  ; time: 84313360 cycles
+floorM;     matrix type: complex; size: (1024, 1025);  ; vectorized time / reference time: 0.09591172739409270509
+
+
+Size: (1025,1025)
+floorM_vec; matrix type: integer; size: (1025, 1025);  ; time: 1970782 cycles
+floorM_ref; matrix type: integer; size: (1025, 1025);  ; time: 3151393 cycles
+floorM;     matrix type: integer; size: (1025, 1025);  ; vectorized time / reference time: 0.62536852750513816090
+
+floorM_vec; matrix type: double; size: (1025, 1025);  ; time: 4047386 cycles
+floorM_ref; matrix type: double; size: (1025, 1025);  ; time: 42198330 cycles
+floorM;     matrix type: double; size: (1025, 1025);  ; vectorized time / reference time: 0.09591341647880377574
+
+floorM_vec; matrix type: complex; size: (1025, 1025);  ; time: 8094552 cycles
+floorM_ref; matrix type: complex; size: (1025, 1025);  ; time: 84395694 cycles
+floorM;     matrix type: complex; size: (1025, 1025);  ; vectorized time / reference time: 0.09591190754352940662
+
+
+
+
+Total program runtime: 5246520669 cycles
+Accuracy test: PASSED
