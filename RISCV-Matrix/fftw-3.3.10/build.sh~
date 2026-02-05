@@ -1,9 +1,0 @@
-#!/bin/bash
-
-source /home/zjt2/project/chipyard/env.sh
-
-./configure CC=riscv64-unknown-elf-gcc CFLAGS="-static -mcmodel=medany -march=rv64gcxhwacha" --prefix=/home/xw424/scratch60/RISCV-BLAS/riscv-library/fftw-3.3.10 --disable-fortran --host=riscv64-unknown-elf --enable-single
-
-make 
-
-make install

@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "stdio.h": "c",
-        "vector_defines.h": "c",
-        "cblas.h": "c"
-    },
-    "cmake.configureOnOpen": false
-}

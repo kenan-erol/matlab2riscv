@@ -1,0 +1,3 @@
+[submodule "RISCV-Matrix"]
+	path = RISCV-Matrix
+	url = https://github.com/kenan-erol/RISCV-Matrix.git
