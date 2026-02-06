@@ -1,4 +1,4 @@
-Welcome to my senior thesis
+Welcome to my senior thesis jit
 
 to clone:
 ```
