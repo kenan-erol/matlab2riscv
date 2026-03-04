@@ -1,32 +1,107 @@
-Organize the result section according to major topics. 
+The first critical phase of this project was to replicate the original RISCV-Matrix execution environment and rebuild the benchmark suite under the current toolchain. The historical speed results were generated using an older cross-compiler toolchain and test suite configuration. This section compares those original results, designated the Grace baseline (commit \texttt{113f4c66}, December 2022), against the current, optimized pipeline (February 2026). All cycle counts were measured on the Spike RISC-V ISA simulator with a vector length of VLEN=1024.
 
-\section{subsection}
-The reader will scan through the section headers at the first pass. Subsection headings help organizations and help the reader find the parts of interest.
+\section{Total Runtime Comparison}
 
-Make section headings as specific and information-rich as possible. Make sure to interpret the results. Summarize the collection of experimental results as clearly and as economically as possible. 
+Table~\ref{tab:total-runtime} details the total runtime comparison across thirty distinct operational tests, highlighting the specific cycle counts and the corresponding percentage changes in execution speed.
 
-\section{How you should prepare figures}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.3\textwidth]{figs/QR_PosterSessionDirectory.png}
-    \vskip -0.2in
-    \caption{QR Code for Poster Session Program, Spring 2024.}
-    \label{fig:qr_poster}
-\end{figure}
-The figure and table captions should contain enough context so that a reader can understand the content of the figure or table without having to refer to the text.
+\input{tables/table_total_runtime}
 
-Any labels or uncommon abbreviations need to be explained in the figure or table caption.
+An exhaustive analysis of the data presented in Table~\ref{tab:total-runtime} reveals several critical insights regarding the current state of the compilation pipeline. Across the entire test suite, the overall execution time decreased by approximately 3.9 percent, dropping from 419.50 Giga-cycles to 403.01 Giga-cycles. However, the distribution of these performance gains is highly non-uniform. The majority of the standard arithmetic and logical operations, such as ceiling calculations, logical ANDs, and greater-than-or-equal comparisons, experienced moderate speedups ranging from ten to twenty percent. This systemic improvement is directly attributable to significant enhancements within the underlying RISC-V GNU cross-compiler toolchain. The newer iterations of the GCC compiler generate substantially tighter scalar and vector code, featuring optimized register allocation algorithms and superior instruction scheduling that were unavailable during the generation of the historical baseline.
 
-\section{In the Results section.. }
+The four core arithmetic tests---\texttt{minus} ($-17.3\%$), \texttt{plus} ($-17.3\%$), \texttt{times} ($-16.4\%$), and \texttt{scale} ($-10.9\%$)---exhibited reductions consistent with the broader toolchain-driven improvements, confirming that the GCC updates benefit both vectorized and scalar code paths uniformly across these operations.
 
-\begin{itemize}
-\item Organize this section according to major topics. 
-\item Subheadings to make the organization clear and to help the reader \item scan through the text to find the parts of interest.
-\item Make these section headings as specific and information-rich as possible but try to cover the major common points.
-\item IMPORTANT: Interpret your results. (e.g., How do your results compare to related studies? Do your results accord with theory or are they surprising in some way? What are the underlying mechanisms that may explain what you found?)
-\item Summarize the collection of experimental results as clearly and as economically as possible. 
-\item The figure and table captions should contain enough context so that a reader can understand the content of the figure or table without having to refer to the text.
-\item Any labels or uncommon abbreviations need to be explained in the figure or table caption.
-\end{itemize}
+The four comparison tests utilizing Octave-mode semantics---\texttt{octave\_ge}, \texttt{octave\_gt}, \texttt{octave\_le}, and \texttt{octave\_lt}---showed negligible improvement ($<1\%$). These tests dominate the total runtime at approximately 51 Giga-cycles each due to their complex multi-mode comparison logic, which involves dispatching to different internal functions depending on the \texttt{COMPARISON\_MODE} configuration. Their dominance skews the aggregate improvement figure downward; excluding them, the remaining 26 tests show a collective improvement of approximately 8 percent.
 
-write this section and approach section first.... see slides
+\subsection{The \texttt{divide} Anomaly}
+
+The \texttt{divide} test is the only operation that exhibited a total runtime \emph{increase} ($+3.0\%$, from 5.47 to 5.64 Gcycles). An investigation of the per-type-combination cycle counts at $N = 1{,}050{,}625$ revealed that this regression is localized to the complex division reference implementations. The reference cycle counts for complex-involving type combinations approximately doubled between Grace and current (e.g., \texttt{int$\times$complex ref}: 37.1M $\rightarrow$ 74.9M cycles; \texttt{double$\times$complex ref}: 36.1M $\rightarrow$ 73.9M cycles), while the vectorized cycle counts remained stable ($\sim$8M cycles). This suggests that the updated GCC toolchain generates less efficient scalar code for complex division specifically---likely due to changes in how the compiler handles the multi-step real/imaginary arithmetic required for complex number division (\texttt{(a+bi)/(c+di)}). Interestingly, this simultaneously \emph{improved} the vec/ref ratio for those combinations (e.g., \texttt{int$\times$complex}: 0.216 $\rightarrow$ 0.106), because the reference denominator grew while the vectorized numerator remained constant.
+
+Conversely, the \texttt{int$\times$int} reference for divide dropped from 14.4M to 4.8M ($-66\%$), indicating that the compiler dramatically improved integer-only scalar division. This demonstrates that the same toolchain update can simultaneously improve and degrade performance across different data type combinations within a single function.
+
+\section{Vectorization Effectiveness}
+
+Further analysis was conducted to evaluate the efficacy of the vectorization implementation relative to scalar execution across different variable types. Tables~\ref{tab:ratio-unary} and~\ref{tab:ratio-binary-diag} present the vector-to-reference execution ratios at the largest tested matrix size, encompassing approximately one million elements. A ratio less than 1.0 indicates that the vectorized implementation is faster than the scalar reference, while a ratio greater than 1.0 indicates a performance degradation. The tables compare Grace and current ratios side-by-side.
+
+Note on type combinations: for binary operations (e.g., \texttt{plusM}, \texttt{divideM}), the test suite evaluates every combination of input types. The notation ``int $\times$ double'' means the left operand matrix contains integers and the right operand matrix contains doubles. The result type is determined by C type promotion rules.
+
+\input{tables/table_ratio_unary}
+
+\input{tables/table_ratio_binary_diag}
+
+A comprehensive breakdown of all nine type combinations for each binary operation is provided in Table~\ref{tab:ratio-binary-full} in the Appendix.
+
+\subsection{Ratio Shifts Due to Compiler Improvements}
+
+While the vectorized implementations maintained approximately constant cycle counts between Grace and current, several vec/ref ratios increased significantly---meaning the scalar \emph{reference} code got faster, narrowing the vectorization advantage. Three distinct patterns were identified:
+
+\paragraph{Pattern 1: Integer memory operations.} For operations that perform simple element-wise copies or integer manipulation---\texttt{ceil}, \texttt{floor}, \texttt{round}, \texttt{full\_duplicate}, and \texttt{ones}---the integer reference cycle counts dropped uniformly from $\sim$3.2M to $\sim$2.2M (a 31\% improvement). The vectorized counts remained at $\sim$2.0M. This caused the integer ratio to jump from $\sim$0.625 to $\sim$0.910, nearly reaching parity. The compiler likely now generates optimized memory copy or store sequences (e.g., using wider loads/stores) that approach vector performance for these trivially simple operations.
+
+\paragraph{Pattern 2: Logical operations on non-integer types.} For \texttt{not} and \texttt{true}, the double and complex reference counts dropped by $\sim$65\% (e.g., \texttt{not} double ref: 10.3M $\rightarrow$ 3.6M). The vectorized counts stayed at $\sim$3.1M. This caused the double/complex ratios to jump from $\sim$0.30 to $\sim$0.85. These functions perform type-conversion-heavy logic that the updated compiler now optimizes far more aggressively.
+
+\paragraph{Pattern 3: Binary operations.} Several binary operations exhibited similar compiler-driven ref improvements for specific type combinations. The \texttt{and} (dbl$\times$dbl), \texttt{matlab\_ge} through \texttt{matlab\_lt} (dbl$\times$dbl), and \texttt{octave\_ge} through \texttt{octave\_lt} (dbl$\times$dbl) all showed double reference speedups of 3--5$\times$, pushing their ratios from $\sim$0.25 to $\sim$0.83. The full details are available in the Appendix (Table~\ref{tab:ratio-binary-full}).
+
+In all cases, the vectorized code did \emph{not} get slower---the reference code simply got faster. This means the absolute performance of the library improved or held steady, but the \emph{relative} advantage of explicit vectorization narrowed for these specific combinations.
+
+\subsection{The \texttt{isEqual} Anomaly}
+
+The \texttt{isEqual} test consistently returns a vec/ref ratio greater than 1.0 for complex type combinations (e.g., complex$\times$complex: 1.172 in Grace, 1.121 in current), indicating that the vectorized implementation is slower than scalar. An extensive investigation revealed that this is a \emph{test harness artifact} caused by short-circuit evaluation.
+
+The evidence is definitive: the raw cycle counts for \texttt{isEqual} complex$\times$complex remain \textbf{exactly 75 cycles (vec) and 64 cycles (ref) at every single matrix size tested}---from $N=1$ through $N=1{,}050{,}625$:
+
+\begin{table}[H]
+\centering
+\caption{The \texttt{isEqual} complex$\times$complex cycle counts remain constant across all matrix sizes, proving short-circuit evaluation.}
+\label{tab:isequal-evidence}
+\small
+\begin{tabular}{r r r r}
+\toprule
+Size $N$ & Vec (cycles) & Ref (cycles) & Ratio \\
+\midrule
+1 & 75 & 64 & 1.172 \\
+9 & 75 & 64 & 1.172 \\
+16,384 & 75 & 64 & 1.172 \\
+1,050,625 & 75 & 64 & 1.172 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+If the implementations were actually traversing the data, the cycle counts would scale linearly with $N$. The fact that they remain locked at 75/64 cycles regardless of input size proves that both implementations exit after comparing only the \emph{first element}. A forensic examination of the test data generation confirmed that the \texttt{isEqual} test compares matrices populated with entirely divergent data streams, guaranteeing an immediate mismatch.
+
+The 17\% performance gap (75 vs.\ 64 cycles) is attributable to \emph{vector setup overhead}: the vectorized path must execute \texttt{vsetvl} (vector length configuration) and stride-loading instructions before performing even a single comparison, while the scalar path directly loads and compares two values. In realistic workloads where equality must be verified across a full dataset traversal, the vectorized implementation vastly outperforms scalar execution, as evidenced by the complex$\times$double combination achieving a ratio of 0.015 (66$\times$ speedup).
+
+\subsection{The \texttt{arg} Function Parity}
+
+The \texttt{arg} function for complex numbers returns a ratio of exactly 1.000 in both Grace and current. A review of the source code confirmed that the \texttt{\_vec} implementation is merely a wrapper around a standard scalar loop executing the C library \texttt{carg()} function. Because the complex argument calculation was never mapped to RVV intrinsics, no parallelization occurs, resulting in identical vec and ref execution times.
+
+\section{Toolchain-Induced Vectorization Regressions}
+
+While the preceding section described cases where the vec/ref ratio \emph{increased but remained below 1.0} (vec still faster), three specific type combinations crossed the 1.0 threshold entirely---meaning the scalar reference now outperforms the vectorized implementation:
+
+\begin{table}[H]
+\centering
+\caption{Type combinations where the scalar reference became faster than the vectorized implementation in the current toolchain.}
+\label{tab:regressions}
+\small
+\begin{tabular}{l l r r r r}
+\toprule
+Test & Type Combo & \multicolumn{2}{c}{Grace} & \multicolumn{2}{c}{Current} \\
+ & & Ratio & Ref (cycles) & Ratio & Ref (cycles) \\
+\midrule
+and & dbl $\times$ dbl & 0.493 & 10.9M & 2.678 & 2.0M \\
+and & cpx $\times$ dbl & 0.408 & 13.3M & 2.464 & 2.2M \\
+or & cpx $\times$ dbl & 0.477 & 13.3M & 2.392 & 2.2M \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In all three cases, the vectorized cycle counts remained approximately constant ($\sim$5.3M for \texttt{and}, $\sim$5.4M for \texttt{or}). The regressions are entirely driven by GCC's updated optimizer reducing the reference cycle counts by a factor of five to six. This indicates that the newer compiler auto-vectorizes or otherwise aggressively optimizes these simple logical operations to the point where they outperform the hand-written RVV intrinsic code.
+
+This has two implications. First, compiler evolution can erode the benefits of manual vectorization if the hand-written code is not periodically re-optimized. Second, the LMUL settings for these functions may be suboptimal---using LMUL=8 for simple logical operations could restore the vectorization advantage by processing more elements per instruction.
+
+\section{Absolute Cycle Counts}
+
+To provide full transparency into the raw performance data, Table~\ref{tab:cycles-unary} presents the absolute vectorized and reference cycle counts at the largest matrix size for both Grace and current environments.
+
+\input{tables/table_cycles_unary}
+
+These raw counts confirm the central finding: vectorized implementations maintained or slightly improved their absolute performance, while compiler improvements to the scalar reference code drove all observed ratio shifts.

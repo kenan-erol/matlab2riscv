@@ -1,0 +1,22 @@
+\begin{table}[H]
+\centering
+\caption{Vectorized and reference cycle counts at $N \approx 1{,}050{,}625$ for unary operations (Grace vs Current).}
+\label{tab:cycles-unary}
+\tiny
+\begin{tabular}{l | r r r r | r r r r | r r r r}
+\toprule
+ & \multicolumn{4}{c|}{int} & \multicolumn{4}{c|}{double} & \multicolumn{4}{c}{complex} \\
+Test & G.vec & C.vec & G.ref & C.ref & G.vec & C.vec & G.ref & C.ref & G.vec & C.vec & G.ref & C.ref \\
+\midrule
+  abs & 2.0M & 2.0M & 10.3M & 10.3M & 4.0M & 3.9M & 10.2M & 10.1M & 4.0M & 4.0M & 913.9M & 948.4M \\
+  arg & 4.0M & 4.0M & 64.3M & 54.3M & 4.0M & 3.9M & 63.2M & 53.2M & 125.8M & 109.5M & 125.8M & 109.5M \\
+  ceil & 2.0M & 2.0M & 3.2M & 2.2M & 4.0M & 4.0M & 42.2M & 42.5M & 8.1M & 8.0M & 83.3M & 85.2M \\
+  floor & 2.0M & 2.0M & 3.2M & 2.2M & 4.0M & 4.0M & 42.2M & 42.5M & 8.1M & 8.0M & 84.4M & 86.7M \\
+  full\_duplicate & 2.0M & 2.0M & 3.2M & 2.2M & 3.9M & 3.9M & 6.3M & 4.3M & 7.9M & 7.8M & 12.6M & 12.9M \\
+  not & 3.0M & 3.0M & 8.6M & 8.6M & 3.1M & 3.1M & 10.3M & 3.6M & 3.2M & 3.2M & 10.7M & 3.8M \\
+  ones & 2.0M & 2.0M & 5.1M & 2.1M & --- & --- & --- & --- & --- & --- & --- & --- \\
+  round & 2.0M & 2.0M & 3.2M & 2.2M & 4.2M & 4.1M & 39.8M & 35.9M & 8.4M & 8.2M & 84.9M & 77.0M \\
+  true & 3.0M & 3.0M & 8.9M & 8.9M & 3.1M & 3.1M & 10.0M & 3.6M & 3.2M & 3.2M & 11.0M & 3.8M \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,97 @@
+\begin{longtable}{l l r r r r}
+\caption{Vectorized and reference cycle counts at $N \approx 1{,}050{,}625$ — diagonal type combos for binary operations.}
+\label{tab:cycles-binary} \\
+\toprule
+Test & Type & Grace vec & Cur. vec & Grace ref & Cur. ref \\
+\midrule
+\endfirsthead
+\toprule
+Test & Type & Grace vec & Cur. vec & Grace ref & Cur. ref \\
+\midrule
+\endhead
+  and & i×i & 7.0M & 7.0M & 11.0M & 11.0M \\
+   & d×d & 5.4M & 5.3M & 10.9M & 2.0M \\
+   & c×c & 5.5M & 5.4M & 15.1M & 13.0M \\
+\midrule
+  divide & i×i & 4.0M & 4.0M & 14.4M & 4.8M \\
+   & d×d & 4.0M & 3.9M & 12.3M & 12.2M \\
+   & c×c & 8.5M & 8.2M & 36.1M & 61.3M \\
+\midrule
+  equal & i×i & 3.1M & 3.0M & 17.7M & 21.9M \\
+   & d×d & 3.2M & 3.1M & 16.6M & 20.8M \\
+   & c×c & 3.3M & 3.2M & 20.8M & 25.0M \\
+\midrule
+  isEqual & i×i & 51 & 48 & 76 & 73 \\
+   & d×d & 55 & 49 & 69 & 67 \\
+   & c×c & 75 & 65 & 64 & 58 \\
+\midrule
+  matlab\_ge & i×i & 3.1M & 3.0M & 10.9M & 10.9M \\
+   & d×d & 3.1M & 3.1M & 12.4M & 3.8M \\
+   & c×c & 3.2M & 3.1M & 12.4M & 12.4M \\
+\midrule
+  matlab\_gt & i×i & 3.1M & 3.0M & 10.9M & 10.9M \\
+   & d×d & 3.1M & 3.1M & 12.4M & 3.8M \\
+   & c×c & 3.2M & 3.1M & 12.4M & 12.4M \\
+\midrule
+  matlab\_le & i×i & 3.1M & 3.0M & 10.9M & 10.9M \\
+   & d×d & 3.1M & 3.1M & 11.4M & 3.8M \\
+   & c×c & 3.2M & 3.1M & 11.4M & 11.4M \\
+\midrule
+  matlab\_lt & i×i & 3.1M & 3.0M & 10.9M & 10.9M \\
+   & d×d & 3.1M & 3.1M & 11.4M & 3.8M \\
+   & c×c & 3.2M & 3.1M & 11.4M & 11.4M \\
+\midrule
+  minus & i×i & 13.5M & 13.4M & 17.7M & 17.7M \\
+   & d×d & 4.0M & 3.9M & 12.3M & 12.2M \\
+   & c×c & 8.0M & 7.9M & 20.3M & 16.1M \\
+\midrule
+  mtimes & i×i & 925.2K & 740.7K & 15.6M & 15.4M \\
+   & d×d & 794.5K & 611.2K & 15.2M & 15.2M \\
+   & c×c & 1.8M & 1.3M & 41.1M & 41.1M \\
+\midrule
+  ne & i×i & 3.1M & 3.0M & 18.7M & 22.9M \\
+   & d×d & 3.2M & 3.1M & 17.7M & 21.9M \\
+   & c×c & 3.3M & 3.2M & 21.9M & 26.1M \\
+\midrule
+  octave\_ge & i×i & 3.1M & 3.0M & 10.9M & 10.9M \\
+   & d×d & 3.1M & 3.1M & 12.4M & 3.8M \\
+   & c×c & 303.5M & 270.2M & 2143.5M & 2197.5M \\
+\midrule
+  octave\_gt & i×i & 3.1M & 3.0M & 10.9M & 10.9M \\
+   & d×d & 3.1M & 3.1M & 12.4M & 3.8M \\
+   & c×c & 303.5M & 270.2M & 2143.5M & 2197.5M \\
+\midrule
+  octave\_le & i×i & 3.1M & 3.0M & 10.9M & 10.9M \\
+   & d×d & 3.1M & 3.1M & 11.4M & 3.8M \\
+   & c×c & 303.5M & 270.2M & 2151.9M & 2211.2M \\
+\midrule
+  octave\_lt & i×i & 3.1M & 3.0M & 10.9M & 10.9M \\
+   & d×d & 3.1M & 3.1M & 11.4M & 3.8M \\
+   & c×c & 303.5M & 270.2M & 2151.9M & 2211.2M \\
+\midrule
+  or & i×i & 7.0M & 7.0M & 10.9M & 10.9M \\
+   & d×d & 5.4M & 5.3M & 10.3M & 10.3M \\
+   & c×c & 5.5M & 5.4M & 11.9M & 12.1M \\
+\midrule
+  pairwise\_max & i×i & 66.4K & 49.7K & 60.0M & 59.8M \\
+   & d×d & 132.0K & 99.0K & 32.7M & 24.4M \\
+   & c×c & 293.1M & 259.9M & 2175.6M & 2229.4M \\
+\midrule
+  pairwise\_min & i×i & 66.4K & 49.7K & 60.0M & 59.8M \\
+   & d×d & 132.0K & 99.0K & 32.7M & 24.4M \\
+   & c×c & 293.1M & 259.9M & 2185.1M & 2244.1M \\
+\midrule
+  plus & i×i & 13.5M & 13.4M & 17.7M & 17.7M \\
+   & d×d & 4.0M & 3.9M & 12.3M & 12.2M \\
+   & c×c & 8.0M & 7.9M & 20.3M & 16.1M \\
+\midrule
+  scale & i×i & --- & --- & --- & --- \\
+   & d×d & --- & --- & --- & --- \\
+   & c×c & --- & --- & --- & --- \\
+\midrule
+  times & i×i & 13.5M & 13.4M & 17.7M & 17.7M \\
+   & d×d & 4.0M & 3.9M & 12.3M & 12.2M \\
+   & c×c & 8.0M & 7.9M & 26.6M & 26.6M \\
+\midrule
+\bottomrule
+\end{longtable}
