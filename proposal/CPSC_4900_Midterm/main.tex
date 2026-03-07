@@ -16,6 +16,7 @@
 \graphicspath{ {images/} }
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{longtable}
 \usepackage[a4paper,width=150mm,top=35mm,bottom=35mm,bindingoffset=6mm]{geometry}
 
 \usepackage{float}
@@ -29,7 +30,6 @@ colorlinks,bookmarksopen,bookmarksnumbered,citecolor=black,urlcolor=black
 
 \usepackage{titlesec} % Add this line
 \usepackage{booktabs}
-\usepackage{longtable}
 % Customize chapter title format
 \titleformat{\chapter}[hang] 
   {\normalfont\huge\bfseries}{\thechapter}{1em}{}
@@ -44,10 +44,13 @@ colorlinks,bookmarksopen,bookmarksnumbered,citecolor=black,urlcolor=black
 \input{titlepage}
 
 \chapter*{Acknowledgements}
-Acknowledge your funding sources. The NSF requires text like "This work was supported by the National Science Foundation under grant EIA NN-NNNNN."
+I want to express my gratitude to my family for their continuous support and guidance. Special thanks to the Yale Department of Computer Science for providing a fantastic environment for academic growth. I'm grateful for the opportunities, scholarships, and resources that have enriched my time here! Finally I would like to thank my advisor Professor Manohar for his guidance across my time as an EECS major and throughout this project. 
 
-Acknowledge people and/or organizations who contributed to your work. 
-e.g., I want to express my gratitude to ... for her support and guidance. ...  Special thanks to the Yale Department of Computer Science for providing a fantastic environment for academic growth. I'm grateful for the opportunities and resources that have enriched my time here!
+Computational
+resources were provided by the Yale Grace cluster. This
+project was undertaken as part of the CPSC 4900 Senior Thesis course at Yale University under the supervision of
+the Director of Undergraduate Studies, Professor Theodore
+Kim.
 
 {
   \hypersetup{linkcolor=black}
@@ -67,7 +70,7 @@ e.g., I want to express my gratitude to ... for her support and guidance. ...  S
 \chapter{Background} \label{ch:background}
 \input{background}
 
-\chapter{Methodology} \label{ch:methodology}
+\chapter{Design} \label{ch:methodology}
 \input{methodology}
 
 
@@ -80,8 +83,8 @@ e.g., I want to express my gratitude to ... for her support and guidance. ...  S
 \chapter{Conclusions} \label{ch:conclusion}
 \input{conclusion}
 
-\chapter{Future Work} \label{ch:futurework}
-\input{futurework}
+% \chapter{Future Work} \label{ch:futurework}
+% \input{futurework}
 
 
 \printbibliography

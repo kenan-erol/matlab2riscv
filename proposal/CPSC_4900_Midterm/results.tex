@@ -1,3 +1,38 @@
+% 80\% RAHH
+
+% Organize the result section according to major topics. 
+
+% \section{subsection}
+% The reader will scan through the section headers at the first pass. Subsection headings help organizations and help the reader find the parts of interest.
+
+% Make section headings as specific and information-rich as possible. Make sure to interpret the results. Summarize the collection of experimental results as clearly and as economically as possible. 
+
+% \section{How you should prepare figures}
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.3\textwidth]{figs/QR_PosterSessionDirectory.png}
+%     \vskip -0.2in
+%     \caption{QR Code for Poster Session Program, Spring 2024.}
+%     \label{fig:qr_poster}
+% \end{figure}
+% The figure and table captions should contain enough context so that a reader can understand the content of the figure or table without having to refer to the text.
+
+% Any labels or uncommon abbreviations need to be explained in the figure or table caption.
+
+% \section{In the Results section.. }
+
+% \begin{itemize}
+% \item Organize this section according to major topics. 
+% \item Subheadings to make the organization clear and to help the reader \item scan through the text to find the parts of interest.
+% \item Make these section headings as specific and information-rich as possible but try to cover the major common points.
+% \item IMPORTANT: Interpret your results. (e.g., How do your results compare to related studies? Do your results accord with theory or are they surprising in some way? What are the underlying mechanisms that may explain what you found?)
+% \item Summarize the collection of experimental results as clearly and as economically as possible. 
+% \item The figure and table captions should contain enough context so that a reader can understand the content of the figure or table without having to refer to the text.
+% \item Any labels or uncommon abbreviations need to be explained in the figure or table caption.
+% \end{itemize}
+
+% write this section and approach section first.... see slides
+
 The first critical phase of this project was to replicate the original RISCV-Matrix execution environment and rebuild the benchmark suite under the current toolchain. The historical speed results were generated using an older cross-compiler toolchain and test suite configuration. This section compares those original results, designated the Grace baseline (commit \texttt{113f4c66}, December 2022), against the current, optimized pipeline (February 2026). All cycle counts were measured on the Spike RISC-V ISA simulator with a vector length of VLEN=1024.
 
 \section{Total Runtime Comparison}
@@ -10,7 +45,7 @@ An exhaustive analysis of the data presented in Table~\ref{tab:total-runtime} re
 
 The four core arithmetic tests---\texttt{minus} ($-17.3\%$), \texttt{plus} ($-17.3\%$), \texttt{times} ($-16.4\%$), and \texttt{scale} ($-10.9\%$)---exhibited reductions consistent with the broader toolchain-driven improvements, confirming that the GCC updates benefit both vectorized and scalar code paths uniformly across these operations.
 
-The four comparison tests utilizing Octave-mode semantics---\texttt{octave\_ge}, \texttt{octave\_gt}, \texttt{octave\_le}, and \texttt{octave\_lt}---showed negligible improvement ($<1\%$). These tests dominate the total runtime at approximately 51 Giga-cycles each due to their complex multi-mode comparison logic, which involves dispatching to different internal functions depending on the \texttt{COMPARISON\_MODE} configuration. Their dominance skews the aggregate improvement figure downward; excluding them, the remaining 26 tests show a collective improvement of approximately 8 percent.
+The four comparison tests utilizing Octave-mode semantics—octave ge, octave gt, octave le, and octave lt—showed negligible improvement ($< 1\%$). These tests dominate the total runtime at approximately 51 Giga-cycles each (versus $\sim$3.6 Giga-cycles for their MATLAB-mode counterparts) because Octave comparison semantics for complex numbers require computing the magnitude ($|z| = \sqrt{\text{re}^2 + \text{im}^2}$) for both operands and, when magnitudes are equal, resolving ties via the phase angle ($\text{atan2}(\text{im}, \text{re})$). The phase angle computation currently executes as a scalar \texttt{carg()} loop since \texttt{argM\_vec} was never mapped to RVV intrinsics, making it the dominant cost. In contrast, MATLAB-mode comparisons only compare the real parts of complex numbers, requiring a single vector comparison instruction. Their dominance skews the aggregate improvement figure downward; excluding them, the remaining 26 tests show a collective improvement of 7.2 percent
 
 \subsection{The \texttt{divide} Anomaly}
 
@@ -20,7 +55,7 @@ Conversely, the \texttt{int$\times$int} reference for divide dropped from 14.4M 
 
 \section{Vectorization Effectiveness}
 
-Further analysis was conducted to evaluate the efficacy of the vectorization implementation relative to scalar execution across different variable types. Tables~\ref{tab:ratio-unary} and~\ref{tab:ratio-binary-diag} present the vector-to-reference execution ratios at the largest tested matrix size, encompassing approximately one million elements. A ratio less than 1.0 indicates that the vectorized implementation is faster than the scalar reference, while a ratio greater than 1.0 indicates a performance degradation. The tables compare Grace and current ratios side-by-side.
+Further analysis was conducted to evaluate the efficacy of the vectorization implementation relative to scalar execution across different variable types. Tables~\ref{tab:ratio-unary} and~\ref{tab:ratio-binary-diag} present the vector-to-reference execution ratios at the largest tested matrix size. A ratio less than 1.0 indicates that the vectorized implementation is faster than the scalar reference, while a ratio greater than 1.0 indicates a performance degradation. The tables compare Grace and current ratios side-by-side.
 
 Note on type combinations: for binary operations (e.g., \texttt{plusM}, \texttt{divideM}), the test suite evaluates every combination of input types. The notation ``int $\times$ double'' means the left operand matrix contains integers and the right operand matrix contains doubles. The result type is determined by C type promotion rules.
 
@@ -34,7 +69,7 @@ A comprehensive breakdown of all nine type combinations for each binary operatio
 
 While the vectorized implementations maintained approximately constant cycle counts between Grace and current, several vec/ref ratios increased significantly---meaning the scalar \emph{reference} code got faster, narrowing the vectorization advantage. Three distinct patterns were identified:
 
-\paragraph{Pattern 1: Integer memory operations.} For operations that perform simple element-wise copies or integer manipulation---\texttt{ceil}, \texttt{floor}, \texttt{round}, \texttt{full\_duplicate}, and \texttt{ones}---the integer reference cycle counts dropped uniformly from $\sim$3.2M to $\sim$2.2M (a 31\% improvement). The vectorized counts remained at $\sim$2.0M. This caused the integer ratio to jump from $\sim$0.625 to $\sim$0.910, nearly reaching parity. The compiler likely now generates optimized memory copy or store sequences (e.g., using wider loads/stores) that approach vector performance for these trivially simple operations.
+\paragraph{Pattern 1: Integer memory operations.} For operations that perform simple element-wise copies or integer manipulation---\texttt{ceil}, \texttt{floor}, \texttt{round}, \texttt{full\_duplicate}, and \texttt{ones}---the integer reference cycle counts dropped uniformly from $\sim$3.2M to $\sim$2.2M (a 31\% improvement). The vectorized counts remained at $\sim$2.0M. This caused the integer ratio to jump from $\sim$0.625 to $\sim$0.910, nearly reaching parity. The compiler likely now generates optimized memory copy or store sequences (e.g., using wider loads/stores) that approach vector performance for these operations.
 
 \paragraph{Pattern 2: Logical operations on non-integer types.} For \texttt{not} and \texttt{true}, the double and complex reference counts dropped by $\sim$65\% (e.g., \texttt{not} double ref: 10.3M $\rightarrow$ 3.6M). The vectorized counts stayed at $\sim$3.1M. This caused the double/complex ratios to jump from $\sim$0.30 to $\sim$0.85. These functions perform type-conversion-heavy logic that the updated compiler now optimizes far more aggressively.
 
@@ -44,9 +79,9 @@ In all cases, the vectorized code did \emph{not} get slower---the reference code
 
 \subsection{The \texttt{isEqual} Anomaly}
 
-The \texttt{isEqual} test consistently returns a vec/ref ratio greater than 1.0 for complex type combinations (e.g., complex$\times$complex: 1.172 in Grace, 1.121 in current), indicating that the vectorized implementation is slower than scalar. An extensive investigation revealed that this is a \emph{test harness artifact} caused by short-circuit evaluation.
+The \texttt{isEqual} test consistently returns a vec/ref ratio greater than 1.0 for complex type combinations (e.g., complex$\times$complex: 1.172 in Grace, 1.121 in current), indicating that the vectorized implementation is slower than scalar. Investigation revealed that this is a \emph{test harness artifact} caused by short-circuit evaluation.
 
-The evidence is definitive: the raw cycle counts for \texttt{isEqual} complex$\times$complex remain \textbf{exactly 75 cycles (vec) and 64 cycles (ref) at every single matrix size tested}---from $N=1$ through $N=1{,}050{,}625$:
+The evidence shows that the raw cycle counts for \texttt{isEqual} complex$\times$complex remain \textbf{exactly 75 cycles (vec) and 64 cycles (ref) at every single matrix size tested}---from $N=1$ through $N=1{,}050{,}625$:
 
 \begin{table}[H]
 \centering
@@ -65,9 +100,9 @@ Size $N$ & Vec (cycles) & Ref (cycles) & Ratio \\
 \end{tabular}
 \end{table}
 
-If the implementations were actually traversing the data, the cycle counts would scale linearly with $N$. The fact that they remain locked at 75/64 cycles regardless of input size proves that both implementations exit after comparing only the \emph{first element}. A forensic examination of the test data generation confirmed that the \texttt{isEqual} test compares matrices populated with entirely divergent data streams, guaranteeing an immediate mismatch.
+If the implementations were actually traversing the data, the cycle counts would scale linearly with $N$. The fact that they remain locked at 75/64 cycles regardless of input size proves that both implementations exit after comparing only the \emph{first element}. An examination of the test data generation confirmed that the \texttt{isEqual} test compares matrices populated with entirely divergent data streams, guaranteeing an immediate mismatch.
 
-The 17\% performance gap (75 vs.\ 64 cycles) is attributable to \emph{vector setup overhead}: the vectorized path must execute \texttt{vsetvl} (vector length configuration) and stride-loading instructions before performing even a single comparison, while the scalar path directly loads and compares two values. In realistic workloads where equality must be verified across a full dataset traversal, the vectorized implementation vastly outperforms scalar execution, as evidenced by the complex$\times$double combination achieving a ratio of 0.015 (66$\times$ speedup).
+The 17\% performance gap (75 vs.\ 64 cycles) is attributable to \emph{vector setup overhead}: the vectorized path must execute \texttt{vsetvl} (vector length configuration) and stride-loading instructions before performing comparisons. The scalar path directly loads and compares two values. In realistic workloads where equality must be verified across a full dataset traversal, the vectorized implementation vastly outperforms scalar execution, as evidenced by the complex$\times$double combination achieving a ratio of 0.015 (66$\times$ speedup).
 
 \subsection{The \texttt{arg} Function Parity}
 
@@ -89,7 +124,7 @@ Test & Type Combo & \multicolumn{2}{c}{Grace} & \multicolumn{2}{c}{Current} \\
 \midrule
 and & dbl $\times$ dbl & 0.493 & 10.9M & 2.678 & 2.0M \\
 and & cpx $\times$ dbl & 0.408 & 13.3M & 2.464 & 2.2M \\
-or & cpx $\times$ dbl & 0.477 & 13.3M & 2.392 & 2.2M \\
+or & cpx $\times$ dbl & 0.477 & 11.4M & 2.392 & 2.2M \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -100,8 +135,15 @@ This has two implications. First, compiler evolution can erode the benefits of m
 
 \section{Absolute Cycle Counts}
 
-To provide full transparency into the raw performance data, Table~\ref{tab:cycles-unary} presents the absolute vectorized and reference cycle counts at the largest matrix size for both Grace and current environments.
+Table~\ref{tab:cycles-unary} presents the absolute vectorized and reference cycle counts at the largest matrix size for both Grace and current environments to display the raw performance data.
 
 \input{tables/table_cycles_unary}
 
-These raw counts confirm the central finding: vectorized implementations maintained or slightly improved their absolute performance, while compiler improvements to the scalar reference code drove all observed ratio shifts.
+These raw counts confirm that vectorized implementations maintained or slightly improved their absolute performance, while compiler improvements to the scalar reference code drove all observed ratio shifts.
+
+\section{TS-traversal Compiler}
+
+Beyond the resolution of benchmarking anomalies, significant debugging efforts have focused on addressing fundamental algorithmic failures within the ts-traversal compiler phase. The most critical work-in-progress involves the computation of the matrix determinant. In high-level environments like MATLAB, the determinant function is executed via highly
+optimized, numerically stable linear algebra subroutines that typically employ Lower-Upper decomposition coupled with partial pivoting. However, ts-traversal had incorrect casting from double to int type when unpacking the LAPACK Lower-Upper decomposition call result, which produces results in the U matrix that are almost always doubles. The incorrect casting has since been removed.
+
+Outside of the matrix determinant debugging, significant ongoing effort has been deployed in replicating the ts-traversal results. The deprecation of Grace has forced some changes that have made this process more difficult than initially scoped.
