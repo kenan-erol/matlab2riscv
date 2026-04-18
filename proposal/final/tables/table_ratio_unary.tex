@@ -1,6 +1,6 @@
 \begin{table}[H]
 \centering
-\caption{Vec/Ref ratios at $N \approx 1{,}050{,}625$ for unary operations. Ratio $< 1$ means vectorized is faster. $\Delta$ shows change from Grace to Current. $^\ddagger$\texttt{cos}, \texttt{mean}, \texttt{var} added in April 2026; ratio $\approx 1.000$ because the \texttt{\_vec} path either reuses scalar libc (\texttt{cos}) or falls back to \texttt{\_ref} when the harness input shape is 2-D (\texttt{mean}, \texttt{var}).}
+\caption{Vec/Ref ratios at $N \approx 1{,}050{,}625$ for unary operations. Ratio $< 1$ means vectorized is faster. $\Delta$ shows change from Grace to Current.}
 \label{tab:ratio-unary}
 \small
 \begin{tabular}{l | r r r | r r r | r r r}
@@ -8,18 +8,15 @@
  & \multicolumn{3}{c|}{int} & \multicolumn{3}{c|}{double} & \multicolumn{3}{c}{complex} \\
 Test & Grace & Cur. & $\Delta$ & Grace & Cur. & $\Delta$ & Grace & Cur. & $\Delta$ \\
 \midrule
-  abs & 0.193 & 0.191 & -0.002 & 0.390 & 0.387 & -0.003 & 0.004 & 0.004 & -0.000 \\
-  cos$^\ddagger$ & --- & --- & --- & --- & 1.000 & new & --- & --- & --- \\
-  mean$^\ddagger$ & --- & 1.000 & new & --- & 1.000 & new & --- & 1.001 & new \\
-  var$^\ddagger$ & --- & 1.000 & new & --- & 1.000 & new & --- & 1.000 & new \\
-  arg & 0.062 & 0.073 & +0.011 & 0.063 & 0.074 & +0.011 & 1.000 & 1.000 & +0.000 \\
+  abs & 0.193 & 0.191 & -0.002 & 0.390 & 0.387 & -0.003 & 0.004 & 0.004 & 0.000 \\
+  arg & 0.062 & 0.073 & +0.011 & 0.063 & 0.074 & +0.011 & 1.000 & 1.000 & 0.000 \\
   ceil & 0.625 & 0.910 & +0.285 & 0.096 & 0.094 & -0.002 & 0.097 & 0.094 & -0.003 \\
   floor & 0.625 & 0.910 & +0.285 & 0.096 & 0.094 & -0.002 & 0.096 & 0.092 & -0.004 \\
   full\_duplicate & 0.625 & 0.910 & +0.285 & 0.625 & 0.910 & +0.285 & 0.625 & 0.605 & -0.020 \\
   not & 0.355 & 0.352 & -0.003 & 0.302 & 0.853 & +0.551 & 0.299 & 0.841 & +0.541 \\
   ones & 0.387 & 0.922 & +0.535 & --- & --- & --- & --- & --- & --- \\
   round & 0.625 & 0.910 & +0.285 & 0.106 & 0.115 & +0.009 & 0.099 & 0.107 & +0.008 \\
-  true & 0.341 & 0.339 & -0.003 & 0.313 & 0.853 & +0.540 & 0.290 & 0.841 & +0.551 \\
+  true & 0.341 & 0.339 & -0.002 & 0.313 & 0.853 & +0.540 & 0.290 & 0.841 & +0.551 \\
 \bottomrule
 \end{tabular}
 \end{table}

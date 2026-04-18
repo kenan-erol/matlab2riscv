@@ -33,14 +33,18 @@
 
 % write this section and approach section first.... see slides
 
-%% STYLE: HOOK + THESIS. Open with a specific moment -- e.g. the first time
-%% a cos loop compiled under GCC 15 beat the hand-written intrinsic at -O2,
-%% or the 75-vs-64-cycle oddity in isEqual -- then state your claim:
-%% "I argue that compiler evolution has quietly redrawn the performance map
-%% of hand-written RVV, so much so that some of the library's earliest
-%% vectorizations are now the slower path."
+The first critical phase of this project was to replicate the original RISCV-Matrix execution environment and rebuild the benchmark suite under the current toolchain. The historical speed results were generated using an older cross-compiler toolchain and test suite configuration. This section compares those original results, designated the Grace baseline (commit \texttt{113f4c66}, December 2022), against the current, optimized pipeline (February 2026). All cycle counts were measured on the Spike RISC-V ISA simulator with a vector length of VLEN=1024.
 
-The first critical phase of this project was to replicate the original RISCV-Matrix execution environment and rebuild the benchmark suite under the current toolchain. The historical speed results were generated using an older cross-compiler toolchain and test suite configuration. This section compares those original results, designated the Grace baseline (commit \texttt{113f4c66}, December 2022), against the current, optimized pipeline (April 2026). All cycle counts were measured on the Spike RISC-V ISA simulator with a vector length of VLEN=1024, using \texttt{riscv64-unknown-elf-gcc} 15.2.0 (commit \texttt{g5115c7e44}) with \texttt{-O2 -march=rv64gcv1p0}.
+Next, the focus was to benchmark the ts-traversal translation pipeline with various MATLAB and Octave tests for correctness and speed. Finally, some non-vectorized functions from RISCV-Matrix were vectorized and mapped onto the ts-traversal pipeline, ensuring speed-ups from the MATLAB to the RISC-V binary outputs.
+
+\section{Additional Vectorization}
+TODO: Here are the previously vectorized... here is what i have further vectorized... add the new ratios to the tables
+
+Three additional functions were given \texttt{\_vec} entry points in April 2026: \texttt{cosM}, \texttt{meanM}, and \texttt{varM}. Accuracy tests pass for all three at every size from $N=1$ to $N=1{,}050{,}625$ (see \texttt{tests\_Vec\_C/\{cos,mean,var\}\_vec\_test/*\_accuracy\_output.txt}), so the work is safe to merge. The speed picture, however, is more nuanced than the table rows suggest, and the picture is worth stating honestly.
+
+For \texttt{cosM}, the current \texttt{cosM\_vec\_d} is a scalar loop calling libc \texttt{cos()}---the RVV intrinsic block from the earlier prototype is commented out pending a vector \texttt{cos} implementation. The ratio is therefore $\approx 1.000$ at all sizes, and the gain reported in Table~\ref{tab:ratio-unary} is an accounting artefact of restoring the dispatch path, not real parallelism.
+
+For \texttt{meanM} and \texttt{varM}, the fast path uses \texttt{vfredusum} on \texttt{f64m1} registers but only fires when the input is a row vector (\texttt{ndim==1} or \texttt{ndim==2 \&\& dim[0]==1}) of type \texttt{DOUBLE}. All other shapes fall through to the reference implementation. Because the benchmark harness iterates over square 2-D matrices with \texttt{dim[0]>1}, the vectorized fast path is never exercised at the sizes reported in the main tables, and the vec/ref ratio reads as $\approx 1.000$. The fast path is visible at small sizes ($N=1$ gives a 0.71 ratio for double \texttt{mean}) where function-call overhead dominates. To exercise the vectorized paths in future benchmarks, the test harness must be extended with explicit $1 \times N$ row-vector cases.
 
 \section{Total Runtime Comparison}
 
@@ -48,7 +52,7 @@ Table~\ref{tab:total-runtime} details the total runtime comparison across thirty
 
 \input{tables/table_total_runtime}
 
-An exhaustive analysis of the data presented in Table~\ref{tab:total-runtime} reveals several critical insights regarding the current state of the compilation pipeline. Across the entire test suite, the overall execution time decreased by approximately 3.9 percent, dropping from 419.50 Giga-cycles to 403.01 Giga-cycles. However, the distribution of these performance gains is highly non-uniform. The majority of the standard arithmetic and logical operations, such as ceiling calculations, logical ANDs, and greater-than-or-equal comparisons, experienced moderate speedups ranging from ten to twenty percent. This systemic improvement is directly attributable to significant enhancements within the underlying RISC-V GNU cross-compiler toolchain. The newer iterations of the GCC compiler generate substantially tighter scalar and vector code, featuring optimized register allocation algorithms and superior instruction scheduling that were unavailable during the generation of the historical baseline.
+An analysis of the data presented in Table~\ref{tab:total-runtime} reveals several critical insights regarding the current state of the compilation pipeline. Across the entire test suite, the overall execution time decreased by approximately 3.9 percent, dropping from 419.50 Giga-cycles to 403.01 Giga-cycles. However, the distribution of these performance gains is highly non-uniform. The majority of the standard arithmetic and logical operations, such as ceiling calculations, logical ANDs, and greater-than-or-equal comparisons, experienced moderate speedups ranging from ten to twenty percent. This systemic improvement is directly attributable to significant enhancements within the underlying RISC-V GNU cross-compiler toolchain. The newer iterations of the GCC compiler generate substantially tighter scalar and vector code, featuring optimized register allocation algorithms and superior instruction scheduling that were unavailable during the generation of the historical baseline.
 
 The four core arithmetic tests---\texttt{minus} ($-17.3\%$), \texttt{plus} ($-17.3\%$), \texttt{times} ($-16.4\%$), and \texttt{scale} ($-10.9\%$)---exhibited reductions consistent with the broader toolchain-driven improvements, confirming that the GCC updates benefit both vectorized and scalar code paths uniformly across these operations.
 
@@ -56,9 +60,9 @@ The four comparison tests utilizing Octave-mode semantics—octave ge, octave gt
 
 \subsection{The \texttt{divide} Anomaly}
 
-The \texttt{divide} test is the only operation that exhibited a total runtime \emph{increase} ($+3.0\%$, from 5.47 to 5.64 Gcycles). An investigation of the per-type-combination cycle counts at $N = 1{,}050{,}625$ revealed that this regression is localized to the complex division reference implementations. The reference cycle counts for complex-involving type combinations approximately doubled between Grace and current (e.g., \texttt{int$\times$complex ref}: 37.1M $\rightarrow$ 74.9M cycles; \texttt{double$\times$complex ref}: 36.1M $\rightarrow$ 73.9M cycles), while the vectorized cycle counts remained stable ($\sim$8M cycles). This suggests that the updated GCC toolchain generates less efficient scalar code for complex division specifically---likely due to changes in how the compiler handles the multi-step real/imaginary arithmetic required for complex number division (\texttt{(a+bi)/(c+di)}). Interestingly, this simultaneously \emph{improved} the vec/ref ratio for those combinations (e.g., \texttt{int$\times$complex}: 0.216 $\rightarrow$ 0.106), because the reference denominator grew while the vectorized numerator remained constant.
+The \texttt{divide} test is the only operation that exhibited a total runtime \emph{increase} ($+3.0\%$, from 5.47 to 5.64 Gcycles). An investigation of the per-type-combination cycle counts at $N = 1{,}050{,}625$ revealed that this regression is localized to the complex division reference implementations. The reference cycle counts for complex-involving type combinations approximately doubled between Grace and current (e.g., \texttt{int$\times$complex ref}: 37.1M $\rightarrow$ 74.9M cycles; \texttt{double$\times$complex ref}: 36.1M $\rightarrow$ 73.9M cycles), while the vectorized cycle counts remained stable ($\sim$8M cycles). This suggests that the updated GCC toolchain generates less efficient scalar code for complex division specifically---likely due to changes in how the compiler handles the multi-step real/imaginary arithmetic required for complex number division (\texttt{(a+bi)/(c+di)}). This simultaneously \emph{improved} the vec/ref ratio for those combinations (e.g., \texttt{int$\times$complex}: 0.216 $\rightarrow$ 0.106), because the reference denominator grew while the vectorized numerator remained constant.
 
-Conversely, the \texttt{int$\times$int} reference for divide dropped from 14.4M to 4.8M ($-66\%$), indicating that the compiler dramatically improved integer-only scalar division. This demonstrates that the same toolchain update can simultaneously improve and degrade performance across different data type combinations within a single function.
+Conversely, the \texttt{int$\times$int} reference for divide dropped from 14.4M to 4.9M ($-66\%$), indicating that the compiler dramatically improved integer-only scalar division. This demonstrates that the same toolchain update can simultaneously improve and degrade performance across different data type combinations within a single function.
 
 \section{Vectorization Effectiveness}
 
@@ -80,7 +84,7 @@ While the vectorized implementations maintained approximately constant cycle cou
 
 \paragraph{Pattern 1: Integer memory operations.} For operations that perform simple element-wise copies or integer manipulation---\texttt{ceil}, \texttt{floor}, \texttt{round}, \texttt{full\_duplicate}, and \texttt{ones}---the integer reference cycle counts dropped uniformly from $\sim$3.2M to $\sim$2.2M (a 31\% improvement). The vectorized counts remained at $\sim$2.0M. This caused the integer ratio to jump from $\sim$0.625 to $\sim$0.910, nearly reaching parity. The compiler likely now generates optimized memory copy or store sequences (e.g., using wider loads/stores) that approach vector performance for these operations.
 
-\paragraph{Pattern 2: Logical operations on non-integer types.} For \texttt{not} and \texttt{true}, the double and complex reference counts dropped by $\sim$65\% (e.g., \texttt{not} double ref: 10.3M $\rightarrow$ 3.6M). The vectorized counts stayed at $\sim$3.1M. This caused the double/complex ratios to jump from $\sim$0.30 to $\sim$0.85. These functions perform type-conversion-heavy logic that the updated compiler now optimizes far more aggressively.
+\paragraph{Pattern 2: Logical operations on non-integer types.} For \texttt{not} and \texttt{true}, the double and complex reference counts dropped by $\sim$65\% (e.g., \texttt{not} double ref: 10.3M $\rightarrow$ 3.6M). The vectorized counts stayed at $\sim$3.1M. This caused the double/complex ratios to jump from $\sim$0.30 to $\sim$0.85. These functions perform type-conversion-heavy logic that the updated GCC compiler now optimizes far more aggressively.
 
 \paragraph{Pattern 3: Binary operations.} Several binary operations exhibited similar compiler-driven ref improvements for specific type combinations. The \texttt{and} (dbl$\times$dbl), \texttt{matlab\_ge} through \texttt{matlab\_lt} (dbl$\times$dbl), and \texttt{octave\_ge} through \texttt{octave\_lt} (dbl$\times$dbl) all showed double reference speedups of 3--5$\times$, pushing their ratios from $\sim$0.25 to $\sim$0.83. The full details are available in the Appendix (Table~\ref{tab:ratio-binary-full}).
 
@@ -111,19 +115,11 @@ Size $N$ & Vec (cycles) & Ref (cycles) & Ratio \\
 
 If the implementations were actually traversing the data, the cycle counts would scale linearly with $N$. The fact that they remain locked at 75/64 cycles regardless of input size proves that both implementations exit after comparing only the \emph{first element}. An examination of the test data generation confirmed that the \texttt{isEqual} test compares matrices populated with entirely divergent data streams, guaranteeing an immediate mismatch.
 
-The 17\% performance gap (75 vs.\ 64 cycles) is attributable to \emph{vector setup overhead}. An inspection of \texttt{src/elementwise\_comparison.c} at \texttt{isEqualM\_internal\_vec\_cc} (line 5478) confirms the mechanism: before any comparison occurs, the vectorized path must execute \texttt{vsetvl\_e32m4}, then issue four strided loads (\texttt{vlse64\_v\_f64m8} with stride 16) to de-interleave the real and imaginary parts of both complex operands, and finally compute the absolute difference via sign-injection before the first \texttt{vmfgt} mask can fire. The scalar path, by contrast, issues two loads and a subtract. Counting the minimum-round-trip through those intrinsics recovers the observed 11-cycle delta almost exactly. In realistic workloads where equality must be verified across a full dataset traversal, the vectorized implementation vastly outperforms scalar execution, as evidenced by the complex$\times$double combination achieving a ratio of 0.015 (66$\times$ speedup).
+The 17\% performance gap (75 vs.\ 64 cycles) is attributable to \emph{vector setup overhead}: the vectorized path must execute \texttt{vsetvl} (vector length configuration) and stride-loading instructions before performing comparisons. The scalar path directly loads and compares two values. In realistic workloads where equality must be verified across a full dataset traversal, the vectorized implementation vastly outperforms scalar execution, as evidenced by the complex$\times$double combination achieving a ratio of 0.015 (66$\times$ speedup).
 
-\subsection{The \texttt{arg} Function Parity}
+% \subsection{The \texttt{arg} Function Parity}
 
-The \texttt{arg} function for complex numbers returns a ratio of exactly 1.000 in both Grace and current. A review of the source code confirmed that the \texttt{\_vec} implementation is merely a wrapper around a standard scalar loop. The April 2026 revision (\texttt{elementwise\_math.c}:99) swapped the body from \texttt{carg(x[i])} to an explicit \texttt{atan2(x\_data[2*i+1], x\_data[2*i])} to mirror what the vectorized path would do if RVV intrinsics for \texttt{atan2} existed, but the change is semantically equivalent and the ratio remains exactly 1.000---confirming that complex argument computation is still the dominant cost in the Octave-mode comparison tests (51~Gcycles each).
-
-\subsection{In-Progress Vectorizations: \texttt{cosM}, \texttt{meanM}, \texttt{varM}}
-
-Three additional functions were given \texttt{\_vec} entry points in April 2026: \texttt{cosM}, \texttt{meanM}, and \texttt{varM}. Accuracy tests pass for all three at every size from $N=1$ to $N=1{,}050{,}625$ (see \texttt{tests\_Vec\_C/\{cos,mean,var\}\_vec\_test/*\_accuracy\_output.txt}), so the work is safe to merge. The speed picture, however, is more nuanced than the table rows suggest, and the picture is worth stating honestly.
-
-For \texttt{cosM}, the current \texttt{cosM\_vec\_d} is a scalar loop calling libc \texttt{cos()}---the RVV intrinsic block from the earlier prototype is commented out pending a vector \texttt{cos} implementation. The ratio is therefore $\approx 1.000$ at all sizes, and the gain reported in Table~\ref{tab:ratio-unary} is an accounting artefact of restoring the dispatch path, not real parallelism.
-
-For \texttt{meanM} and \texttt{varM}, the fast path uses \texttt{vfredusum} on \texttt{f64m1} registers but only fires when the input is a row vector (\texttt{ndim==1} or \texttt{ndim==2 \&\& dim[0]==1}) of type \texttt{DOUBLE}. All other shapes fall through to the reference implementation. Because the benchmark harness iterates over square 2-D matrices with \texttt{dim[0]>1}, the vectorized fast path is never exercised at the sizes reported in the main tables, and the vec/ref ratio reads as $\approx 1.000$. The fast path is visible at small sizes ($N=1$ gives a 0.71 ratio for double \texttt{mean}) where function-call overhead dominates. To exercise the vectorized paths in future benchmarks, the test harness must be extended with explicit $1 \times N$ row-vector cases.
+% The \texttt{arg} function for complex numbers returns a ratio of exactly 1.000 in both Grace and current. A review of the source code confirmed that the \texttt{\_vec} implementation is merely a wrapper around a standard scalar loop executing the C library \texttt{carg()} function. Because the complex argument calculation was never mapped to RVV intrinsics, no parallelization occurs, resulting in identical vec and ref execution times.
 
 \section{Toolchain-Induced Vectorization Regressions}
 
@@ -146,15 +142,9 @@ or & cpx $\times$ dbl & 0.477 & 11.4M & 2.392 & 2.2M \\
 \end{tabular}
 \end{table}
 
-In all three cases, the vectorized cycle counts remained approximately constant ($\sim$5.3M for \texttt{and}, $\sim$5.4M for \texttt{or}). The regressions are entirely driven by GCC's updated optimizer reducing the reference cycle counts by a factor of five to six. The benchmark is compiled with \texttt{-march=rv64gcv1p0 -O2} on \texttt{riscv64-unknown-elf-gcc} 15.2.0, a toolchain whose release notes explicitly advertise RISC-V autovectorization as a first-class feature: GCC 14 introduced fixed-length RVV autovec for the RISC-V backend in April 2024, and GCC 15 extended it to variable-length and early-break loops \cite{gcc14-release,gcc15-release}. Because \texttt{-O2} enables \texttt{-ftree-vectorize} by default since GCC 12, a simple dense \texttt{double} elementwise loop like the body of \texttt{andM\_ref} is exactly the shape the GCC 15 RISC-V vectorizer targets. The reference code is therefore no longer scalar in practice---it is merely \emph{implicitly} vectorized, at the compiler's discretion, and the 5--6$\times$ ref-side speedup is consistent with that explanation.%
-%% STYLE: VERIFY BY DISASSEMBLY. To move this from plausible to proven, run
-%%   riscv64-unknown-elf-objdump -d tests_Vec_C/and_test/and_test.riscv \
-%%     | awk '/<andM_ref>:/,/^$/' | grep -E 'vsetvl|vle|vs|vad'
-%% If vset*, vle*, vs* show up inside andM_ref, autovec is confirmed. Cite
-%% the disassembly the way the EDST paper cites court rulings (Callahan,
-%% Pizor): a specific artefact backing a specific claim.
+In all three cases, the vectorized cycle counts remained approximately constant ($\sim$5.3M for \texttt{and}, $\sim$5.4M for \texttt{or}). The regressions are entirely driven by GCC's updated optimizer reducing the reference cycle counts by a factor of five to six. This indicates that the newer compiler auto-vectorizes or otherwise aggressively optimizes these simple logical operations to the point where they outperform the hand-written RVV intrinsic code.
 
-This has two implications. First, compiler evolution can erode the \emph{relative} benefits of manual vectorization if the hand-written code is not periodically re-tuned. Second, the LMUL settings for these functions are already at \texttt{e32m4} or \texttt{e32m8} (see \texttt{elementwise\_comparison.c}:39,70,104), and the README's ``Vector Processor Architecture'' section warns that raising LMUL beyond the number of live vector variables ``will cause extra loads and stores to be called implicitly, slowing down the program.'' The README's own TODO list flags these functions with ``LMUL settings need checking''---with the implication that current settings may already be \emph{too high}, not too low. The correct next step is therefore to audit each \texttt{and}/\texttt{or}/\texttt{not} kernel's live-register pressure and pick the largest LMUL that leaves $\text{LMUL} \times |\text{live vector vars}| \leq 32$, which may mean \emph{lowering} LMUL from m8 to m4 rather than raising it.
+This has two implications. First, compiler evolution can erode the benefits of manual vectorization if the hand-written code is not periodically re-optimized. Second, the LMUL settings for these functions may be suboptimal---using LMUL=8 for simple logical operations could restore the vectorization advantage by processing more elements per instruction.
 
 \section{Absolute Cycle Counts}
 
@@ -166,7 +156,12 @@ These raw counts confirm that vectorized implementations maintained or slightly 
 
 \section{TS-traversal Compiler}
 
-Beyond the resolution of benchmarking anomalies, significant debugging efforts have focused on addressing fundamental algorithmic failures within the ts-traversal compiler phase. The most critical work-in-progress involves the computation of the matrix determinant. In high-level environments like MATLAB, the determinant function is executed via highly
-optimized, numerically stable linear algebra subroutines that typically employ Lower-Upper decomposition coupled with partial pivoting. However, ts-traversal had incorrect casting from double to int type when unpacking the LAPACK Lower-Upper decomposition call result, which produces results in the U matrix that are almost always doubles. The incorrect casting has since been removed.
+Beyond the resolution of benchmarking anomalies, significant debugging efforts have focused on addressing algorithmic failures within the ts-traversal compiler phase. 
 
-Outside of the matrix determinant debugging, significant ongoing effort has been deployed in replicating the ts-traversal results. The deprecation of Grace has forced some changes that have made this process more difficult than initially scoped.
+TODO:
+
+- benchmarks for all stages
+
+- fixes from the inherited state
+
+- timing improvements post vectorization mapping
