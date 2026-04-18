@@ -1,0 +1,20 @@
+% A good conclusion leaves readers with a clear statement of your point and a renewed appreciation of its significance. 
+
+% Start with a brief statement of your research questions. Describe the main results. Provide a summary of the conclusion. Emphasize the contribution of your work. 
+
+% A title is the first thing readers read and the last thing you should write. It is not just a few words to suggest the topic of your papers. A title is useful when it helps readers understand specifically what is to come.  Put into your title the keywords in your main point. 
+
+The successful chronic implantation of next-gen BCIs is constrained by extreme power efficiency requirements. This has historically been met through the deployment of highly inflexible, monolithic ASIC hardware. HALO BCIs leverage a heterogeneous processing array and the RVV extension to introduce significant flexibility without compromising critical thermal limits. However, to make this sophisticated hardware accessible to the broader neuroscientific community, an automated, highly optimized software compilation pipeline is required. This project directly addresses this need by engineering an end-to-end toolchain that merges a TypeScript-based source-to-source compiler with a hardware-specific vectorization library, enabling the automatic transformation of high-level MATLAB algorithms into power-optimized RISC-V binaries.
+
+Preliminary validation and benchmarking demonstrate that the vectorized matrix library successfully runs on Spike and yields near-consistent performance improvements. Detailed analysis of the benchmarking data has successfully isolated performance improvements driven by updated cross-compiler toolchains, while simultaneously identifying significant test-harness anomalies. Despite these successes, critical challenges remain in the ts-traversal semantic translation layer. Ongoing debugging efforts are actively addressing numerical instability with certain matrix functions like power matrix, stftM, hamming hanning, det M, and varargout. 
+
+%% STYLE: CLOSE WITH RESONANCE.
+%% The EDST conclusion ends on stakes and a rhetorical pivot: "what if
+%% this hierarchy of compassion were dismantled?" The current ending here
+%% is a to-do list. Replace with this shape:
+%%   (a) one-sentence restatement of the argument (compiler > silicon),
+%%   (b) one concrete stake (a patient waiting for a better detector),
+%%   (c) one rhetorical pivot inviting the reader to imagine the outcome,
+%%   (d) end on what you want the reader to carry out of the room.
+
+Development for the remainder of the semester will focus on resolving these existing bugs, substantially expanding the vectorization coverage of the hardware library, and achieving full end-to-end integration of the compilation pipeline. The larger claim this thesis has tried to earn is that the bottleneck in deploying BCI algorithms to HALO is no longer silicon, and, for three specific logical operations, has already shifted to the quality of the open-source RISC-V vectorizer itself. Every month a neuroscientist hand-ports a MATLAB script into RVV intrinsics is a month a patient waits for a better seizure detector, and the value of an automated pipeline grows in direct proportion to how quickly the underlying toolchain improves. If GCC's RVV autovectorizer continues the trajectory it has traced from version~14 to version~15, a meaningful fraction of the hand-written kernels in RISCV-Matrix will eventually be slower than what the compiler emits from plain C---and that is a success condition for this line of work, not a failure. At that point the library becomes less a performance layer and more a semantic oracle: the place where ``what MATLAB means by \texttt{varM}'' is written down, once, in a form the compiler can target without a neuroscientist having to become a vector-assembly programmer first.

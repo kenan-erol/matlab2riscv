@@ -1,0 +1,22 @@
+\thispagestyle{plain}
+\begin{center}
+    \Large
+    \textbf{Optimized Translation of MATLAB to RISC-V Architecture for Brain-Computer Interfaces}
+    
+    \vspace{0.4cm}
+    \large
+    % Thesis Subtitle
+    
+    \vspace{0.4cm}
+    \textbf{Kenan Erol}
+    
+    \vspace{0.9cm}
+    \textbf{Abstract}
+\end{center}
+
+
+Brain computer interfaces (BCIs) offer significant clinical potential for neurological disorders such as epilepsy and strokes. Fully implantable BCIs impose severe limitations on power dissipation to prevent irreversible thermal damage to brain tissue. As a result, BCI hardware needs to balance real-time signal processing with ultra-low power consumption. The Hardware Architecture for LOw Power BCIs (HALO) project addresses these constraints through a design that combines application-specific hardware accelerators with a low-power RISC-V microcontroller equipped with the RISC-V Vector extension. There is a significant toolchain gap between the computational environments preferred by neuroscientists and the low-level constraints of the HALO hardware. Algorithm development typically occurs in dynamically typed languages such as MATLAB, whereas HALO hardware requires statically typed, optimized, and vectorized C code. This report details the ongoing development of an end-to-end compilation pipeline engineered to bridge this divide. The pipeline uses a TypeScript-based compiler and an RVV-optimized C matrix library to translate MATLAB algorithms into power-efficient RISC-V binaries. This midterm progress report discusses the current architectural design of the pipeline, benchmarks on the Spike instruction-set architecture simulator, investigates execution-cycle metrics, discusses ongoing debugging efforts related to determinant translation, and presents a comprehensive roadmap for the remainder of the semester.
+
+
+
+

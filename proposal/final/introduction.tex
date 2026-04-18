@@ -1,0 +1,26 @@
+%% STYLE: HOOK + EXPLICIT THESIS.
+%% The EDST paper opens with Chris D'Agata's "relatively civilized,
+%% relatively European" quote -- one concrete utterance that frames the
+%% whole argument. The survey-style opener below lacks that anchor.
+%% Replace with something concrete, e.g.:
+%%   "A sliver of silicon sealed under the dura of a rat with
+%%   pharmacoresistant epilepsy has fifteen milliwatts to listen to a
+%%   hundred channels of neural signal, decide whether a seizure is
+%%   coming, and stimulate back -- all without warming the cortex by
+%%   more than one degree Celsius \cite{10120914}."
+%% Then state the thesis in the same declarative voice you used for
+%% "I will argue that race and ethnicity are the primary determinants..."
+%%   "I argue that the toolchain -- not the silicon -- is the current
+%%   bottleneck in making that 15 mW budget usable by the neuroscientists
+%%   who write the algorithms, and that open-source compiler evolution
+%%   has quietly reshaped what counts as a good RVV kernel."
+
+Recent work in computational neuroscience and embedded systems engineering has enabled the development of BCIs capable of direct, real-time communication between biological neural networks and digital processing units. BCIs are central to closed-loop therapeutic applications, where the device must continuously process high-density, multi-channel neural recordings, execute complex spectral and statistical feature extraction algorithms, and determine appropriate electrical stimulation parameters to mitigate neurological events such as epileptic seizures \cite{9138938}. Fully implantable BCIs must meet stringent physical and thermal constraints to ensure patient safety, reduce surgical complexity, and extend device longevity. The thermal dissipation limit is the most critical constraint. To prevent irreversible necrosis of the surrounding brain tissue, the surface temperature of the implant must not exceed 1 °C, thereby strictly capping the total device power budget at approximately 15 mW \cite{10120914}.
+
+The HALO BCI project was engineered specifically to satisfy these dual, often conflicting demands. The HALO architecture departs from traditional application-specific integrated circuit (ASIC) designs, which lack the flexibility to adapt to new algorithms. Instead, HALO uses a modular array of hardware processing elements (PEs) controlled by a low-power RISC-V microcontroller \cite{9138938}. The microcontroller uses the RISC-V Vector (RVV) extension to execute data-parallel signal-processing workloads, minimizing instruction-fetch overhead and enabling rapid transitions into low-power states. 
+
+However, the clinical and research efficiency of HALO is currently bottlenecked by a toolchain disparity. Neuroscientists use languages like MATLAB for their intuitive syntax, signal-processing toolboxes, and dynamic typing. In contrast, HALO needs statically typed C code that contains RVV intrinsics. The manual translation of advanced, multi-stage signal processing algorithms, such as Fast Fourier transforms, from MATLAB to vectorized C is an error-prone, labor-intensive process that impedes the rapid deployment of new clinical approaches. 
+
+This research addresses the aforementioned toolchain gap by engineering an automated compilation pipeline that translates standard MATLAB scripts into RVV-accelerated RISC-V binaries for HALO. The proposed solution relies on the integration and expansion of two software modules previously developed in isolation: a compiler capable of parsing MATLAB syntax into equivalent C code \cite{ts}, and a computational C matrix library that maps standard linear algebra operations directly to RVV assembly instructions \cite{riscvmatrix}.
+
+Several milestones were completed during the initial phases of this project. The matrix library has been successfully replicated and integrated into a benchmarking environment that uses Spike, the official RISC-V instruction set architecture (ISA) simulator. Performance evaluations reveal substantial reductions in execution cycle counts, driven by updated cross-compiler toolchains. Furthermore, critical anomalies in the execution ratios of complex equality checks have been successfully isolated and diagnosed as test-harness artifacts rather than vectorization faults. In addition, debugging efforts have identified fundamental algorithmic limitations in the current translation of matrix determinant computations. This progress report establishes the foundational background, outlines the pipeline's structural design, analyzes current benchmarking results, and discusses ongoing challenges and future development plans for the remainder of the academic term.
