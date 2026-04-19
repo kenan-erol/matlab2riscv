@@ -1,6 +1,6 @@
 \begin{table}[H]
 \centering
-\caption{Vectorized and reference cycle counts at $N \approx 1{,}050{,}625$ for unary operations (Grace vs Current). $^\ddagger$\texttt{cos}, \texttt{mean}, and \texttt{var} received \texttt{\_vec} entry points in April 2026 (post-Grace); no Grace baseline exists. \texttt{cos}'s \texttt{\_vec\_d} is still a scalar libc loop; \texttt{mean} and \texttt{var} use an \texttt{f64m1} reduction fast path gated on 1-D \texttt{DOUBLE} inputs, which the current harness does not exercise at large $N$.}
+\caption{Vectorized and reference cycle counts at $N \approx 1{,}050{,}625$ for unary operations (Grace vs Current). $^\ddagger$\texttt{cos}, \texttt{mean}, and \texttt{var} received \texttt{\_vec} entry points in April 2026 (post-Grace); no Grace baseline exists. \texttt{cos}'s \texttt{\_vec\_d} is still a scalar libc loop. \texttt{mean} and \texttt{var} gained 1-D, $1\times N$ row-vector, and 2-D column-reduction fast paths (all DOUBLE-only), which the harness now exercises at the largest size---producing the $\sim$12$\times$ and $\sim$7$\times$ speedups visible in the \texttt{double} columns.}
 \label{tab:cycles-unary}
 \tiny
 \begin{tabular}{l | r r r r | r r r r | r r r r}
@@ -10,8 +10,8 @@ Test & G.vec & C.vec & G.ref & C.ref & G.vec & C.vec & G.ref & C.ref & G.vec & C
 \midrule
   abs & 2.0M & 2.0M & 10.3M & 10.3M & 4.0M & 3.9M & 10.2M & 10.1M & 4.0M & 4.0M & 913.9M & 948.4M \\
   cos$^\ddagger$ & --- & --- & --- & --- & --- & 139.5M & --- & 139.5M & --- & --- & --- & --- \\
-  mean$^\ddagger$ & --- & 11.6M & --- & 11.6M & --- & 10.5M & --- & 10.5M & --- & 10.6M & --- & 10.5M \\
-  var$^\ddagger$ & --- & 26.2M & --- & 26.3M & --- & 24.2M & --- & 24.2M & --- & 40.0M & --- & 40.0M \\
+  mean$^\ddagger$ & --- & 11.6M & --- & 11.6M & --- & 0.87M & --- & 10.5M & --- & 10.6M & --- & 10.5M \\
+  var$^\ddagger$ & --- & 26.3M & --- & 26.3M & --- & 2.01M & --- & 14.5M & --- & 40.0M & --- & 40.0M \\
   arg & 4.0M & 4.0M & 64.3M & 54.3M & 4.0M & 3.9M & 63.2M & 53.2M & 125.8M & 109.5M & 125.8M & 109.5M \\
   ceil & 2.0M & 2.0M & 3.2M & 2.2M & 4.0M & 4.0M & 42.2M & 42.5M & 8.1M & 8.0M & 83.3M & 85.2M \\
   floor & 2.0M & 2.0M & 3.2M & 2.2M & 4.0M & 4.0M & 42.2M & 42.5M & 8.1M & 8.0M & 84.4M & 86.7M \\

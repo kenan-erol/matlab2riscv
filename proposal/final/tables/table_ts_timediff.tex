@@ -1,0 +1,34 @@
+\begin{table}[H]
+\centering
+\caption{TS-traversal end-to-end benchmark: retired instruction counts for tests that existed in the baseline (\texttt{compareall} at the 68-tests-passing checkpoint) compared against the current pipeline. Only representative rows are shown; the heavy \texttt{SPEED\_big\_*} workloads, the five largest regressions, and the newly added tests are included. Positive $\Delta$ indicates a speedup.}
+\label{tab:ts-timediff}
+\small
+\begin{tabular}{l r r r}
+\toprule
+Test & Baseline (instret) & Current (instret) & $\Delta$ (\%) \\
+\midrule
+\multicolumn{4}{l}{\emph{Heavy vectorized workloads (stable)}} \\
+SPEED\_big\_addition           & $7.08 \times 10^{8}$  & $7.08 \times 10^{8}$  & $+0.00$ \\
+SPEED\_big\_transpose          & $5.14 \times 10^{8}$  & $5.14 \times 10^{8}$  & $-0.00$ \\
+SPEED\_big\_fourier            & $9.06 \times 10^{8}$  & $9.06 \times 10^{8}$  & $-0.00$ \\
+SPEED\_big\_multiplication     & $1.573 \times 10^{10}$ & $1.573 \times 10^{10}$ & $-0.00$ \\
+SPEED\_big\_inverse            & $1.593 \times 10^{10}$ & $1.593 \times 10^{10}$ & $-0.00$ \\
+SPEED\_big\_eigen              & $1.117 \times 10^{11}$ & $1.117 \times 10^{11}$ & $-0.00$ \\
+SPEED\_big\_power\_double      & $7.422 \times 10^{10}$ & $7.422 \times 10^{10}$ & $+0.00$ \\
+SPEED\_big\_power\_complex     & $7.422 \times 10^{10}$ & $7.422 \times 10^{10}$ & $+0.00$ \\
+\midrule
+\multicolumn{4}{l}{\emph{Five largest regressions (Octave-semantics plumbing overhead)}} \\
+fourier                        & $2.93 \times 10^{7}$  & $5.75 \times 10^{7}$  & $-96.59$ \\
+filterM                        & $4.45 \times 10^{8}$  & $7.24 \times 10^{8}$  & $-62.83$ \\
+elem\_trig\_matrix             & $1.41 \times 10^{6}$  & $2.10 \times 10^{6}$  & $-48.91$ \\
+elem\_scalarpower\_matrix      & $2.32 \times 10^{6}$  & $3.26 \times 10^{6}$  & $-40.87$ \\
+elem\_power\_matrix            & $2.09 \times 10^{6}$  & $2.80 \times 10^{6}$  & $-33.98$ \\
+\midrule
+\multicolumn{4}{l}{\emph{Newly added tests (no baseline)}} \\
+advanced\_stats                & ---                   & $1.14 \times 10^{9}$  & --- \\
+reshape\_matrix                & ---                   & $2.46 \times 10^{5}$  & --- \\
+octaveIncludes                 & ---                   & $1.76 \times 10^{5}$  & --- \\
+octaveTimer                    & ---                   & $1.27 \times 10^{5}$  & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
