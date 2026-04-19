@@ -1,0 +1,696 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{9138938}{inproceedings}{}{}
+      \name{author}{8}{}{%
+        {{hash=e5456cd6cafc8302c43005d8d695619b}{%
+           family={Karageorgos},
+           familyi={K\bibinitperiod},
+           given={Ioannis},
+           giveni={I\bibinitperiod}}}%
+        {{hash=5e99a7cca3980506b0aa1fc4c232fab5}{%
+           family={Sriram},
+           familyi={S\bibinitperiod},
+           given={Karthik},
+           giveni={K\bibinitperiod}}}%
+        {{hash=cd7cba6bb3184fd375c37086296e1fd1}{%
+           family={Veselý},
+           familyi={V\bibinitperiod},
+           given={Ján},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7fb13f90c32829b180bc9d08218737e1}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=364d71f530dee2796e0101c8cadb0c09}{%
+           family={Powell},
+           familyi={P\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=39cb5025fd13880fd8b9ea33867f31e6}{%
+           family={Borton},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=aac12f8c6a280294fb5960dde74ae274}{%
+           family={Manohar},
+           familyi={M\bibinitperiod},
+           given={Rajit},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7bd22dabab533e06f7355e232e16b05c}{%
+           family={Bhattacharjee},
+           familyi={B\bibinitperiod},
+           given={Abhishek},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{dba1e542fffccf717c2ade7fb55f5493}
+      \strng{fullhash}{1acc6220faa0b771189908f4f6c67dfc}
+      \strng{fullhashraw}{1acc6220faa0b771189908f4f6c67dfc}
+      \strng{bibnamehash}{dba1e542fffccf717c2ade7fb55f5493}
+      \strng{authorbibnamehash}{dba1e542fffccf717c2ade7fb55f5493}
+      \strng{authornamehash}{dba1e542fffccf717c2ade7fb55f5493}
+      \strng{authorfullhash}{1acc6220faa0b771189908f4f6c67dfc}
+      \strng{authorfullhashraw}{1acc6220faa0b771189908f4f6c67dfc}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 ACM/IEEE 47th Annual International Symposium on Computer Architecture (ISCA)}
+      \field{title}{Hardware-Software Co-Design for Brain-Computer Interfaces}
+      \field{year}{2020}
+      \field{pages}{391\bibrangedash 404}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1109/ISCA45697.2020.00041
+      \endverb
+      \keyw{Neurological diseases;Pipelines;Epilepsy;Computer architecture;Parallel processing;Motors;Hardware;Brain-computer interfaces;Real-time systems;Safety}
+    \endentry
+    \entry{10120914}{article}{}{}
+      \name{author}{10}{}{%
+        {{hash=5e99a7cca3980506b0aa1fc4c232fab5}{%
+           family={Sriram},
+           familyi={S\bibinitperiod},
+           given={Karthik},
+           giveni={K\bibinitperiod}}}%
+        {{hash=e5456cd6cafc8302c43005d8d695619b}{%
+           family={Karageorgos},
+           familyi={K\bibinitperiod},
+           given={Ioannis},
+           giveni={I\bibinitperiod}}}%
+        {{hash=fbafdd3d20bce7f37b3c44689bec1c4d}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={Xiayuan},
+           giveni={X\bibinitperiod}}}%
+        {{hash=cd7cba6bb3184fd375c37086296e1fd1}{%
+           family={Veselý},
+           familyi={V\bibinitperiod},
+           given={Ján},
+           giveni={J\bibinitperiod}}}%
+        {{hash=be30da287523be0b376ff26b79a5f8e6}{%
+           family={Lindsay},
+           familyi={L\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod}}}%
+        {{hash=7fb13f90c32829b180bc9d08218737e1}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=cbd1b4256b93bcc1d885438736d1b08e}{%
+           family={Khazan},
+           familyi={K\bibinitperiod},
+           given={Lenny},
+           giveni={L\bibinitperiod}}}%
+        {{hash=9834fddb68def52a649aaac50e31083d}{%
+           family={Pothukuchi},
+           familyi={P\bibinitperiod},
+           given={Raghavendra\bibnamedelima Pradyumna},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=aac12f8c6a280294fb5960dde74ae274}{%
+           family={Manohar},
+           familyi={M\bibinitperiod},
+           given={Rajit},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7bd22dabab533e06f7355e232e16b05c}{%
+           family={Bhattacharjee},
+           familyi={B\bibinitperiod},
+           given={Abhishek},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f5a56133a45b40bb52dfa51679002fdd}
+      \strng{fullhash}{9bd17477c9b31eb33104561e1ecf0ddb}
+      \strng{fullhashraw}{9bd17477c9b31eb33104561e1ecf0ddb}
+      \strng{bibnamehash}{f5a56133a45b40bb52dfa51679002fdd}
+      \strng{authorbibnamehash}{f5a56133a45b40bb52dfa51679002fdd}
+      \strng{authornamehash}{f5a56133a45b40bb52dfa51679002fdd}
+      \strng{authorfullhash}{9bd17477c9b31eb33104561e1ecf0ddb}
+      \strng{authorfullhashraw}{9bd17477c9b31eb33104561e1ecf0ddb}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Micro}
+      \field{number}{3}
+      \field{title}{HALO: A Hardware–Software Co-Designed Processor for Brain–Computer Interfaces}
+      \field{volume}{43}
+      \field{year}{2023}
+      \field{pages}{64\bibrangedash 72}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/MM.2023.3258907
+      \endverb
+      \keyw{Computer interfaces;Task analysis;Brain-computer interfaces;Encryption;Neurons;Hardware;Support vector machines}
+    \endentry
+    \entry{ts}{software}{}{}
+      \name{author}{1}{}{%
+        {{hash=6ed556a68682b9f4f2d81b577b3f5e0a}{%
+           family={Gruber},
+           familyi={G\bibinitperiod},
+           given={Danielle},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ed556a68682b9f4f2d81b577b3f5e0a}
+      \strng{fullhash}{6ed556a68682b9f4f2d81b577b3f5e0a}
+      \strng{fullhashraw}{6ed556a68682b9f4f2d81b577b3f5e0a}
+      \strng{bibnamehash}{6ed556a68682b9f4f2d81b577b3f5e0a}
+      \strng{authorbibnamehash}{6ed556a68682b9f4f2d81b577b3f5e0a}
+      \strng{authornamehash}{6ed556a68682b9f4f2d81b577b3f5e0a}
+      \strng{authorfullhash}{6ed556a68682b9f4f2d81b577b3f5e0a}
+      \strng{authorfullhashraw}{6ed556a68682b9f4f2d81b577b3f5e0a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{ts-traversal: A Typescript Based MATLAB-to-C Compiler}}
+      \field{version}{1.0.0}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://github.com/kenan-erol/ts-traversal
+      \endverb
+      \verb{url}
+      \verb https://github.com/kenan-erol/ts-traversal
+      \endverb
+    \endentry
+    \entry{riscvmatrix}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=80d59ee62410d4b74bc141d910355046}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Zach},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=fbafdd3d20bce7f37b3c44689bec1c4d}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={Xiayuan},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Yale University, Department of Computer Science}%
+      }
+      \strng{namehash}{cfe8eecfee6bac34273b2bb9181c6ce5}
+      \strng{fullhash}{cfe8eecfee6bac34273b2bb9181c6ce5}
+      \strng{fullhashraw}{cfe8eecfee6bac34273b2bb9181c6ce5}
+      \strng{bibnamehash}{cfe8eecfee6bac34273b2bb9181c6ce5}
+      \strng{authorbibnamehash}{cfe8eecfee6bac34273b2bb9181c6ce5}
+      \strng{authornamehash}{cfe8eecfee6bac34273b2bb9181c6ce5}
+      \strng{authorfullhash}{cfe8eecfee6bac34273b2bb9181c6ce5}
+      \strng{authorfullhashraw}{cfe8eecfee6bac34273b2bb9181c6ce5}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Private internal repository, HALO Project}
+      \field{title}{{RISCV-Matrix: A RISC-V Vectorized C Library for Matrix Manipulation}}
+      \field{year}{2022}
+    \endentry
+    \entry{7982670}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=02142b2a837efac590f9088cdf19c4c1}{%
+           family={Kassiri},
+           familyi={K\bibinitperiod},
+           given={Hossein},
+           giveni={H\bibinitperiod}}}%
+        {{hash=621dc26a1c0bcc4a558c47f5594944a2}{%
+           family={Tonekaboni},
+           familyi={T\bibinitperiod},
+           given={Sana},
+           giveni={S\bibinitperiod}}}%
+        {{hash=fda329f9b6b2f6b39ebcb849603ca46a}{%
+           family={Salam},
+           familyi={S\bibinitperiod},
+           given={M.\bibnamedelimi Tariqus},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=b123e5a6491f437dd37b8a0aa0a9a6c4}{%
+           family={Soltani},
+           familyi={S\bibinitperiod},
+           given={Nima},
+           giveni={N\bibinitperiod}}}%
+        {{hash=cc243c84930173001721b251e4009b4e}{%
+           family={Abdelhalim},
+           familyi={A\bibinitperiod},
+           given={Karim},
+           giveni={K\bibinitperiod}}}%
+        {{hash=09652bc816922b0cf71a9eb7ea34d0b3}{%
+           family={Velazquez},
+           familyi={V\bibinitperiod},
+           given={Jose\bibnamedelimb Luis\bibnamedelima Perez},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=51706b61af04d6f1a70e96335cc55761}{%
+           family={Genov},
+           familyi={G\bibinitperiod},
+           given={Roman},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{8364679bafbfc366adcfe8f062efd9fb}
+      \strng{fullhash}{3c094dda577f6be5e40b0550345305dd}
+      \strng{fullhashraw}{3c094dda577f6be5e40b0550345305dd}
+      \strng{bibnamehash}{8364679bafbfc366adcfe8f062efd9fb}
+      \strng{authorbibnamehash}{8364679bafbfc366adcfe8f062efd9fb}
+      \strng{authornamehash}{8364679bafbfc366adcfe8f062efd9fb}
+      \strng{authorfullhash}{3c094dda577f6be5e40b0550345305dd}
+      \strng{authorfullhashraw}{3c094dda577f6be5e40b0550345305dd}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Biomedical Circuits and Systems}
+      \field{number}{5}
+      \field{title}{Closed-Loop Neurostimulators: A Survey and A Seizure-Predicting Design Example for Intractable Epilepsy Treatment}
+      \field{volume}{11}
+      \field{year}{2017}
+      \field{pages}{1026\bibrangedash 1040}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/TBCAS.2017.2694638
+      \endverb
+      \keyw{Epilepsy;Signal processing algorithms;Monitoring;System-on-chip;Wireless communication;Performance evaluation;Batteries;Battery-less;brain implant;brain monitoring;closed loop;closed-loop SoC;chronic in-vivo experiments;diagnostics;epilepsy;implantable neurostimulator;inductive powering;intractable;multi-band radio;neural recording;neural stimulation;phase synchronization;seizure detection;system-on-chip;wireless implant}
+    \endentry
+    \entry{Musk2019}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=20beef4c22071f18682739a2ea621b0d}{%
+           family={Musk},
+           familyi={M\bibinitperiod},
+           given={Elon},
+           giveni={E\bibinitperiod}}}%
+        {{hash=2809151cf98a4790f01475d5aaf41318}{%
+           family={Neuralink},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{85192c673046c01bb7d3b62247155ea5}
+      \strng{fullhash}{85192c673046c01bb7d3b62247155ea5}
+      \strng{fullhashraw}{85192c673046c01bb7d3b62247155ea5}
+      \strng{bibnamehash}{85192c673046c01bb7d3b62247155ea5}
+      \strng{authorbibnamehash}{85192c673046c01bb7d3b62247155ea5}
+      \strng{authornamehash}{85192c673046c01bb7d3b62247155ea5}
+      \strng{authorfullhash}{85192c673046c01bb7d3b62247155ea5}
+      \strng{authorfullhashraw}{85192c673046c01bb7d3b62247155ea5}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Medical Internet Research}
+      \field{number}{10}
+      \field{title}{An Integrated Brain-Machine Interface Platform With Thousands of Channels}
+      \field{volume}{21}
+      \field{year}{2019}
+      \field{pages}{e16194}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.2196/16194
+      \endverb
+    \endentry
+    \entry{Heck2014}{article}{}{}
+      \name{author}{36}{}{%
+        {{hash=d479b3ea1d4510b3cb8db505979c095a}{%
+           family={Heck},
+           familyi={H\bibinitperiod},
+           given={Christianne\bibnamedelima N.},
+           giveni={C\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=4a221b5b8c078c2c76965b9f7d41ee54}{%
+           family={King-Stephens},
+           familyi={K\bibinithyphendelim S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a6d10ae60e9200b8e04eecd97d8a0f56}{%
+           family={Massey},
+           familyi={M\bibinitperiod},
+           given={Andrew\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=eae9b5213851f25db1d3cd0063180cdc}{%
+           family={Nair},
+           familyi={N\bibinitperiod},
+           given={Dileep\bibnamedelima R.},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=134d16899dcb5cb8a185225dd5576a82}{%
+           family={Jobst},
+           familyi={J\bibinitperiod},
+           given={Barbara\bibnamedelima C.},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=eef48d6d69c4a534f1a576fa9c532927}{%
+           family={Barkley},
+           familyi={B\bibinitperiod},
+           given={Gregory\bibnamedelima L.},
+           giveni={G\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=b037d42c31393a7f05ada8ca8f657261}{%
+           family={Salanova},
+           familyi={S\bibinitperiod},
+           given={Vicenta},
+           giveni={V\bibinitperiod}}}%
+        {{hash=84f753ebd48adfc27b4346143dd4d94d}{%
+           family={Cole},
+           familyi={C\bibinitperiod},
+           given={Andrew\bibnamedelima J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=62c489f888afc32fd1c1dae9a4ba9164}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Michael\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=6ead119418739abe44502cf1fa92616c}{%
+           family={Gwinn},
+           familyi={G\bibinitperiod},
+           given={Ryder\bibnamedelima P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=5aafcb9161928ebbce4d9796857df6c5}{%
+           family={Skidmore},
+           familyi={S\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=aa7a067b49220a308f276cba2a2607d2}{%
+           family={Van\bibnamedelima Ness},
+           familyi={V\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={Paul\bibnamedelima C.},
+           giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=9bbb329bc0be65415285e717d468a72d}{%
+           family={Bergey},
+           familyi={B\bibinitperiod},
+           given={Gregory\bibnamedelima K.},
+           giveni={G\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=688bcdfe0f63fcb14b27b9d5a1954482}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Yong\bibnamedelima D.},
+           giveni={Y\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=e4c62c7ce4e8656fe61a4bfbac02f3a9}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=7fd43abc39967829a099e3887ed8881e}{%
+           family={Geller},
+           familyi={G\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=b4fc2f31c3a5d5a0078eaa411cbd2f9b}{%
+           family={Rutecki},
+           familyi={R\bibinitperiod},
+           given={Paul\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=8cb50afd15890a9fb1d35cb9cf3f1b5c}{%
+           family={Zimmerman},
+           familyi={Z\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=dbf21b7149a664b903ac661aac1d1af7}{%
+           family={Spencer},
+           familyi={S\bibinitperiod},
+           given={David\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=ef167a4acc86a4bd2a0a5f7c989c7300}{%
+           family={Goldman},
+           familyi={G\bibinitperiod},
+           given={Alica},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a7c9e337841ac58ce2c2d7d267cdf6c4}{%
+           family={Edwards},
+           familyi={E\bibinitperiod},
+           given={Jonathan\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=1894fdd64bcd41195b8f9242581681ef}{%
+           family={Leiphart},
+           familyi={L\bibinitperiod},
+           given={James\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=87d242f5e8446e67381010fe5f6ebce3}{%
+           family={Wharen},
+           familyi={W\bibinitperiod},
+           given={Robert\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=72e419c877ff4c0eb7fe8df4b3971f5a}{%
+           family={Fessler},
+           familyi={F\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=085a411a8f5e0d6c4a4fff71fd57893c}{%
+           family={Fountain},
+           familyi={F\bibinitperiod},
+           given={Nathan\bibnamedelima B.},
+           giveni={N\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=c54a97595c8ae21d84c128520d045035}{%
+           family={Worrell},
+           familyi={W\bibinitperiod},
+           given={Gregory\bibnamedelima A.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=a41833996e582b42d7eba5e8a2cf6648}{%
+           family={Gross},
+           familyi={G\bibinitperiod},
+           given={Robert\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=ebcbe46b4f7239d325928c423a2cece3}{%
+           family={Eisenschenk},
+           familyi={E\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9be8450a422c7f6a3f008e707f4e2059}{%
+           family={Duckrow},
+           familyi={D\bibinitperiod},
+           given={Robert\bibnamedelima B.},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=1156722dd74180965ab1bfea42d1c68f}{%
+           family={Hirsch},
+           familyi={H\bibinitperiod},
+           given={Lawrence\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=296c0de85c46dd50cc19a10a4c4e39f0}{%
+           family={Bazil},
+           familyi={B\bibinitperiod},
+           given={Carl},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d997a49e1482e9cf46d88f2c1d08320d}{%
+           family={O'Donovan},
+           familyi={O\bibinitperiod},
+           given={Cormac\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=a7b73a5b6ec46cd6f11345235fab1333}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Felice\bibnamedelima T.},
+           giveni={F\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=14c6faf3903528569870699a1d7d9a4c}{%
+           family={Courtney},
+           familyi={C\bibinitperiod},
+           given={Tracy\bibnamedelima A.},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=de873830026726edf3cc321d93aa8749}{%
+           family={Seale},
+           familyi={S\bibinitperiod},
+           given={Cairn\bibnamedelima G.},
+           giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=add808016f0980291d27196579964d91}{%
+           family={Morrell},
+           familyi={M\bibinitperiod},
+           given={Martha\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{441fe4e0f810803ed79dffcca2cb1ffc}
+      \strng{fullhash}{241910fbcbda22a4c67773ac3091143b}
+      \strng{fullhashraw}{241910fbcbda22a4c67773ac3091143b}
+      \strng{bibnamehash}{441fe4e0f810803ed79dffcca2cb1ffc}
+      \strng{authorbibnamehash}{441fe4e0f810803ed79dffcca2cb1ffc}
+      \strng{authornamehash}{441fe4e0f810803ed79dffcca2cb1ffc}
+      \strng{authorfullhash}{241910fbcbda22a4c67773ac3091143b}
+      \strng{authorfullhashraw}{241910fbcbda22a4c67773ac3091143b}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Epilepsia}
+      \field{number}{3}
+      \field{title}{Two-year seizure reduction in adults with medically intractable partial onset epilepsy treated with responsive neurostimulation: Final results of the RNS System Pivotal trial}
+      \field{volume}{55}
+      \field{year}{2014}
+      \field{pages}{432\bibrangedash 441}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1111/epi.12534
+      \endverb
+    \endentry
+    \entry{pipicelli2020quantum}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=75095a343bd12e66c8a050424a3ae678}{%
+           family={Pipicelli},
+           familyi={P\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Università degli Studi di Napoli Federico II}%
+      }
+      \list{location}{1}{%
+        {Naples, Italy}%
+      }
+      \strng{namehash}{75095a343bd12e66c8a050424a3ae678}
+      \strng{fullhash}{75095a343bd12e66c8a050424a3ae678}
+      \strng{fullhashraw}{75095a343bd12e66c8a050424a3ae678}
+      \strng{bibnamehash}{75095a343bd12e66c8a050424a3ae678}
+      \strng{authorbibnamehash}{75095a343bd12e66c8a050424a3ae678}
+      \strng{authornamehash}{75095a343bd12e66c8a050424a3ae678}
+      \strng{authorfullhash}{75095a343bd12e66c8a050424a3ae678}
+      \strng{authorfullhashraw}{75095a343bd12e66c8a050424a3ae678}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Quantum Machine Learning: A Comparison Between Quantum and Classical Support Vector Machine}
+      \field{type}{phdthesis}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb http://www.fedoa.unina.it/13259/1/PhDThesisPipicelliFinal.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.fedoa.unina.it/13259/1/PhDThesisPipicelliFinal.pdf
+      \endverb
+    \endentry
+    \entry{gcc14-release}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=7f0884ab76c58925db6a44836453ebab}{%
+           family={{GNU Project}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f0884ab76c58925db6a44836453ebab}
+      \strng{fullhash}{7f0884ab76c58925db6a44836453ebab}
+      \strng{fullhashraw}{7f0884ab76c58925db6a44836453ebab}
+      \strng{bibnamehash}{7f0884ab76c58925db6a44836453ebab}
+      \strng{authorbibnamehash}{7f0884ab76c58925db6a44836453ebab}
+      \strng{authornamehash}{7f0884ab76c58925db6a44836453ebab}
+      \strng{authorfullhash}{7f0884ab76c58925db6a44836453ebab}
+      \strng{authorfullhashraw}{7f0884ab76c58925db6a44836453ebab}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://gcc.gnu.org/gcc-14/changes.html}}
+      \field{title}{{GCC 14 Release Series Changes, New Features, and Fixes}}
+      \field{year}{2024}
+    \endentry
+    \entry{gcc15-release}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=7f0884ab76c58925db6a44836453ebab}{%
+           family={{GNU Project}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f0884ab76c58925db6a44836453ebab}
+      \strng{fullhash}{7f0884ab76c58925db6a44836453ebab}
+      \strng{fullhashraw}{7f0884ab76c58925db6a44836453ebab}
+      \strng{bibnamehash}{7f0884ab76c58925db6a44836453ebab}
+      \strng{authorbibnamehash}{7f0884ab76c58925db6a44836453ebab}
+      \strng{authornamehash}{7f0884ab76c58925db6a44836453ebab}
+      \strng{authorfullhash}{7f0884ab76c58925db6a44836453ebab}
+      \strng{authorfullhashraw}{7f0884ab76c58925db6a44836453ebab}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://gcc.gnu.org/gcc-15/changes.html}}
+      \field{title}{{GCC 15 Release Series Changes, New Features, and Fixes}}
+      \field{year}{2025}
+    \endentry
+    \entry{mathworks_matlab_coder}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=2d2b0d998977e6379aad61f1b56ac3c1}{%
+           family={{MathWorks}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{fullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{fullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{bibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorbibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorfullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MATLAB Coder: Generate C and C++ code from MATLAB code}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.mathworks.com/products/matlab-coder.html
+      \endverb
+      \verb{url}
+      \verb https://www.mathworks.com/products/matlab-coder.html
+      \endverb
+    \endentry
+    \entry{behnel2011cython}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=cb2b3eaf82cfcf865dabb4b2d257172a}{%
+           family={Behnel},
+           familyi={B\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9af25671edb49e0c4b5c9da99fc536a3}{%
+           family={Bradshaw},
+           familyi={B\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6f712ddfd730736ee54fdc87a4abf7a2}{%
+           family={Citro},
+           familyi={C\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod}}}%
+        {{hash=6600c3041cf5eea1f4cc4c7e4ffbd9b3}{%
+           family={Dalcin},
+           familyi={D\bibinitperiod},
+           given={Lisandro},
+           giveni={L\bibinitperiod}}}%
+        {{hash=57f9fe03891661b6bee4c27aa8cda66e}{%
+           family={Seljebotn},
+           familyi={S\bibinitperiod},
+           given={Dag\bibnamedelima Sverre},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=e9d61bfbef98b1fe95c25b35d79f6212}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Kurt},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{08ff02667ac0ecbf322b06bc353b9d66}
+      \strng{fullhash}{5e22d5a47077d67e6831f734652f3adb}
+      \strng{fullhashraw}{5e22d5a47077d67e6831f734652f3adb}
+      \strng{bibnamehash}{08ff02667ac0ecbf322b06bc353b9d66}
+      \strng{authorbibnamehash}{08ff02667ac0ecbf322b06bc353b9d66}
+      \strng{authornamehash}{08ff02667ac0ecbf322b06bc353b9d66}
+      \strng{authorfullhash}{5e22d5a47077d67e6831f734652f3adb}
+      \strng{authorfullhashraw}{5e22d5a47077d67e6831f734652f3adb}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computing in Science \& Engineering}
+      \field{number}{2}
+      \field{title}{Cython: The Best of Both Worlds}
+      \field{volume}{13}
+      \field{year}{2011}
+      \field{pages}{31\bibrangedash 39}
+      \range{pages}{9}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

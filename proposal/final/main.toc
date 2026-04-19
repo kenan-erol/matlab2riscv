@@ -1,0 +1,22 @@
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Background}{7}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Design}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Results}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Additional Vectorization}{11}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Total Runtime Comparison}{12}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}The \texttt {divide} Anomaly}{14}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Vectorization Effectiveness}{15}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Ratio Shifts Due to Compiler Improvements}{16}{subsection.4.3.1}%
+\contentsline {paragraph}{Pattern 1: Integer memory operations.}{17}{subsection.4.3.1}%
+\contentsline {paragraph}{Pattern 2: Logical operations on non-integer types.}{17}{subsection.4.3.1}%
+\contentsline {paragraph}{Pattern 3: Binary operations.}{17}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}The \texttt {isEqual} Anomaly}{17}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Toolchain-Induced Vectorization Regressions}{18}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Absolute Cycle Counts}{19}{section.4.5}%
+\contentsline {section}{\numberline {4.6}TS-traversal Compiler}{19}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Related Work}{23}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Source-to-Source Translation for High-Level Languages}{23}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Conclusions}{25}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Appendix Title}{27}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Full Binary Ratio Comparison}{27}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Binary Operation Cycle Counts}{32}{section.A.2}%
