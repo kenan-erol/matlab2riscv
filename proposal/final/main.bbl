@@ -561,6 +561,132 @@
       \verb http://www.fedoa.unina.it/13259/1/PhDThesisPipicelliFinal.pdf
       \endverb
     \endentry
+    \entry{octave_comparison_ops}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e32a614d1f6cc4a0ff429b6efb153f26}{%
+           family={{GNU Octave Developers}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{e32a614d1f6cc4a0ff429b6efb153f26}
+      \strng{fullhash}{e32a614d1f6cc4a0ff429b6efb153f26}
+      \strng{fullhashraw}{e32a614d1f6cc4a0ff429b6efb153f26}
+      \strng{bibnamehash}{e32a614d1f6cc4a0ff429b6efb153f26}
+      \strng{authorbibnamehash}{e32a614d1f6cc4a0ff429b6efb153f26}
+      \strng{authornamehash}{e32a614d1f6cc4a0ff429b6efb153f26}
+      \strng{authorfullhash}{e32a614d1f6cc4a0ff429b6efb153f26}
+      \strng{authorfullhashraw}{e32a614d1f6cc4a0ff429b6efb153f26}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2026-04-20}
+      \field{title}{{GNU Octave Manual: 8.4 Comparison Operators}}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.octave.org/latest/Comparison-Ops.html
+      \endverb
+      \verb{url}
+      \verb https://docs.octave.org/latest/Comparison-Ops.html
+      \endverb
+    \endentry
+    \entry{taylor1982upward}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=9a73566b2c034858eebe00d0f6e401d1}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Roger},
+           giveni={R\bibinitperiod}}}%
+        {{hash=854415a7f9c5e7897478a0356217616f}{%
+           family={Lemmons},
+           familyi={L\bibinitperiod},
+           given={Phil},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{faeb6ca733ae0ed2ed18cf6c9f4ab29b}
+      \strng{fullhash}{faeb6ca733ae0ed2ed18cf6c9f4ab29b}
+      \strng{fullhashraw}{faeb6ca733ae0ed2ed18cf6c9f4ab29b}
+      \strng{bibnamehash}{faeb6ca733ae0ed2ed18cf6c9f4ab29b}
+      \strng{authorbibnamehash}{faeb6ca733ae0ed2ed18cf6c9f4ab29b}
+      \strng{authornamehash}{faeb6ca733ae0ed2ed18cf6c9f4ab29b}
+      \strng{authorfullhash}{faeb6ca733ae0ed2ed18cf6c9f4ab29b}
+      \strng{authorfullhashraw}{faeb6ca733ae0ed2ed18cf6c9f4ab29b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BYTE Magazine}
+      \field{month}{6}
+      \field{number}{6}
+      \field{title}{Upward Migration---Part 1: Translators}
+      \field{volume}{7}
+      \field{year}{1982}
+      \field{pages}{321\bibrangedash 344}
+      \range{pages}{24}
+      \verb{urlraw}
+      \verb https://web.archive.org/web/20200116024623/https://tech-insider.org/personal-computers/research/acrobat/8206-b.pdf
+      \endverb
+      \verb{url}
+      \verb https://web.archive.org/web/20200116024623/https://tech-insider.org/personal-computers/research/acrobat/8206-b.pdf
+      \endverb
+    \endentry
+    \entry{derose1996falcon}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=262051ca248d6548ef0518e7f281f2de}{%
+           family={De\bibnamedelima Rose},
+           familyi={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Luiz},
+           giveni={L\bibinitperiod}}}%
+        {{hash=657210c9f20af187144ac595b2da8acb}{%
+           family={Gallivan},
+           familyi={G\bibinitperiod},
+           given={Katie},
+           giveni={K\bibinitperiod}}}%
+        {{hash=8f8e336f880df5980b7b22ba9c16f70b}{%
+           family={Gallopoulos},
+           familyi={G\bibinitperiod},
+           given={Efstratios},
+           giveni={E\bibinitperiod}}}%
+        {{hash=3eb6ed4ffca4e24b4743c669835ed9c8}{%
+           family={Marsolf},
+           familyi={M\bibinitperiod},
+           given={Bret},
+           giveni={B\bibinitperiod}}}%
+        {{hash=10069b6c0f07f4f656cd2853b6599848}{%
+           family={Padua},
+           familyi={P\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{8e85040650cf83fd686c1c5b48dd8df8}
+      \strng{fullhash}{d246bd2cc1640931cf79b528aee76496}
+      \strng{fullhashraw}{d246bd2cc1640931cf79b528aee76496}
+      \strng{bibnamehash}{8e85040650cf83fd686c1c5b48dd8df8}
+      \strng{authorbibnamehash}{8e85040650cf83fd686c1c5b48dd8df8}
+      \strng{authornamehash}{8e85040650cf83fd686c1c5b48dd8df8}
+      \strng{authorfullhash}{d246bd2cc1640931cf79b528aee76496}
+      \strng{authorfullhashraw}{d246bd2cc1640931cf79b528aee76496}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Languages and Compilers for Parallel Computing (LCPC'95)}
+      \field{series}{Lecture Notes in Computer Science}
+      \field{title}{{FALCON}: A {MATLAB} Interactive Restructuring Compiler}
+      \field{volume}{1033}
+      \field{year}{1996}
+      \field{pages}{269\bibrangedash 288}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1007/bfb0014201
+      \endverb
+    \endentry
     \entry{mathworks_matlab_coder}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=2d2b0d998977e6379aad61f1b56ac3c1}{%

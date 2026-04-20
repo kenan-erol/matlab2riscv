@@ -1,11 +1,4 @@
-% This section might vary depending on the field of research. Consider this the approach, design, or architecture of the proposed system. You can also include implementation if it applies to your research.
 
-% Include at least one figure. Figure that shows the architecture of the proposed system, concepts of the proposed algorithm, etc. One figure that you could put into a slide that tells your idea. 
-
-% figure needed for displaying the architecture so matlab to riscv
-
-% Include actual implementation details. 
-% Describe the implementation language, platform, location, and dependencies on the packages.
 
 The objective of this research is to design the architecture of and to implement a cohesive, automated compilation pipeline capable of translating high-level algorithms into low-level optimized silicon instructions. This section details the system architecture, focusing on the transformation mechanisms and the underlying platform dependencies. 
 
@@ -19,8 +12,9 @@ The compiler pipeline is implemented as a continuous, directed data flow that st
 \end{figure}
 
 
-These raw files are passed into the first major component of the pipeline, the ts-traversal engine \cite{ts}. The transpiler executes a multi-phase transformation. First, it uses the TreeSitter and TreeSitter-Matlab parsing libraries to generate a concrete syntax tree (CST). This representation captures the complete syntactic structure of the input algorithms. The engine must thus perform rigorous type inference on the dynamically typed input MATLAB code. The inference algorithms in ts-traversal then traverse the CST to deduce the maximal dimensions, memory allocation requirements, and fundamental data types of all variables, mapping them to statically typed C constructs. The output of this phase is standard C code. The semantic intent of the MATLAB script is entirely preserved and the available vectorized and scalar functions are mapped via RISCV-Matrix library's headers. These headers contain highly optimized, inline RVV C intrinsics. This transformation effectively converts the MATLAB into heavily accelerated C code explicitly built for the parallel execution capabilities of HALO's microcontroller.
+These raw files are passed into ts-traversal \cite{ts}, which is the first component of the translation pipeline. ts-traversal executes a multi-phase transformation. First, it uses the TreeSitter and TreeSitter-Matlab parsing libraries to create a concrete syntax tree (CST). This representation captures the complete syntactic structure of the input MATLAB file and the algorithms it contains. Then, the engine performs type inference on the dynamically typed input MATLAB code. The inference algorithms in ts-traversal traverse the CST to understand the maximal dimensions, memory allocation requirements, and fundamental data types of all MATLAB variables, mapping them to statically typed C constructs. The output of this phase is standard C code. The semantic intent of the MATLAB script is entirely preserved and the available vectorized and scalar functions are mapped via RISCV-Matrix library's \texttt{matrix.h} header, which contains contain highly optimized, inline RVV C intrinsics as well as reference scalar implementations of functions. This transformation effectively converts the MATLAB into heavily accelerated C code explicitly built for the parallel execution capabilities of HALO's microcontroller.
 
 The final phase involves compiling and deploying the codebase. The generated main.c file is compiled via the RISC-V GNU Compiler toolchain. The compiler statically links the optimized vector library to produce a highly efficient RISC-V binary. Thus, the pipeline generates an executable containing the exact algorithms authored by neuroscientists in Matlab while meeting the power and latency requirements of the implanted chip. 
 
 The validation, execution modeling, and accurate instruction-level benchmarking of the generated binaries are conducted using the Spike ISA simulator, since the actual HALO silicon is not readily available. Spike provides a fully functional, instruction-accurate model of a RISC-V core with the RVV extension, enabling precise tracking of executed instructions, vector register utilization, and overall execution cycles. This enables the continuous, iterative refinement of both the source-to-source compiler and the vectorization library without requiring constant access to the physical test hardware.
+

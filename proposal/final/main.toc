@@ -14,9 +14,9 @@
 \contentsline {section}{\numberline {4.4}Toolchain-Induced Vectorization Regressions}{16}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Absolute Cycle Counts}{17}{section.4.5}%
 \contentsline {section}{\numberline {4.6}TS-traversal Compiler}{17}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Related Work}{20}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Translation for High-Level Languages}{20}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Conclusions}{21}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Appendix Title}{23}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Full Binary Ratio Comparison}{23}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Binary Operation Cycle Counts}{28}{section.A.2}%
+\contentsline {chapter}{\numberline {5}Related Work}{21}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Translation for High-Level Languages}{21}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Conclusions}{23}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Appendix Title}{26}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Full Binary Ratio Comparison}{26}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Binary Operation Cycle Counts}{31}{section.A.2}%

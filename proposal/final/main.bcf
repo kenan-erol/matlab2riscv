@@ -2392,12 +2392,15 @@
     <bcf:citekey order="17" intorder="1">ts</bcf:citekey>
     <bcf:citekey order="18" intorder="1">riscvmatrix</bcf:citekey>
     <bcf:citekey order="19" intorder="1">ts</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">riscvmatrix</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">7982670</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">Musk2019</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">Heck2014</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">mathworks_matlab_coder</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">behnel2011cython</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">octave_comparison_ops</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">riscvmatrix</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">7982670</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">Musk2019</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">Heck2014</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">taylor1982upward</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">derose1996falcon</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">mathworks_matlab_coder</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">behnel2011cython</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
