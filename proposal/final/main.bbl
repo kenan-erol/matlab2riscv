@@ -561,52 +561,6 @@
       \verb http://www.fedoa.unina.it/13259/1/PhDThesisPipicelliFinal.pdf
       \endverb
     \endentry
-    \entry{gcc14-release}{misc}{}{}
-      \name{author}{1}{}{%
-        {{hash=7f0884ab76c58925db6a44836453ebab}{%
-           family={{GNU Project}},
-           familyi={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{7f0884ab76c58925db6a44836453ebab}
-      \strng{fullhash}{7f0884ab76c58925db6a44836453ebab}
-      \strng{fullhashraw}{7f0884ab76c58925db6a44836453ebab}
-      \strng{bibnamehash}{7f0884ab76c58925db6a44836453ebab}
-      \strng{authorbibnamehash}{7f0884ab76c58925db6a44836453ebab}
-      \strng{authornamehash}{7f0884ab76c58925db6a44836453ebab}
-      \strng{authorfullhash}{7f0884ab76c58925db6a44836453ebab}
-      \strng{authorfullhashraw}{7f0884ab76c58925db6a44836453ebab}
-      \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://gcc.gnu.org/gcc-14/changes.html}}
-      \field{title}{{GCC 14 Release Series Changes, New Features, and Fixes}}
-      \field{year}{2024}
-    \endentry
-    \entry{gcc15-release}{misc}{}{}
-      \name{author}{1}{}{%
-        {{hash=7f0884ab76c58925db6a44836453ebab}{%
-           family={{GNU Project}},
-           familyi={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{7f0884ab76c58925db6a44836453ebab}
-      \strng{fullhash}{7f0884ab76c58925db6a44836453ebab}
-      \strng{fullhashraw}{7f0884ab76c58925db6a44836453ebab}
-      \strng{bibnamehash}{7f0884ab76c58925db6a44836453ebab}
-      \strng{authorbibnamehash}{7f0884ab76c58925db6a44836453ebab}
-      \strng{authornamehash}{7f0884ab76c58925db6a44836453ebab}
-      \strng{authorfullhash}{7f0884ab76c58925db6a44836453ebab}
-      \strng{authorfullhashraw}{7f0884ab76c58925db6a44836453ebab}
-      \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://gcc.gnu.org/gcc-15/changes.html}}
-      \field{title}{{GCC 15 Release Series Changes, New Features, and Fixes}}
-      \field{year}{2025}
-    \endentry
     \entry{mathworks_matlab_coder}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=2d2b0d998977e6379aad61f1b56ac3c1}{%
