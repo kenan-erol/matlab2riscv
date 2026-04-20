@@ -2,7 +2,7 @@
 \centering
 \caption{Vec/Ref ratios at $N \approx 1{,}050{,}625$ for binary operations (diagonal type combos). Ratio $< 1$ means vectorized is faster.}
 \label{tab:ratio-binary-diag}
-\small
+\resizebox{\linewidth}{!}{%
 \begin{tabular}{l | r r r | r r r | r r r}
 \toprule
  & \multicolumn{3}{c|}{int $\times$ int} & \multicolumn{3}{c|}{dbl $\times$ dbl} & \multicolumn{3}{c}{cpx $\times$ cpx} \\
@@ -30,5 +30,6 @@ Test & Grace & Cur. & $\Delta$ & Grace & Cur. & $\Delta$ & Grace & Cur. & $\Delt
   scale & 0.8068 & 0.8039 & -0.0029 & 0.3532 & 0.3505 & -0.0027 & 0.3102 & 0.3072 & -0.0030 \\
   times & 0.7619 & 0.7580 & -0.0039 & 0.3249 & 0.3218 & -0.0031 & 0.3017 & 0.2973 & -0.0044 \\
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \end{table}

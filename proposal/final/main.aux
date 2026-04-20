@@ -62,28 +62,32 @@
 \newlabel{ch:results}{{4}{11}{Results}{chapter.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Additional Vectorization}{11}{section.4.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}Total Runtime Comparison}{11}{section.4.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Total program runtime comparison: Grace (Dec 2022) vs Current (Feb 2026). Cycle counts measured on Spike simulator with VLEN=1024.}}{12}{table.caption.4}\protected@file@percent }
-\newlabel{tab:total-runtime}{{4.1}{12}{Total program runtime comparison: Grace (Dec 2022) vs Current (Feb 2026). Cycle counts measured on Spike simulator with VLEN=1024}{table.caption.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Total program runtime comparison: Grace (Dec 2022) vs Current (April 2026). Cycle counts measured on Spike simulator with VLEN=1024.}}{12}{table.caption.4}\protected@file@percent }
+\newlabel{tab:total-runtime}{{4.1}{12}{Total program runtime comparison: Grace (Dec 2022) vs Current (April 2026). Cycle counts measured on Spike simulator with VLEN=1024}{table.caption.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}The \texttt  {divide} Anomaly}{13}{subsection.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Vectorization Effectiveness}{14}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Vectorization Effectiveness}{13}{section.4.3}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Vec/Ref ratios at $N \approx 1{,}050{,}625$ for unary operations. Ratio $< 1$ means vectorized is faster. $\Delta $ shows change from Grace to Current.}}{14}{table.caption.5}\protected@file@percent }
 \newlabel{tab:ratio-unary}{{4.2}{14}{Vec/Ref ratios at $N \approx 1{,}050{,}625$ for unary operations. Ratio $< 1$ means vectorized is faster. $\Delta $ shows change from Grace to Current}{table.caption.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Vec/Ref ratios at $N \approx 1{,}050{,}625$ for binary operations (diagonal type combos). Ratio $< 1$ means vectorized is faster.}}{15}{table.caption.6}\protected@file@percent }
-\newlabel{tab:ratio-binary-diag}{{4.3}{15}{Vec/Ref ratios at $N \approx 1{,}050{,}625$ for binary operations (diagonal type combos). Ratio $< 1$ means vectorized is faster}{table.caption.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Vec/Ref ratios at $N \approx 1{,}050{,}625$ for binary operations (diagonal type combos). Ratio $< 1$ means vectorized is faster.}}{14}{table.caption.6}\protected@file@percent }
+\newlabel{tab:ratio-binary-diag}{{4.3}{14}{Vec/Ref ratios at $N \approx 1{,}050{,}625$ for binary operations (diagonal type combos). Ratio $< 1$ means vectorized is faster}{table.caption.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Ratio Shifts Due to Compiler Improvements}{15}{subsection.4.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Pattern 1: Integer memory operations.}{16}{subsection.4.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Pattern 2: Logical operations on non-integer types.}{16}{subsection.4.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Pattern 3: Binary operations.}{16}{subsection.4.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}The \texttt  {isEqual} Anomaly}{16}{subsection.4.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Pattern 1: Integer memory operations.}{15}{subsection.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Pattern 2: Logical operations on non-integer types.}{15}{subsection.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Pattern 3: Binary operations.}{15}{subsection.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}The \texttt  {isEqual} Anomaly}{15}{subsection.4.3.2}\protected@file@percent }
+\abx@aux@cite{0}{riscvmatrix}
+\abx@aux@segm{0}{0}{riscvmatrix}
 \@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces The \texttt  {isEqual} complex$\times $complex cycle counts remain constant across all matrix sizes, proving short-circuit evaluation.}}{16}{table.caption.7}\protected@file@percent }
 \newlabel{tab:isequal-evidence}{{4.4}{16}{The \texttt {isEqual} complex$\times $complex cycle counts remain constant across all matrix sizes, proving short-circuit evaluation}{table.caption.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Toolchain-Induced Vectorization Regressions}{17}{section.4.4}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces Type combinations where the scalar reference became faster than the vectorized implementation in the current toolchain.}}{17}{table.caption.8}\protected@file@percent }
-\newlabel{tab:regressions}{{4.5}{17}{Type combinations where the scalar reference became faster than the vectorized implementation in the current toolchain}{table.caption.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Absolute Cycle Counts}{18}{section.4.5}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces Vectorized and reference cycle counts at $N \approx 1{,}050{,}625$ for unary operations (Grace vs Current).}}{18}{table.caption.9}\protected@file@percent }
-\newlabel{tab:cycles-unary}{{4.6}{18}{Vectorized and reference cycle counts at $N \approx 1{,}050{,}625$ for unary operations (Grace vs Current)}{table.caption.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}TS-traversal Compiler}{18}{section.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Toolchain-Induced Vectorization Regressions}{16}{section.4.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces Type combinations where the scalar reference became faster than the vectorized implementation in the current toolchain.}}{16}{table.caption.8}\protected@file@percent }
+\newlabel{tab:regressions}{{4.5}{16}{Type combinations where the scalar reference became faster than the vectorized implementation in the current toolchain}{table.caption.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Absolute Cycle Counts}{17}{section.4.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces Vectorized and reference cycle counts at $N \approx 1{,}050{,}625$ for unary operations (Grace vs Current).}}{17}{table.caption.9}\protected@file@percent }
+\newlabel{tab:cycles-unary}{{4.6}{17}{Vectorized and reference cycle counts at $N \approx 1{,}050{,}625$ for unary operations (Grace vs Current)}{table.caption.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}TS-traversal Compiler}{17}{section.4.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.7}{\ignorespaces TS-traversal end-to-end benchmark: retired instruction counts for tests that existed in the baseline (\texttt  {compareall} at the 68-tests-passing checkpoint) compared against the current pipeline. Only representative rows are shown; the heavy \texttt  {SPEED\_big\_*} workloads, the largest vectorization wins, the largest regressions, and newly added tests are included. Positive $\Delta $ indicates a speedup.}}{19}{table.caption.10}\protected@file@percent }
+\newlabel{tab:ts-timediff}{{4.7}{19}{TS-traversal end-to-end benchmark: retired instruction counts for tests that existed in the baseline (\texttt {compareall} at the 68-tests-passing checkpoint) compared against the current pipeline. Only representative rows are shown; the heavy \texttt {SPEED\_big\_*} workloads, the largest vectorization wins, the largest regressions, and newly added tests are included. Positive $\Delta $ indicates a speedup}{table.caption.10}{}}
 \abx@aux@cite{0}{7982670}
 \abx@aux@segm{0}{0}{7982670}
 \abx@aux@cite{0}{Musk2019}

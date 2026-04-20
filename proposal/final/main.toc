@@ -5,15 +5,15 @@
 \contentsline {section}{\numberline {4.1}Additional Vectorization}{11}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Total Runtime Comparison}{11}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}The \texttt {divide} Anomaly}{13}{subsection.4.2.1}%
-\contentsline {section}{\numberline {4.3}Vectorization Effectiveness}{14}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Vectorization Effectiveness}{13}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Ratio Shifts Due to Compiler Improvements}{15}{subsection.4.3.1}%
-\contentsline {paragraph}{Pattern 1: Integer memory operations.}{16}{subsection.4.3.1}%
-\contentsline {paragraph}{Pattern 2: Logical operations on non-integer types.}{16}{subsection.4.3.1}%
-\contentsline {paragraph}{Pattern 3: Binary operations.}{16}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}The \texttt {isEqual} Anomaly}{16}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Toolchain-Induced Vectorization Regressions}{17}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Absolute Cycle Counts}{18}{section.4.5}%
-\contentsline {section}{\numberline {4.6}TS-traversal Compiler}{18}{section.4.6}%
+\contentsline {paragraph}{Pattern 1: Integer memory operations.}{15}{subsection.4.3.1}%
+\contentsline {paragraph}{Pattern 2: Logical operations on non-integer types.}{15}{subsection.4.3.1}%
+\contentsline {paragraph}{Pattern 3: Binary operations.}{15}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}The \texttt {isEqual} Anomaly}{15}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Toolchain-Induced Vectorization Regressions}{16}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Absolute Cycle Counts}{17}{section.4.5}%
+\contentsline {section}{\numberline {4.6}TS-traversal Compiler}{17}{section.4.6}%
 \contentsline {chapter}{\numberline {5}Related Work}{20}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Translation for High-Level Languages}{20}{section.5.1}%
 \contentsline {chapter}{\numberline {6}Conclusions}{21}{chapter.6}%

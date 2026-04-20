@@ -1,6 +1,6 @@
 \begin{table}[H]
 \centering
-\caption{Total program runtime comparison: Grace (Dec 2022) vs Current (Feb 2026). Cycle counts measured on Spike simulator with VLEN=1024.}
+\caption{Total program runtime comparison: Grace (Dec 2022) vs Current (April 2026). Cycle counts measured on Spike simulator with VLEN=1024.}
 \label{tab:total-runtime}
 \small
 \begin{tabular}{l r r r r}
@@ -11,6 +11,7 @@ Test & Grace (Gcycles) & Current (Gcycles) & $\Delta$ (Gcycles) & Change (\%) \\
   and & 2.22 & 1.91 & -0.31 & -14.2\% $\downarrow$ \\
   arg & 6.48 & 5.33 & -1.14 & -17.7\% $\downarrow$ \\
   ceil & 4.96 & 4.14 & -0.82 & -16.5\% $\downarrow$ \\
+  ctranspose & --- & 3.56 & --- & ---  \\
   divide & 5.47 & 5.64 & +0.16 & +3.0\% $\uparrow$ \\
   equal & 4.75 & 4.31 & -0.44 & -9.3\% $\downarrow$ \\
   floor & 4.97 & 4.15 & -0.81 & -16.4\% $\downarrow$ \\
@@ -22,7 +23,7 @@ Test & Grace (Gcycles) & Current (Gcycles) & $\Delta$ (Gcycles) & Change (\%) \\
   matlab\_lt & 4.34 & 3.63 & -0.72 & -16.5\% $\downarrow$ \\
   mean & --- & 3.50 & --- & ---  \\
   minus & 6.18 & 5.11 & -1.07 & -17.3\% $\downarrow$ \\
-  mtimes & 3.07 & 3.01 & -0.07 & -2.2\% $\downarrow$ \\
+  mtimes & 3.07 & 3.01 & -0.07 & -2.3\% $\downarrow$ \\
   ne & 4.81 & 4.36 & -0.44 & -9.2\% $\downarrow$ \\
   not & 1.51 & 1.28 & -0.23 & -15.2\% $\downarrow$ \\
   octave\_ge & 51.90 & 51.60 & -0.30 & -0.6\% $\approx$ \\
@@ -37,10 +38,11 @@ Test & Grace (Gcycles) & Current (Gcycles) & $\Delta$ (Gcycles) & Change (\%) \\
   round & 4.95 & 4.05 & -0.90 & -18.2\% $\downarrow$ \\
   scale & 1.98 & 1.76 & -0.22 & -10.9\% $\downarrow$ \\
   times & 6.37 & 5.33 & -1.05 & -16.4\% $\downarrow$ \\
+  transpose & --- & 3.55 & --- & ---  \\
   true & 1.54 & 1.35 & -0.19 & -12.4\% $\downarrow$ \\
   var & --- & 3.69 & --- & ---  \\
 \midrule
-  \textbf{Total} & \textbf{419.50} & \textbf{410.20} & \textbf{-9.30} & \textbf{-2.2\%} \\
+  \textbf{Total} & \textbf{419.50} & \textbf{417.31} & \textbf{-2.19} & \textbf{-0.5\%} \\
 \bottomrule
 \end{tabular}
 \end{table}

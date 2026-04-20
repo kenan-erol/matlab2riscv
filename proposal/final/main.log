@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  19 APR 2026 21:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  20 APR 2026 10:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -776,9 +776,9 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)) [5
+) [5
 
-] [6]
+]) [6]
 Chapter 2.
 (./background.tex [7
 
@@ -796,13 +796,13 @@ Package pdftex.def Info: figs/pipeline_architecture2.png  used on input line 16
  <./figs/pipeline_architecture2.png>]) [10]
 Chapter 4.
 (./results.tex (./tables/table_total_runtime.tex)
-Underfull \vbox (badness 2393) has occurred while \output is active []
+Underfull \vbox (badness 4505) has occurred while \output is active []
 
  [11
 
 ]
 [12]
-Overfull \hbox (6.75641pt too wide) in paragraph at lines 58--59
+Overfull \hbox (6.75641pt too wide) in paragraph at lines 23--24
 []\OT1/ptm/m/n/12 The four core arith-metic tests---\OT1/pcr/m/n/12 minus \OT1/
 ptm/m/n/12 ($\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 17\OML/cmm/m/it/12 :\OT1/cmr/m
 /n/12 3%$\OT1/ptm/m/n/12 ), \OT1/pcr/m/n/12 plus \OT1/ptm/m/n/12 ($\OMS/cmsy/m/
@@ -812,59 +812,65 @@ n/12 ^^@\OT1/cmr/m/n/12 17\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 3%$\OT1/ptm/m/n/12
  []
 
 
-Overfull \hbox (16.31436pt too wide) in paragraph at lines 60--61
+Overfull \hbox (16.31436pt too wide) in paragraph at lines 25--26
 []\OT1/ptm/m/n/12 The four com-par-i-son tests uti-liz-ing Octave-mode semantic
 s---\OT1/pcr/m/n/12 octave[]ge\OT1/ptm/m/n/12 , \OT1/pcr/m/n/12 octave[]gt\OT1/
 ptm/m/n/12 ,
  []
 
 
-Overfull \hbox (12.48273pt too wide) in paragraph at lines 66--67
+Overfull \hbox (4.17311pt too wide) in paragraph at lines 29--30
+\OT1/ptm/m/n/12 step real/imaginary arith-metic re-quired for com-plex num-ber 
+di-vi-sion (\OT1/pcr/m/n/12 (a+bi)/(c+di)\OT1/ptm/m/n/12 ). 
+ []
+
+
+Overfull \hbox (12.48273pt too wide) in paragraph at lines 31--32
 []\OT1/ptm/m/n/12 Conversely, the \OT1/pcr/m/n/12 int$\OMS/cmsy/m/n/12 ^^B$\OT1
 /pcr/m/n/12 int \OT1/ptm/m/n/12 ref-er-ence for \OT1/pcr/m/n/12 divide \OT1/ptm
-/m/n/12 dropped from 14.4M to 4.9M ($\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 66%$\O
+/m/n/12 dropped from 14.4M to 4.8M ($\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 67%$\O
 T1/ptm/m/n/12 ),
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
-(./tables/table_ratio_unary.tex
-Overfull \hbox (42.0412pt too wide) in paragraph at lines 6--24
- [][] 
- []
-
-) (./tables/table_ratio_binary_diag.tex
-Overfull \hbox (42.64351pt too wide) in paragraph at lines 6--34
- [][] 
- []
-
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14]
-[15]
-Overfull \hbox (1.31535pt too wide) in paragraph at lines 90--91
+(./tables/table_ratio_unary.tex [13]) (./tables/table_ratio_binary_diag.tex)
+[14]
+Overfull \hbox (27.82616pt too wide) in paragraph at lines 53--54
 \OT1/ptm/m/n/12 driven ref im-prove-ments for spe-cific type com-bi-na-tions. T
-he \OT1/pcr/m/n/12 and \OT1/ptm/m/n/12 (dbl$\OMS/cmsy/m/n/12 ^^B$\OT1/ptm/m/n/1
-2 dbl), \OT1/pcr/m/n/12 matlab[]ge
+he \OT1/pcr/m/n/12 matlab[]ge \OT1/ptm/m/n/12 through \OT1/pcr/m/n/12 matlab[]l
+t
  []
 
-[16]
-Overfull \hbox (4.26285pt too wide) in paragraph at lines 146--148
+[15]
+Overfull \hbox (4.26285pt too wide) in paragraph at lines 105--107
 []\OT1/ptm/m/n/12 In all three cases, the vec-tor-ized cy-cle counts re-mained 
 ap-prox-i-mately con-stant ($\OMS/cmsy/m/n/12 ^^X$\OT1/ptm/m/n/12 5.3M
  []
 
-(./tables/table_cycles_unary.tex [17])
-Overfull \hbox (19.27258pt too wide) in paragraph at lines 163--164
-\OT1/pcr/m/n/12 multiplication\OT1/ptm/m/n/12 , \OT1/pcr/m/n/12 power[]complex\
-OT1/ptm/m/n/12 , \OT1/pcr/m/n/12 power[]int\OT1/ptm/m/n/12 , \OT1/pcr/m/n/12 po
-wer[]double\OT1/ptm/m/n/12 , and \OT1/pcr/m/n/12 transpose\OT1/ptm/m/n/12 .
+[16] (./tables/table_cycles_unary.tex)
+Overfull \hbox (13.006pt too wide) in paragraph at lines 122--123
+\OT1/pcr/m/n/12 power[]double\OT1/ptm/m/n/12 , and \OT1/pcr/m/n/12 transpose\OT
+1/ptm/m/n/12 . There also ex-ist smaller test ker-nels such as \OT1/pcr/m/n/12 
+reindex\OT1/ptm/m/n/12 ,
  []
 
-[18]) [19]
+[17] (./tables/table_ts_timediff.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
+Overfull \hbox (49.65594pt too wide) in paragraph at lines 135--136
+\OT1/ptm/m/n/12 prove-ment --- $\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n
+/12 93%$ \OT1/ptm/m/n/12 on \OT1/pcr/m/n/12 SPEED[]big[]transpose \OT1/ptm/m/n/
+12 and $\OT1/cmr/m/n/12 26\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 75%$ \OT1/ptm/m/n/1
+2 on \OT1/pcr/m/n/12 SPEED[]medium[]transpose\OT1/ptm/m/n/12 .
+ []
+
+
+Overfull \hbox (26.6253pt too wide) in paragraph at lines 135--136
+\OT1/ptm/m/n/12 While the num-bers seem tame, they tell a big-ger story of im-p
+rove-ment due to the \OT1/pcr/m/n/12 transposeM
+ []
+
+) [19]
 Chapter 5.
 (./relatedwork.tex) [20
 
@@ -903,11 +909,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19978 strings out of 467525
- 348338 string characters out of 5418982
- 1249859 words of memory out of 5000000
- 48543 multiletter control sequences out of 15000+600000
- 657493 words of font info for 100 fonts, out of 8000000 for 9000
+ 19990 strings out of 467525
+ 348653 string characters out of 5418982
+ 1250282 words of memory out of 5000000
+ 48550 multiletter control sequences out of 15000+600000
+ 659177 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,79p,1477b,1298s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -923,10 +929,10 @@ al/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on main.pdf (29 pages, 351167 bytes).
+Output written on main.pdf (29 pages, 355441 bytes).
 PDF statistics:
- 383 PDF objects out of 1000 (max. 8388607)
- 320 compressed objects within 4 object streams
- 71 named destinations out of 1000 (max. 500000)
+ 384 PDF objects out of 1000 (max. 8388607)
+ 321 compressed objects within 4 object streams
+ 72 named destinations out of 1000 (max. 500000)
  158 words of extra memory for PDF output out of 10000 (max. 10000000)
 
