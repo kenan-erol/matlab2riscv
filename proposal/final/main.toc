@@ -17,6 +17,6 @@
 \contentsline {chapter}{\numberline {5}Related Work}{21}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Translation for High-Level Languages}{21}{section.5.1}%
 \contentsline {chapter}{\numberline {6}Conclusions}{23}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Appendix Title}{26}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Full Binary Benchmark Data}{26}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Full Binary Ratio Comparison}{26}{section.A.1}%
 \contentsline {section}{\numberline {A.2}Binary Operation Cycle Counts}{31}{section.A.2}%

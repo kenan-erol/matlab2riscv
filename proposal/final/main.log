@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  20 APR 2026 14:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  20 APR 2026 23:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -785,7 +785,7 @@ Chapter 2.
 ]) [8]
 Chapter 3.
 (./methodology.tex
-<figs/pipeline_architecture2.png, id=168, 768.8725pt x 399.4925pt>
+<figs/pipeline_architecture2.png, id=170, 768.8725pt x 399.4925pt>
 File: figs/pipeline_architecture2.png Graphic file (type png)
 <use figs/pipeline_architecture2.png>
 Package pdftex.def Info: figs/pipeline_architecture2.png  used on input line 9.
@@ -817,7 +817,7 @@ tm/m/n/12 dropped from 14.4M to 4.8M ($\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 67%$
  []
 
 (./tables/table_ratio_unary.tex)
-Underfull \vbox (badness 1097) has occurred while \output is active []
+Underfull \vbox (badness 2617) has occurred while \output is active []
 
  [13]
 (./tables/table_ratio_binary_diag.tex) [14]
@@ -829,14 +829,7 @@ Overfull \hbox (4.26285pt too wide) in paragraph at lines 103--105
 ap-prox-i-mately con-stant ($\OMS/cmsy/m/n/12 ^^X$\OT1/ptm/m/n/12 5.3M
  []
 
-[16] (./tables/table_cycles_unary.tex)
-Overfull \hbox (13.006pt too wide) in paragraph at lines 120--121
-\OT1/pcr/m/n/12 power[]double\OT1/ptm/m/n/12 , and \OT1/pcr/m/n/12 transpose\OT
-1/ptm/m/n/12 . There also ex-ist smaller test ker-nels such as \OT1/pcr/m/n/12 
-reindex\OT1/ptm/m/n/12 ,
- []
-
-[17] (./tables/table_ts_timediff.tex)
+[16] (./tables/table_cycles_unary.tex) [17] (./tables/table_ts_timediff.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18]
@@ -886,19 +879,19 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B7234BEF9250A7879EDDF511DEF741D7;3463.
+(rerunfilecheck)             Checksum: 47C7F8A3C6EAE2009EA2CB62E95DBFEF;3529.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20006 strings out of 467525
- 349239 string characters out of 5418982
- 1251499 words of memory out of 5000000
- 48560 multiletter control sequences out of 15000+600000
+ 20010 strings out of 467525
+ 349375 string characters out of 5418982
+ 1251560 words of memory out of 5000000
+ 48563 multiletter control sequences out of 15000+600000
  659177 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,1527b,1480s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,1633b,1482s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -912,10 +905,10 @@ al/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on main.pdf (32 pages, 359193 bytes).
+Output written on main.pdf (32 pages, 359892 bytes).
 PDF statistics:
- 412 PDF objects out of 1000 (max. 8388607)
- 346 compressed objects within 4 object streams
- 78 named destinations out of 1000 (max. 500000)
+ 417 PDF objects out of 1000 (max. 8388607)
+ 351 compressed objects within 4 object streams
+ 79 named destinations out of 1000 (max. 500000)
  158 words of extra memory for PDF output out of 10000 (max. 10000000)
 

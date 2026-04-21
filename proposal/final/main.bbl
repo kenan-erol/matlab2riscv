@@ -185,10 +185,10 @@
       \field{version}{1.0.0}
       \field{year}{2024}
       \verb{urlraw}
-      \verb https://github.com/kenan-erol/ts-traversal
+      \verb https://github.com/daniellegruber/ts-traversal
       \endverb
       \verb{url}
-      \verb https://github.com/kenan-erol/ts-traversal
+      \verb https://github.com/daniellegruber/ts-traversal
       \endverb
     \endentry
     \entry{riscvmatrix}{misc}{}{}
@@ -559,6 +559,33 @@
       \endverb
       \verb{url}
       \verb http://www.fedoa.unina.it/13259/1/PhDThesisPipicelliFinal.pdf
+      \endverb
+    \endentry
+    \entry{Ibanez}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=9008c745882bd8e9b37cae4adf3fbb21}{%
+           family={Ibanez},
+           familyi={I\bibinitperiod},
+           given={Roger\bibnamedelima Ferrer},
+           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{9008c745882bd8e9b37cae4adf3fbb21}
+      \strng{fullhash}{9008c745882bd8e9b37cae4adf3fbb21}
+      \strng{fullhashraw}{9008c745882bd8e9b37cae4adf3fbb21}
+      \strng{bibnamehash}{9008c745882bd8e9b37cae4adf3fbb21}
+      \strng{authorbibnamehash}{9008c745882bd8e9b37cae4adf3fbb21}
+      \strng{authornamehash}{9008c745882bd8e9b37cae4adf3fbb21}
+      \strng{authorfullhash}{9008c745882bd8e9b37cae4adf3fbb21}
+      \strng{authorfullhashraw}{9008c745882bd8e9b37cae4adf3fbb21}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{Introduction to the RISC-V Vector Extension}
+      \verb{urlraw}
+      \verb https://eupilot.eu/wp-content/uploads/2022/11/RISC-V-VectorExtension-1-1.pdf
+      \endverb
+      \verb{url}
+      \verb https://eupilot.eu/wp-content/uploads/2022/11/RISC-V-VectorExtension-1-1.pdf
       \endverb
     \endentry
     \entry{octave_comparison_ops}{online}{}{}
