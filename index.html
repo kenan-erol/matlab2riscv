@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPSC 290: HSI Drug Classification</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+
+        .figure {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .caption {
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CPSC 4900: Optimized Translation of MATLAB to RISC-V Architecture for Brain-Computer Interfaces: Final Report
+    </h1>
+    <p><strong>Student:</strong> Kenan Erol</p>
+    <p><strong>Advisor:</strong> Professor Rajit Manohar</p>
+    <p><strong>Date:</strong> Spring 2026</p>
+
+    <hr>
+
+    <h2>Abstract</h2>
+    <p>
+        Counterfeit pharmaceuticals pose a significant global health risk. These counterfeit drugs are visually
+        indistinguishable from their real counterparts. These similarities lead people to mistakenly take ineffective or
+        even harmful active pharmaceutical ingredients (API), potentially causing serious adverse health effects or
+        death.
+    </p>
+    <p>
+
+
+        This work explores the potential of hyperspectral imaging (HSI), which captures detailed spectral information
+        beyond human vision, combined with deep learning for non destructive pill analysis. HSI provides a unique
+        spectral analysis for materials by measuring reflectance across hundreds of narrow wavelength bands. We
+        developed a pipeline to put such HSI data through preprocessing, segmentation using Segment Anything Model 2
+        (SAM2), spectral patch extraction, and training of adapted Convolutional Neural Networks (CNNs).
+    </p>
+    <p>
+
+
+        We address two key tasks: multi-class classification of six different drug types, and binary classification
+        distinguishing authentic spectral patches from synthetically generated “fake” patches designed to simulate the
+        spectral differences one might expect. We used datasets acquired by a Lumo spectral imager scanning trays
+        containing 100 pills, producing 256 bands. The drug classes used were bromazolam, ecstasy (MDMA), clonazepam,
+        oxycodone, tramadol, and zopiclone. Our adapted ResNet-18 model achieves 100% accuracy on the drug
+        classification task. The model achieves 98.77% accuracy on the real vs fake task when using augmentations
+        targeted at specific bands. Augmentations to bands 0-130 and 81-130 were tried with results becoming more
+        effective based on the strength of the augmentations. These results demonstrate the promise of HSI and deep
+        learning for pharmaceutical analysis, while highlighting the need for further validation with physically
+        acquired counterfeit samples.
+
+    </p>
+    <!-- end abstratc -->
+
+    <hr>
+
+    <h2>Project Links</h2>
+    <ul>
+        <li><a href="https://github.com/kenan-erol/hyperspectral-classification" target="_blank">Code Repository</a>
+        </li>
+        <li><a href="docs/final/main.pdf" target="_blank">Final Project Report (PDF)</a></li>
+        <li><a href="docs/Kenan Erol Spring 2026 Project Proposal for CPSC 4900-2.pdf" target="_blank">Original Project
+                Description (PDF)</a></li>
+    </ul>
+
+
+
+    <hr>
+
+</body>
+
+</html>

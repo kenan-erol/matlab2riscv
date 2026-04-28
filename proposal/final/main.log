@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  28 APR 2026 00:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  28 APR 2026 12:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -801,10 +801,10 @@ Chapter 4.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-Overfull \hbox (10.31436pt too wide) in paragraph at lines 25--26
+Overfull \hbox (16.31436pt too wide) in paragraph at lines 25--26
 []\OT1/ptm/m/n/12 The four com-par-i-son tests uti-liz-ing Octave-mode semantic
-s--\OT1/pcr/m/n/12 octave[]ge\OT1/ptm/m/n/12 , \OT1/pcr/m/n/12 octave[]gt\OT1/p
-tm/m/n/12 ,
+s---\OT1/pcr/m/n/12 octave[]ge\OT1/ptm/m/n/12 , \OT1/pcr/m/n/12 octave[]gt\OT1/
+ptm/m/n/12 ,
  []
 
 
@@ -836,11 +836,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
-Overfull \hbox (43.65594pt too wide) in paragraph at lines 130--131
-\OT1/ptm/m/n/12 prove-ment -- $\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/
-12 93%$ \OT1/ptm/m/n/12 on \OT1/pcr/m/n/12 SPEED[]big[]transpose \OT1/ptm/m/n/1
-2 and $\OT1/cmr/m/n/12 26\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 75%$ \OT1/ptm/m/n/12
- on \OT1/pcr/m/n/12 SPEED[]medium[]transpose\OT1/ptm/m/n/12 .
+Overfull \hbox (49.65594pt too wide) in paragraph at lines 130--131
+\OT1/ptm/m/n/12 prove-ment --- $\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n
+/12 93%$ \OT1/ptm/m/n/12 on \OT1/pcr/m/n/12 SPEED[]big[]transpose \OT1/ptm/m/n/
+12 and $\OT1/cmr/m/n/12 26\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 75%$ \OT1/ptm/m/n/1
+2 on \OT1/pcr/m/n/12 SPEED[]medium[]transpose\OT1/ptm/m/n/12 .
  []
 
 
@@ -850,9 +850,9 @@ rove-ment due to the \OT1/pcr/m/n/12 transposeM
  []
 
 [20])
-Overfull \hbox (33.64473pt too wide) in paragraph at lines 134--85
-\OT1/ptm/m/n/12 ioral dif-fer-ences to be dis-cussed in this sec-tion. The same
- tol-er-ance gate (\OT1/pcr/m/n/12 tolerant[]diff.py\OT1/ptm/m/n/12 ,
+Overfull \hbox (9.36906pt too wide) in paragraph at lines 134--85
+\OT1/ptm/m/n/12 dif-fer-ences to be dis-cussed in this sec-tion. The same tol-e
+r-ance gate (\OT1/pcr/m/n/12 tolerant[]diff.py\OT1/ptm/m/n/12 ,
  []
 
 [21]
@@ -919,7 +919,7 @@ Here is how much of TeX's memory you used:
  48571 multiletter control sequences out of 15000+600000
  660124 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,1633b,1480s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,1636b,1480s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -933,7 +933,7 @@ al/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on main.pdf (34 pages, 441401 bytes).
+Output written on main.pdf (34 pages, 444196 bytes).
 PDF statistics:
  437 PDF objects out of 1000 (max. 8388607)
  370 compressed objects within 4 object streams
