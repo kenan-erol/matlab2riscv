@@ -72,26 +72,27 @@
 \@writefile{toc}{\contentsline {section}{\numberline {4.3}Vectorization Effectiveness}{13}{section.4.3}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Vec/Ref ratios at $N \approx 1{,}050{,}625$ for unary operations. Ratio $< 1$ means vectorized is faster. $\Delta $ shows change from Grace to Current.}}{14}{table.caption.5}\protected@file@percent }
 \newlabel{tab:ratio-unary}{{4.2}{14}{Vec/Ref ratios at $N \approx 1{,}050{,}625$ for unary operations. Ratio $< 1$ means vectorized is faster. $\Delta $ shows change from Grace to Current}{table.caption.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Vec/Ref ratios at $N \approx 1{,}050{,}625$ for binary operations (diagonal type combos). Ratio $< 1$ means vectorized is faster.}}{14}{table.caption.6}\protected@file@percent }
-\newlabel{tab:ratio-binary-diag}{{4.3}{14}{Vec/Ref ratios at $N \approx 1{,}050{,}625$ for binary operations (diagonal type combos). Ratio $< 1$ means vectorized is faster}{table.caption.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Vec/Ref ratios at $N \approx 1{,}050{,}625$ for binary operations (diagonal type combos). Ratio $< 1$ means vectorized is faster.}}{15}{table.caption.6}\protected@file@percent }
+\newlabel{tab:ratio-binary-diag}{{4.3}{15}{Vec/Ref ratios at $N \approx 1{,}050{,}625$ for binary operations (diagonal type combos). Ratio $< 1$ means vectorized is faster}{table.caption.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Ratio Shifts Due to Compiler Improvements}{15}{subsection.4.3.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Pattern 1: Integer memory operations.}{15}{subsection.4.3.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Pattern 2: Logical operations on non-integer types.}{15}{subsection.4.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Pattern 3: Binary operations.}{15}{subsection.4.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}The \texttt  {isEqual} Anomaly}{15}{subsection.4.3.2}\protected@file@percent }
-\abx@aux@cite{0}{riscvmatrix}
-\abx@aux@segm{0}{0}{riscvmatrix}
+\@writefile{toc}{\contentsline {paragraph}{Pattern 3: Binary operations.}{16}{subsection.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}The \texttt  {isEqual} Anomaly}{16}{subsection.4.3.2}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces The \texttt  {isEqual} complex$\times $complex cycle counts remain constant across all matrix sizes, proving short-circuit evaluation.}}{16}{table.caption.7}\protected@file@percent }
 \newlabel{tab:isequal-evidence}{{4.4}{16}{The \texttt {isEqual} complex$\times $complex cycle counts remain constant across all matrix sizes, proving short-circuit evaluation}{table.caption.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Toolchain-Induced Vectorization Regressions}{16}{section.4.4}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces Type combinations where the scalar reference became faster than the vectorized implementation in the current toolchain.}}{16}{table.caption.8}\protected@file@percent }
-\newlabel{tab:regressions}{{4.5}{16}{Type combinations where the scalar reference became faster than the vectorized implementation in the current toolchain}{table.caption.8}{}}
+\abx@aux@cite{0}{riscvmatrix}
+\abx@aux@segm{0}{0}{riscvmatrix}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Toolchain-Induced Vectorization Regressions}{17}{section.4.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces Type combinations where the scalar reference became faster than the vectorized implementation in the current toolchain.}}{17}{table.caption.8}\protected@file@percent }
+\newlabel{tab:regressions}{{4.5}{17}{Type combinations where the scalar reference became faster than the vectorized implementation in the current toolchain}{table.caption.8}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.5}Absolute Cycle Counts}{17}{section.4.5}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces Vectorized and reference cycle counts at $N \approx 1{,}050{,}625$ for unary operations (Grace vs Current).}}{17}{table.caption.9}\protected@file@percent }
-\newlabel{tab:cycles-unary}{{4.6}{17}{Vectorized and reference cycle counts at $N \approx 1{,}050{,}625$ for unary operations (Grace vs Current)}{table.caption.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}TS-traversal Compiler}{17}{section.4.6}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.7}{\ignorespaces TS-traversal end-to-end benchmark: retired instruction counts for tests that existed in the baseline (\texttt  {compareall} at the 68-tests-passing checkpoint) compared against the current pipeline. Only representative rows are shown; the heavy \texttt  {SPEED\_big\_*} workloads, the largest vectorization wins, the largest regressions, and newly added tests are included. Positive $\Delta $ indicates a speedup.}}{19}{table.caption.10}\protected@file@percent }
-\newlabel{tab:ts-timediff}{{4.7}{19}{TS-traversal end-to-end benchmark: retired instruction counts for tests that existed in the baseline (\texttt {compareall} at the 68-tests-passing checkpoint) compared against the current pipeline. Only representative rows are shown; the heavy \texttt {SPEED\_big\_*} workloads, the largest vectorization wins, the largest regressions, and newly added tests are included. Positive $\Delta $ indicates a speedup}{table.caption.10}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces Vectorized and reference cycle counts at $N \approx 1{,}050{,}625$ for unary operations (Grace vs Current).}}{18}{table.caption.9}\protected@file@percent }
+\newlabel{tab:cycles-unary}{{4.6}{18}{Vectorized and reference cycle counts at $N \approx 1{,}050{,}625$ for unary operations (Grace vs Current)}{table.caption.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}TS-traversal Compiler}{18}{section.4.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.7}{\ignorespaces TS-traversal end-to-end benchmark: retired instruction counts for tests that existed in the baseline (\texttt  {compareall} at the 68-tests-passing checkpoint) compared against the current pipeline. Only representative rows are shown; the heavy \texttt  {SPEED\_big\_*} workloads, the largest vectorization wins, the largest regressions, and newly added tests are included. Positive $\Delta $ indicates a speedup.}}{20}{table.caption.10}\protected@file@percent }
+\newlabel{tab:ts-timediff}{{4.7}{20}{TS-traversal end-to-end benchmark: retired instruction counts for tests that existed in the baseline (\texttt {compareall} at the 68-tests-passing checkpoint) compared against the current pipeline. Only representative rows are shown; the heavy \texttt {SPEED\_big\_*} workloads, the largest vectorization wins, the largest regressions, and newly added tests are included. Positive $\Delta $ indicates a speedup}{table.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}C-Octave Suite Residuals}{21}{subsection.4.6.1}\protected@file@percent }
 \abx@aux@cite{0}{7982670}
 \abx@aux@segm{0}{0}{7982670}
 \abx@aux@cite{0}{Musk2019}
@@ -106,28 +107,36 @@
 \abx@aux@segm{0}{0}{mathworks_matlab_coder}
 \abx@aux@cite{0}{behnel2011cython}
 \abx@aux@segm{0}{0}{behnel2011cython}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Related Work}{21}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Related Work}{22}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:relatedwork}{{5}{21}{Related Work}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Translation for High-Level Languages}{21}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusions}{23}{chapter.6}\protected@file@percent }
+\newlabel{ch:relatedwork}{{5}{22}{Related Work}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Translation for High-Level Languages}{22}{section.5.1}\protected@file@percent }
+\abx@aux@cite{0}{sleef}
+\abx@aux@segm{0}{0}{sleef}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusions}{24}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:conclusion}{{6}{23}{Conclusions}{chapter.6}{}}
+\newlabel{ch:conclusion}{{6}{24}{Conclusions}{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Future Work}{24}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Continued vectorization.}{24}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Integer overflow in \texttt  {powM}.}{24}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{LMUL audit.}{25}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Transpiler improvements.}{25}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{HALO deployment.}{25}{section.6.1}\protected@file@percent }
 \gdef \LT@i {\LT@entry 
     {3}{77.63922pt}\LT@entry 
     {1}{74.03978pt}\LT@entry 
     {3}{51.00002pt}\LT@entry 
     {3}{51.00002pt}\LT@entry 
     {3}{57.76788pt}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Full Binary Benchmark Data}{26}{appendix.A}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Full Binary Benchmark Data}{28}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:appendices}{{A}{26}{Full Binary Benchmark Data}{appendix.A}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Full Binary Ratio Comparison}{26}{section.A.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces Vec/Ref ratios at $N \approx 1{,}050{,}625$ — all type combos for binary operations.}}{26}{table.A.1}\protected@file@percent }
-\newlabel{tab:ratio-binary-full}{{A.1}{26}{Vec/Ref ratios at $N \approx 1{,}050{,}625$ — all type combos for binary operations}{table.A.1}{}}
+\newlabel{ch:appendices}{{A}{28}{Full Binary Benchmark Data}{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Full Binary Ratio Comparison}{28}{section.A.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces Vec/Ref ratios at $N \approx 1{,}050{,}625$ — all type combos for binary operations.}}{28}{table.A.1}\protected@file@percent }
+\newlabel{tab:ratio-binary-full}{{A.1}{28}{Vec/Ref ratios at $N \approx 1{,}050{,}625$ — all type combos for binary operations}{table.A.1}{}}
 \gdef \LT@ii {\LT@entry 
     {3}{77.63922pt}\LT@entry 
     {1}{35.7pt}\LT@entry 
@@ -135,10 +144,10 @@
     {1}{52.5359pt}\LT@entry 
     {1}{56.96355pt}\LT@entry 
     {3}{55.6679pt}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.2}Binary Operation Cycle Counts}{31}{section.A.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {A.2}{\ignorespaces Vectorized and reference cycle counts at $N \approx 1{,}050{,}625$ — diagonal type combos for binary operations.}}{31}{table.A.2}\protected@file@percent }
-\newlabel{tab:cycles-binary}{{A.2}{31}{Vectorized and reference cycle counts at $N \approx 1{,}050{,}625$ — diagonal type combos for binary operations}{table.A.2}{}}
-\abx@aux@read@bbl@mdfivesum{415CFE3C9000B0F8C8FB0048BB17965C}
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}Binary Operation Cycle Counts}{33}{section.A.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {A.2}{\ignorespaces Vectorized and reference cycle counts at $N \approx 1{,}050{,}625$ — diagonal type combos for binary operations.}}{33}{table.A.2}\protected@file@percent }
+\newlabel{tab:cycles-binary}{{A.2}{33}{Vectorized and reference cycle counts at $N \approx 1{,}050{,}625$ — diagonal type combos for binary operations}{table.A.2}{}}
+\abx@aux@read@bbl@mdfivesum{70EECDF8CCFB519CA9603674DC2EFFAF}
 \abx@aux@defaultrefcontext{0}{9138938}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{10120914}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{ts}{none/global//global/global/global}
@@ -153,4 +162,5 @@
 \abx@aux@defaultrefcontext{0}{derose1996falcon}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{mathworks_matlab_coder}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{behnel2011cython}{none/global//global/global/global}
-\gdef \@abspage@last{32}
+\abx@aux@defaultrefcontext{0}{sleef}{none/global//global/global/global}
+\gdef \@abspage@last{34}

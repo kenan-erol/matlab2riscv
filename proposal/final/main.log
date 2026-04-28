@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  20 APR 2026 23:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  28 APR 2026 00:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -785,113 +785,141 @@ Chapter 2.
 ]) [8]
 Chapter 3.
 (./methodology.tex
-<figs/pipeline_architecture2.png, id=170, 768.8725pt x 399.4925pt>
+<figs/pipeline_architecture2.png, id=180, 2394.9475pt x 1496.59125pt>
 File: figs/pipeline_architecture2.png Graphic file (type png)
 <use figs/pipeline_architecture2.png>
 Package pdftex.def Info: figs/pipeline_architecture2.png  used on input line 9.
 
-(pdftex.def)             Requested size: 426.79134pt x 221.75752pt.
+(pdftex.def)             Requested size: 426.79134pt x 266.68015pt.
  [9
 
  <./figs/pipeline_architecture2.png>]) [10]
 Chapter 4.
-(./results.tex (./tables/table_total_runtime.tex)
-Underfull \vbox (badness 4505) has occurred while \output is active []
-
- [11
+(./results.tex (./tables/table_total_runtime.tex) [11
 
 ]
-[12]
-Overfull \hbox (16.31436pt too wide) in paragraph at lines 23--24
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+Overfull \hbox (10.31436pt too wide) in paragraph at lines 25--26
 []\OT1/ptm/m/n/12 The four com-par-i-son tests uti-liz-ing Octave-mode semantic
-s---\OT1/pcr/m/n/12 octave[]ge\OT1/ptm/m/n/12 , \OT1/pcr/m/n/12 octave[]gt\OT1/
-ptm/m/n/12 ,
+s--\OT1/pcr/m/n/12 octave[]ge\OT1/ptm/m/n/12 , \OT1/pcr/m/n/12 octave[]gt\OT1/p
+tm/m/n/12 ,
  []
 
 
-Overfull \hbox (9.53035pt too wide) in paragraph at lines 29--30
+Overfull \hbox (9.53035pt too wide) in paragraph at lines 31--32
 []\OT1/ptm/m/n/12 In con-trast, the \OT1/pcr/m/n/12 int$\OMS/cmsy/m/n/12 ^^B$\O
 T1/pcr/m/n/12 int \OT1/ptm/m/n/12 ref-er-ence for \OT1/pcr/m/n/12 divide \OT1/p
 tm/m/n/12 dropped from 14.4M to 4.8M ($\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 67%$
 \OT1/ptm/m/n/12 ),
  []
 
-(./tables/table_ratio_unary.tex)
-Underfull \vbox (badness 2617) has occurred while \output is active []
+(./tables/table_ratio_unary.tex) [13] (./tables/table_ratio_binary_diag.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
-(./tables/table_ratio_binary_diag.tex) [14]
-Underfull \vbox (badness 4846) has occurred while \output is active []
+ [14]
+[15]
+Underfull \vbox (badness 1331) has occurred while \output is active []
 
- [15]
-Overfull \hbox (4.26285pt too wide) in paragraph at lines 103--105
+ [16]
+Overfull \hbox (4.26285pt too wide) in paragraph at lines 105--107
 []\OT1/ptm/m/n/12 In all three cases, the vec-tor-ized cy-cle counts re-mained 
 ap-prox-i-mately con-stant ($\OMS/cmsy/m/n/12 ^^X$\OT1/ptm/m/n/12 5.3M
  []
 
-[16] (./tables/table_cycles_unary.tex) [17] (./tables/table_ts_timediff.tex)
+(./tables/table_cycles_unary.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
-Overfull \hbox (49.65594pt too wide) in paragraph at lines 128--129
-\OT1/ptm/m/n/12 prove-ment --- $\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n
-/12 93%$ \OT1/ptm/m/n/12 on \OT1/pcr/m/n/12 SPEED[]big[]transpose \OT1/ptm/m/n/
-12 and $\OT1/cmr/m/n/12 26\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 75%$ \OT1/ptm/m/n/1
-2 on \OT1/pcr/m/n/12 SPEED[]medium[]transpose\OT1/ptm/m/n/12 .
+ [17]
+[18] (./tables/table_ts_timediff.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+Overfull \hbox (43.65594pt too wide) in paragraph at lines 130--131
+\OT1/ptm/m/n/12 prove-ment -- $\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/
+12 93%$ \OT1/ptm/m/n/12 on \OT1/pcr/m/n/12 SPEED[]big[]transpose \OT1/ptm/m/n/1
+2 and $\OT1/cmr/m/n/12 26\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 75%$ \OT1/ptm/m/n/12
+ on \OT1/pcr/m/n/12 SPEED[]medium[]transpose\OT1/ptm/m/n/12 .
  []
 
 
-Overfull \hbox (26.6253pt too wide) in paragraph at lines 128--129
+Overfull \hbox (26.6253pt too wide) in paragraph at lines 130--131
 \OT1/ptm/m/n/12 While the num-bers seem tame, they tell a big-ger story of im-p
 rove-ment due to the \OT1/pcr/m/n/12 transposeM
  []
 
-) [19] [20]
+[20])
+Overfull \hbox (33.64473pt too wide) in paragraph at lines 134--85
+\OT1/ptm/m/n/12 ioral dif-fer-ences to be dis-cussed in this sec-tion. The same
+ tol-er-ance gate (\OT1/pcr/m/n/12 tolerant[]diff.py\OT1/ptm/m/n/12 ,
+ []
+
+[21]
 Chapter 5.
-(./relatedwork.tex [21
+(./relatedwork.tex [22
 
-]) [22]
+]) [23]
 Chapter 6.
-(./conclusion.tex) [23
+(./conclusion.tex
+Overfull \hbox (50.36308pt too wide) in paragraph at lines 17--18
+[] []\OT1/ptm/b/n/12 In-te-ger over-flow in \OT1/pcr/b/n/12 powM\OT1/ptm/b/n/12
+ .[] \OT1/ptm/m/n/12 As noted in the C-Octave Suite Resid-u-als dis-cus-sion, \
+OT1/pcr/m/n/12 power[]matrix
+ []
 
-] [24
+[24
 
-] [25]
+]
+Overfull \hbox (10.84595pt too wide) in paragraph at lines 23--24
+\OT1/ptm/m/n/12 EEGLAB: the \OT1/pcr/m/n/12 getClasses \OT1/ptm/m/n/12 pass dis
+-cov-ers prop-er-ties and meth-ods but emits \OT1/pcr/m/n/12 initVar()
+ []
+
+
+Overfull \hbox (5.62341pt too wide) in paragraph at lines 23--24
+\OT1/ptm/m/n/12 calls in-side C \OT1/pcr/m/n/12 struct \OT1/ptm/m/n/12 def-i-ni
+-tions, which is il-le-gal C. Sep-a-rat-ing struct dec-la-ra-tion (header)
+ []
+
+) [25] [26
+
+] [27]
 Appendix A.
 (./appendices.tex (./tables/table_ratio_binary_full.tex
 ignored: Infinite glue shrinkage 
-found in box being split [26
+found in box being split [28
 
 ]
-ignored: Infinite glue shrinkage found in box being split [27]
+ignored: Infinite glue shrinkage found in box being split [29]
 ignored: Infinite glue shrinkage f
-ound in box being split [28]
-ignored: Infinite glue shrinkage found in box being split [2
-9])
+ound in box being split [30]
+ignored: Infinite glue shrinkage found in box being split [3
+1])
 (./tables/table_cycles_binary.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30]
+ [32]
 ignored: Infinite glue shrinkage found in box being split
-[31])) [32] (./main.aux)
+[33])) [34] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 47C7F8A3C6EAE2009EA2CB62E95DBFEF;3529.
+(rerunfilecheck)             Checksum: 11EE7712D269AED27553A2DF73B98FED;3884.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20010 strings out of 467525
- 349375 string characters out of 5418982
- 1251560 words of memory out of 5000000
- 48563 multiletter control sequences out of 15000+600000
- 659177 words of font info for 102 fonts, out of 8000000 for 9000
+ 20024 strings out of 467525
+ 349625 string characters out of 5418982
+ 1251613 words of memory out of 5000000
+ 48571 multiletter control sequences out of 15000+600000
+ 660124 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,1633b,1482s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,1633b,1480s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -905,10 +933,10 @@ al/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on main.pdf (32 pages, 359892 bytes).
+Output written on main.pdf (34 pages, 441401 bytes).
 PDF statistics:
- 417 PDF objects out of 1000 (max. 8388607)
- 351 compressed objects within 4 object streams
- 79 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 437 PDF objects out of 1000 (max. 8388607)
+ 370 compressed objects within 4 object streams
+ 84 named destinations out of 1000 (max. 500000)
+ 174 words of extra memory for PDF output out of 10000 (max. 10000000)
 

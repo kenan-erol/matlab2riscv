@@ -4,5 +4,24 @@ The successful chronic implantation of next-gen BCIs is constrained by extreme p
 
 Validation and benchmarking demonstrate that the vectorized matrix library successfully runs on Spike and yields near-consistent performance improvements. Analysis of the data has successfully isolated performance improvements driven by updated cross-compiler toolchains, while simultaneously identifying initial test-harness anomalies. The ts-traversal semantic translation layer has also been benchmarked and timed with successful results across various essential operations.
 
-Future research can take multiple directions from here. First, there are unvectorized kernels flagged in the RISCV-Matrix README that require further work. Second, the hand-off to the BCI lab at the Yale School of Medicine will move the pipeline from simulator-only validation onto the physical HALO prototype under neuroscientist-written full workloads, where the 15 mW power envelope and $1 ^\circ$C thermal limit will provide a real-world check on the cycle-count argument made here.
+% Future research can take multiple directions from here. First, there are unvectorized kernels flagged in the RISCV-Matrix README that require further work. Second, the hand-off to the BCI lab at the Yale School of Medicine will move the pipeline from simulator-only validation onto the physical HALO prototype under neuroscientist-written full workloads, where the 15 mW power envelope and $1 ^\circ$C thermal limit will provide a real-world check on the cycle-count argument made here.
+
+\section{Future Work}
+
+The work presented here opens several concrete directions for future development, organized by component.
+
+\paragraph{Continued vectorization.}
+The RISCV-Matrix README flags dozens of kernels that remain unvectorized. The highest value vectorizations are likely trigonometric functions like \texttt{sinM} and the complex side of \texttt{argM} would provide significant speedups for BCI workloads due to the DSP-heavy nature of neural decoding. As discussed earlier, the vectorization of \texttt{carg} would speed-up the heavy Octave workloads from Table~\ref{tab:total-runtime}. However, this is likely a difficult endeavor as the lack of RVV trigonometric intrinsics require polynomial approximations to be built or pulled from  a library like SLEEF \cite{sleef}. Outside of these options, \texttt{popvarM} can be vectorized easily following the implementations of \texttt{varM,stdM,popstdM}. Finally, 1D non-double types can be vectorized for \texttt{varM}.
+
+\paragraph{Integer overflow in \texttt{powM}.}
+As noted in the C-Octave Suite Residuals discussion, \texttt{power\_matrix} produces results exceeding $\texttt{INT\_MAX} = 2^{31} - 1$ for \texttt{INTEGER} inputs. The Octave suite correctly computes these large values while the C suite gets stuck at \texttt{INT\_MIN/INT\_MAX}. This warrants further investigation into \texttt{powM} and \texttt{floorM}, which both get called in the test suite.
+
+\paragraph{LMUL audit.}
+Several vectorized functions were flagged in the original README as having LMUL settings that ``need checking.'' Using an LMUL that exceeds the number of live vector variables causes implicit register spills, negating the throughput benefit. An LMUL audit pass would identify and correct sub-optimal groupings.
+
+\paragraph{Transpiler improvements.} 
+Support for MATLAB's \texttt{classdef} OOP is incomplete and would be a highest value change in order to enable supporting BCI workloads through EEGLAB: the \texttt{getClasses} pass discovers properties and methods but emits \texttt{initVar()} calls inside C \texttt{struct} definitions, which is illegal~C. Separating struct declaration (header) from constructor initialization (function) would unblock the \texttt{class\_test} suite.
+
+\paragraph{HALO deployment.}
+The hand-off to the BCI lab at the Yale School of Medicine will enable physical HALO testing under neuroscientist-written full workloads, where the 15~mW power envelope and $1\,^{\circ}$C thermal limit will provide a real-world check on the cycle-count conclusions drawn here. Cache effects, TLB pressure, and memory bandwidth saturation -- none of which are modeled by \texttt{rdinstret}-based benchmarking on Spike -- will then become the dominant performance factors to drill into.
 

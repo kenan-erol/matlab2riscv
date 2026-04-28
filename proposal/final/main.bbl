@@ -797,6 +797,38 @@
       \field{pages}{31\bibrangedash 39}
       \range{pages}{9}
     \endentry
+    \entry{sleef}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=330b35e758bf25167f383474b39cbaf3}{%
+           family={Shibata},
+           familyi={S\bibinitperiod},
+           given={Naoki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=a8b2e39951bba535f313f563f6abaef6}{%
+           family={contributors},
+           familyi={c\bibinitperiod}}}%
+      }
+      \strng{namehash}{e9f6c04ca46660f14897958f74890a43}
+      \strng{fullhash}{e9f6c04ca46660f14897958f74890a43}
+      \strng{fullhashraw}{e9f6c04ca46660f14897958f74890a43}
+      \strng{bibnamehash}{e9f6c04ca46660f14897958f74890a43}
+      \strng{authorbibnamehash}{e9f6c04ca46660f14897958f74890a43}
+      \strng{authornamehash}{e9f6c04ca46660f14897958f74890a43}
+      \strng{authorfullhash}{e9f6c04ca46660f14897958f74890a43}
+      \strng{authorfullhashraw}{e9f6c04ca46660f14897958f74890a43}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2026-04-27}
+      \field{title}{SLEEF: SIMD Library for Evaluating Elementary Functions}
+      \verb{urlraw}
+      \verb https://sleef.org
+      \endverb
+      \verb{url}
+      \verb https://sleef.org
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

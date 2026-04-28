@@ -9,14 +9,21 @@
 \contentsline {subsection}{\numberline {4.3.1}Ratio Shifts Due to Compiler Improvements}{15}{subsection.4.3.1}%
 \contentsline {paragraph}{Pattern 1: Integer memory operations.}{15}{subsection.4.3.1}%
 \contentsline {paragraph}{Pattern 2: Logical operations on non-integer types.}{15}{subsection.4.3.1}%
-\contentsline {paragraph}{Pattern 3: Binary operations.}{15}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}The \texttt {isEqual} Anomaly}{15}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Toolchain-Induced Vectorization Regressions}{16}{section.4.4}%
+\contentsline {paragraph}{Pattern 3: Binary operations.}{16}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}The \texttt {isEqual} Anomaly}{16}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Toolchain-Induced Vectorization Regressions}{17}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Absolute Cycle Counts}{17}{section.4.5}%
-\contentsline {section}{\numberline {4.6}TS-traversal Compiler}{17}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Related Work}{21}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Translation for High-Level Languages}{21}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Conclusions}{23}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Full Binary Benchmark Data}{26}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Full Binary Ratio Comparison}{26}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Binary Operation Cycle Counts}{31}{section.A.2}%
+\contentsline {section}{\numberline {4.6}TS-traversal Compiler}{18}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}C-Octave Suite Residuals}{21}{subsection.4.6.1}%
+\contentsline {chapter}{\numberline {5}Related Work}{22}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Translation for High-Level Languages}{22}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Conclusions}{24}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Future Work}{24}{section.6.1}%
+\contentsline {paragraph}{Continued vectorization.}{24}{section.6.1}%
+\contentsline {paragraph}{Integer overflow in \texttt {powM}.}{24}{section.6.1}%
+\contentsline {paragraph}{LMUL audit.}{25}{section.6.1}%
+\contentsline {paragraph}{Transpiler improvements.}{25}{section.6.1}%
+\contentsline {paragraph}{HALO deployment.}{25}{section.6.1}%
+\contentsline {chapter}{\numberline {A}Full Binary Benchmark Data}{28}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Full Binary Ratio Comparison}{28}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Binary Operation Cycle Counts}{33}{section.A.2}%

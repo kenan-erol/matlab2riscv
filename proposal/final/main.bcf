@@ -2402,6 +2402,7 @@
     <bcf:citekey order="26" intorder="1">derose1996falcon</bcf:citekey>
     <bcf:citekey order="27" intorder="1">mathworks_matlab_coder</bcf:citekey>
     <bcf:citekey order="28" intorder="1">behnel2011cython</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">sleef</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
