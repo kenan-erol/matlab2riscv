@@ -29,7 +29,7 @@ The full thesis report is in [`docs/final/main.pdf`](docs/final/main.pdf).
 
 ## Prerequisites
 
-- macOS (Apple Silicon or Intel) or Linux. Tested on macOS 14 with Homebrew and Yale's Grace cluster (deprecated April 2026; everything in this repo now builds locally).
+- macOS (Apple Silicon or Intel) or Linux. Tested on macOS 14 with Homebrew.
 - Approximately 4 GB free disk for the toolchain build, 2 GB for `node_modules` and FFTW/BLAS object files.
 - `git`, `bash`, `make` (already shipped on macOS Command Line Tools and most Linux distros).
 
@@ -55,7 +55,7 @@ cd ~/riscv-gnu-toolchain
 ./configure --prefix=$HOME/riscv \
             --with-arch=rv64gcv1p0 \
             --with-abi=lp64d
-make -j$(sysctl -n hw.ncpu)        # ~30 minutes on M-series, ~45 on Intel
+make -j$(sysctl -n hw.ncpu)
 ```
 
 After this, `$HOME/riscv/bin/riscv64-unknown-elf-gcc --version` should print `gcc (g) 15.2.0` (or newer). If you have an older `riscv64-elf-gcc` from Homebrew or another source, make sure `$HOME/riscv/bin` is *first* on `PATH` so the right one is picked up.
@@ -95,7 +95,7 @@ brew install openblas lapack scalapack       # for BLAS-backed kernels
 
 # Octave statistics package (required by tests_C_Octave/advanced_stats.m)
 octave --eval "pkg install -forge io"
-octave --eval "pkg install -forge datatypes"
+octave --eval "pkg install -forge datatypes" # if this asks for an octave update, skip
 octave --eval "pkg install -forge statistics"
 ```
 
@@ -108,7 +108,7 @@ export RISCV="$HOME/riscv"
 export PATH="$RISCV/bin:$PATH"
 export TS_TRAVERSAL="$(pwd)/ts-traversal"
 export OCTAVEC="$(pwd)/RISCV-Matrix/src"
-# Only needed if you want to run the EEGLAB-derived tests:
+# Only needed if you want to run the EEGLAB-derived tests (once class derivation is fixed):
 # export EEGLAB="$HOME/eeglab"
 ```
 
@@ -117,31 +117,23 @@ Add those to `~/.zshrc` or `~/.bashrc` so future shells pick them up.
 Verify the toolchain is reachable:
 
 ```bash
-riscv64-unknown-elf-gcc --version | head -1     # should be 15.2.0+
-spike --help 2>&1 | head -1                     # "Spike RISC-V ISA simulator"
-ls $RISCV/riscv64-unknown-elf/bin/pk            # should exist
+riscv64-unknown-elf-gcc --version # should be 15.2.0+
+spike --help 2>&1 # "Spike RISC-V ISA simulator"
+ls $RISCV/riscv64-unknown-elf/bin/pk # should exist
 ```
 
 ## Build the matrix library
 
 ```bash
-make -C RISCV-Matrix/src
-```
-
-This cross-compiles every `.c` in `RISCV-Matrix/src/` with `-march=rv64gcv1p0 -O2` and packs the result into `RISCV-Matrix/src/libmatrix.a`. ~20 seconds on first run; incremental thereafter. You can watch which kernels are vectorized vs reference in `RISCV-Matrix/README.md` § "Table of Vectorization Status".
-
-If you also want to regenerate FFTW and the BLAS shims:
-
-```bash
-make -C RISCV-Matrix matrix       # rebuilds libmatrix.a
-# riscv-blas and fftw-3.3.10 are built one-time when first invoked by tests
+make -C RISCV-Matrix/src # or
+make -C RISCV-Matrix matrix		# rebuilds libmatrix.a
 ```
 
 ## Set up ts-traversal
 
 ```bash
 cd ts-traversal
-npm install                       # ~1 minute, pulls tree-sitter-matlab + @types/node
+npm install
 
 # If you plan to run the ts-traversal test suite (make compareall),
 # you must ensure MATLAB is activated and reachable in your environment:
@@ -150,7 +142,7 @@ matlab -nodesktop -nosplash -nodisplay -r "disp('hello'); exit"
 cd ../..
 ```
 
-That's it — TypeScript runs via `ts-node`, no separate compile step needed.
+After this, you can use ts-node to run the transpiler against any .m file.
 
 ## Translate a MATLAB file end-to-end
 
@@ -289,54 +281,8 @@ make -C RISCV-Matrix/tests_C_Octave compare_outputs > \
 
 # 3. ts-traversal end-to-end (every .m → main.c → .riscv → output, against MATLAB reference)
 ( cd ts-traversal/generatedCode && make compareall )
-( cd ts-traversal/generatedCode && make timeall  )
+( cd ts-traversal/generatedCode && make timeall_fast  )
 ```
 
 Both suites use the same tolerance gate (`tolerant_diff.py` at `MANTISSA_TOL = ABS_TOL = 5e-10`).
 
-## Repository layout
-
-```
-matlab2riscv/
-├── README.md               # this file
-├── index.html              # CPSC 4900 submission landing page
-├── docs/
-│   ├── final/main.pdf      # final thesis report
-│   ├── poster.pdf          # final poster
-│   └── Kenan Erol Spring 2026 Project Proposal for CPSC 4900-2.pdf
-├── RISCV-Matrix/           # submodule: vectorized C library + tests
-│   ├── src/                # library sources (compiled into libmatrix.a)
-│   ├── tests_Vec_C/        # vec-vs-ref accuracy + speed harness
-│   ├── tests_C_Octave/     # C-vs-Octave correctness harness
-│   ├── BSC-RVV/            # BSC RVV macro layer (vector_defines.h)
-│   ├── fftw-3.3.10/        # cross-compiled FFTW
-│   ├── riscv-blas/         # RISC-V port of OpenBLAS
-│   └── README.md           # library reference incl. vectorization status table
-└── ts-traversal/           # submodule: TypeScript MATLAB→C compiler
-    ├── *.ts                # source: index.ts, generateCode.ts, etc.
-    ├── generatedCode/      # per-test work directory + Makefile
-    │   ├── myscript/       # your MATLAB file lands here
-    │   ├── tolerant_diff.py
-    │   └── timediff_latex.py
-    └── README.md           # transpiler reference
-```
-
-## Troubleshooting
-
-**`undefined reference to *_vec` at link time.** The matrix library is stale. Force-rebuild:
-```bash
-rm RISCV-Matrix/src/*.o RISCV-Matrix/src/libmatrix.a
-make -C RISCV-Matrix/src
-```
-
-**`vsetvl_e32m1: implicit declaration`.** You're on an older toolchain that doesn't ship the LMUL=1 set. Pull the latest `riscv-gnu-toolchain` and rebuild — RVV 1.0 intrinsics names changed between 0.7 and 1.0.
-
-**`pkg load statistics` fails in Octave.** Install the dependency chain in order: `pkg install -forge io`, then `datatypes`, then `statistics`.
-
-**`tic`/`toc` rewriting eats `static`.** Was a real bug in `cleanUp.ts`; fixed by adding `\b` word boundaries. If you hit it on an older checkout, pull the fix from the latest `ts-traversal` `main`.
-
-**Tests fail with token-count mismatch but values look identical.** The C side likely emits a stderr diagnostic that pk routes to stdout (e.g., singular-matrix or non-diagonalizable warnings). Mirror the diagnostic literal in the matching `.m` — see `tests_C_Octave/invert_matrix/invert_matrix.m` for the canonical pattern.
-
-**FFTW-vs-fftpack ULP scatter > tolerance.** Documented in `RISCV-Matrix/README.md` § "Numerical Divergence and the Tolerant Diff". Worst residual on the suite is `filterM` token 3586 at `5.246e-10` (just above the `5e-10` `ABS_TOL` short-circuit). Loosen `ABS_TOL` to `1e-9` if you need that test green.
-
-For more, see [`RISCV-Matrix/README.md`](RISCV-Matrix/README.md) and [`ts-traversal/README.md`](ts-traversal/README.md), which document each subsystem in depth.
