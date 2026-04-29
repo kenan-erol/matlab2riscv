@@ -52,15 +52,15 @@ While the vectorized implementations maintained approximately constant cycle cou
 
 \begin{verbatim}
     ...
-    1002:       22077107                vlseg2e64.v     v2,(a4)
-    1012:       62209057                vmfeq.vv        v0,v2,v1
-    1016:       62309157                vmfeq.vv        v2,v3,v1
-    101e:       0007e227                vse32.v v4,(a5),v0.t
-    1038:       5e003157                vmv.v.i v2,0
-    1040:       5e00b0d7                vmv.v.i v1,1
-    1048:       02077007                vle64.v v0,(a4)
-    1058:       62011057                vmfeq.vv        v0,v0,v2
-    105c:       0007e0a7                vse32.v v1,(a5),v0.t
+    1002:       22077107       vlseg2e64.v     v2,(a4)
+    1012:       62209057       vmfeq.vv        v0,v2,v1
+    1016:       62309157       vmfeq.vv        v2,v3,v1
+    101e:       0007e227       vse32.v v4,(a5),v0.t
+    1038:       5e003157       vmv.v.i v2,0
+    1040:       5e00b0d7       vmv.v.i v1,1
+    1048:       02077007       vle64.v v0,(a4)
+    1058:       62011057       vmfeq.vv        v0,v0,v2
+    105c:       0007e0a7       vse32.v v1,(a5),v0.t
     ...
 \end{verbatim}
 
@@ -119,21 +119,21 @@ or & cpx $\times$ dbl & 0.477 & 11.4M & 2.392 & 2.2M \\
 In all three cases, the vectorized cycle counts remained approximately constant ($\sim$5.3M for \texttt{and}, $\sim$5.4M for \texttt{or}). The regressions are entirely driven by GCC's updated optimizer reducing the reference cycle counts by a factor of five to six. It is expected that the ``scalar'' reference is no longer scalar: GCC 15's RISC-V backend auto-vectorizes it, and the resulting code beats the library's hand-written kernel. For example, disassembling \texttt{andM\_internal\_ref} shows vector register operations:
 
 \begin{verbatim}
-     62c:       5e003157                vmv.v.i v2,0
-     634:       5e00b1d7                vmv.v.i v3,1
-     63c:       0207f007                vle64.v v0,(a5)
-     64c:       72011057                vmfne.vv        v0,v0,v2
-     650:       00077087                vle64.v v1,(a4),v0.t
-     656:       721110d7                vmfne.vv        v1,v1,v2
-     65e:       0006e1a7                vse32.v v3,(a3),v0.t
-     698:       5e003257                vmv.v.i v4,0
-     6a0:       5e00b2d7                vmv.v.i v5,1
-     6a8:       2207f107                vlseg2e64.v     v2,(a5)
-     6bc:       72321057                vmfne.vv        v0,v3,v4
-     6c0:       72221157                vmfne.vv        v2,v2,v4
-     6c8:       00077087                vle64.v v1,(a4),v0.t
-     6ce:       721210d7                vmfne.vv        v1,v1,v4
-     6d6:       0006e2a7                vse32.v v5,(a3),v0.t
+     62c:       5e003157       vmv.v.i v2,0
+     634:       5e00b1d7       vmv.v.i v3,1
+     63c:       0207f007       vle64.v v0,(a5)
+     64c:       72011057       vmfne.vv        v0,v0,v2
+     650:       00077087       vle64.v v1,(a4),v0.t
+     656:       721110d7       vmfne.vv        v1,v1,v2
+     65e:       0006e1a7       vse32.v v3,(a3),v0.t
+     698:       5e003257       vmv.v.i v4,0
+     6a0:       5e00b2d7       vmv.v.i v5,1
+     6a8:       2207f107       vlseg2e64.v     v2,(a5)
+     6bc:       72321057       vmfne.vv        v0,v3,v4
+     6c0:       72221157       vmfne.vv        v2,v2,v4
+     6c8:       00077087       vle64.v v1,(a4),v0.t
+     6ce:       721210d7       vmfne.vv        v1,v1,v4
+     6d6:       0006e2a7       vse32.v v5,(a3),v0.t
 \end{verbatim}
 % because it fuses the compare and mask steps that the intrinsic version keeps separate.
 
@@ -163,4 +163,4 @@ The observed speed improvement was less than initially expected due to the fact 
 
 \subsection{C-Octave Suite Residuals}
 
-There is a suite of Octave and C tests that mirror the same kernels tested in the MATLAB-vs-C comparison but use Octave instead of MATLAB, which causes certain behavioral differences. The same tolerance gate (\texttt{tolerant\_diff.py}, $MANTISSA\_TOL = ABS\_TOL = 5 \times 10^{-10}$, $\text{EXP\_JITTER} = 1$) is now wired into \texttt{tests\_C\_Octave/Makefile}'s \texttt{compare\_outputs} target so the same numerical contract governs both surfaces. Following recent fixes to display handling, the number of passing tests went from 66 to 71/79. The eight still-failing tests fail due to \emph{FFT library divergence} between FFTW (RISCV-MATRIX) and fftpack (Octave) or \emph{error handling behavior differences}. As an example of error handling, the C implementation prints out a warning statement about matrix singularity whereas Octave does not. 
+There is a suite of Octave and C tests that mirror the same kernels tested in the MATLAB-vs-C comparison but use Octave instead of MATLAB, which causes certain behavioral differences. The same tolerance gate (\texttt{tolerant\_diff.py}, $MANTISSA\_TOL = ABS\_TOL = 5 \times 10^{-10}$, $\text{EXP\_JITTER} = 1$) is now wired into \texttt{tests\_C\_Octave/Makefile}'s \texttt{compare\_outputs} target so the same numerical contract governs both surfaces. Following recent fixes to display handling, the number of passing tests went from 66 to 71/79. The eight still-failing tests fail due to numerical divergence or error handling behavior differences. One example of tolerance divergence can be seen in the \texttt{filterM} test case which fails due to a difference of $2.349 \times 10^{-10}$ between $i \times 2.896 \times 10^{-10}$ and $i \times 5.246 \times 10^{-10}$, which would have passed if the ABS\_TOL was slightly larger. As such, a review of the current tolerance settings across all test suites may help pass more of these tests. Additionally, certain test cases like \texttt{stftM} may suffer from FFT library difference between C and Octave, which use FFTW and fftpack respectively. As an example of error handling, the C implementation prints out a warning statement about matrix singularity whereas Octave does not. 

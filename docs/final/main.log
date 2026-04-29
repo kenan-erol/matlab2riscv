@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  28 APR 2026 23:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  28 APR 2026 23:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -819,109 +819,13 @@ tm/m/n/12 dropped from 14.4M to 4.8M ($\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 67%$
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-[15]
-Overfull \hbox (26.80847pt too wide) in paragraph at lines 65--65
-[]    \OT1/pcr/m/n/12 1002:       22077107                vlseg2e64.v     v2,(a
-4)[] 
- []
-
-
-Overfull \hbox (34.00847pt too wide) in paragraph at lines 65--65
-[]    \OT1/pcr/m/n/12 1012:       62209057                vmfeq.vv        v0,v2
-,v1[] 
- []
-
-
-Overfull \hbox (34.00847pt too wide) in paragraph at lines 65--65
-[]    \OT1/pcr/m/n/12 1016:       62309157                vmfeq.vv        v2,v3
-,v1[] 
- []
-
-
-Overfull \hbox (5.20848pt too wide) in paragraph at lines 65--65
-[]    \OT1/pcr/m/n/12 101e:       0007e227                vse32.v v4,(a5),v0.t[
-] 
- []
-
-
-Overfull \hbox (34.00847pt too wide) in paragraph at lines 65--65
-[]    \OT1/pcr/m/n/12 1058:       62011057                vmfeq.vv        v0,v0
-,v2[] 
- []
-
-
-Overfull \hbox (5.20848pt too wide) in paragraph at lines 65--65
-[]    \OT1/pcr/m/n/12 105c:       0007e0a7                vse32.v v1,(a5),v0.t[
-] 
- []
-
-[16]
+[15] [16]
 Overfull \hbox (4.26285pt too wide) in paragraph at lines 119--120
 []\OT1/ptm/m/n/12 In all three cases, the vec-tor-ized cy-cle counts re-mained 
 ap-prox-i-mately con-stant ($\OMS/cmsy/m/n/12 ^^X$\OT1/ptm/m/n/12 5.3M
  []
 
-
-Overfull \hbox (34.00847pt too wide) in paragraph at lines 137--137
-[]     \OT1/pcr/m/n/12 64c:       72011057                vmfne.vv        v0,v0
-,v2[] 
- []
-
-
-Overfull \hbox (5.20848pt too wide) in paragraph at lines 137--137
-[]     \OT1/pcr/m/n/12 650:       00077087                vle64.v v1,(a4),v0.t[
-] 
- []
-
-
-Overfull \hbox (34.00847pt too wide) in paragraph at lines 137--137
-[]     \OT1/pcr/m/n/12 656:       721110d7                vmfne.vv        v1,v1
-,v2[] 
- []
-
-
-Overfull \hbox (5.20848pt too wide) in paragraph at lines 137--137
-[]     \OT1/pcr/m/n/12 65e:       0006e1a7                vse32.v v3,(a3),v0.t[
-] 
- []
-
-
-Overfull \hbox (26.80847pt too wide) in paragraph at lines 137--137
-[]     \OT1/pcr/m/n/12 6a8:       2207f107                vlseg2e64.v     v2,(a
-5)[] 
- []
-
-[17]
-Overfull \hbox (34.00847pt too wide) in paragraph at lines 137--137
-[]     \OT1/pcr/m/n/12 6bc:       72321057                vmfne.vv        v0,v3
-,v4[] 
- []
-
-
-Overfull \hbox (34.00847pt too wide) in paragraph at lines 137--137
-[]     \OT1/pcr/m/n/12 6c0:       72221157                vmfne.vv        v2,v2
-,v4[] 
- []
-
-
-Overfull \hbox (5.20848pt too wide) in paragraph at lines 137--137
-[]     \OT1/pcr/m/n/12 6c8:       00077087                vle64.v v1,(a4),v0.t[
-] 
- []
-
-
-Overfull \hbox (34.00847pt too wide) in paragraph at lines 137--137
-[]     \OT1/pcr/m/n/12 6ce:       721210d7                vmfne.vv        v1,v1
-,v4[] 
- []
-
-
-Overfull \hbox (5.20848pt too wide) in paragraph at lines 137--137
-[]     \OT1/pcr/m/n/12 6d6:       0006e2a7                vse32.v v5,(a3),v0.t[
-] 
- []
-
-(./tables/table_cycles_unary.tex) [18] (./tables/table_ts_timediff.tex)
+[17] (./tables/table_cycles_unary.tex) [18] (./tables/table_ts_timediff.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
@@ -1019,7 +923,7 @@ al/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on main.pdf (34 pages, 446962 bytes).
+Output written on main.pdf (34 pages, 447650 bytes).
 PDF statistics:
  437 PDF objects out of 1000 (max. 8388607)
  370 compressed objects within 4 object streams
