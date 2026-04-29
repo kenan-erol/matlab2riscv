@@ -12,7 +12,7 @@
 \contentsline {paragraph}{Pattern 3: Binary operations.}{16}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}The \texttt {isEqual} Anomaly}{16}{subsection.4.3.2}%
 \contentsline {section}{\numberline {4.4}Toolchain-Induced Vectorization Regressions}{17}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Absolute Cycle Counts}{17}{section.4.5}%
+\contentsline {section}{\numberline {4.5}Absolute Cycle Counts}{18}{section.4.5}%
 \contentsline {section}{\numberline {4.6}TS-traversal Compiler}{18}{section.4.6}%
 \contentsline {subsection}{\numberline {4.6.1}C-Octave Suite Residuals}{21}{subsection.4.6.1}%
 \contentsline {chapter}{\numberline {5}Related Work}{22}{chapter.5}%

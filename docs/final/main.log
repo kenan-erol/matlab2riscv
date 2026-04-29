@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  28 APR 2026 21:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  28 APR 2026 23:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -820,23 +820,112 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
 [15]
-Underfull \vbox (badness 1331) has occurred while \output is active []
+Overfull \hbox (26.80847pt too wide) in paragraph at lines 65--65
+[]    \OT1/pcr/m/n/12 1002:       22077107                vlseg2e64.v     v2,(a
+4)[] 
+ []
 
- [16]
-Overfull \hbox (4.26285pt too wide) in paragraph at lines 105--107
+
+Overfull \hbox (34.00847pt too wide) in paragraph at lines 65--65
+[]    \OT1/pcr/m/n/12 1012:       62209057                vmfeq.vv        v0,v2
+,v1[] 
+ []
+
+
+Overfull \hbox (34.00847pt too wide) in paragraph at lines 65--65
+[]    \OT1/pcr/m/n/12 1016:       62309157                vmfeq.vv        v2,v3
+,v1[] 
+ []
+
+
+Overfull \hbox (5.20848pt too wide) in paragraph at lines 65--65
+[]    \OT1/pcr/m/n/12 101e:       0007e227                vse32.v v4,(a5),v0.t[
+] 
+ []
+
+
+Overfull \hbox (34.00847pt too wide) in paragraph at lines 65--65
+[]    \OT1/pcr/m/n/12 1058:       62011057                vmfeq.vv        v0,v0
+,v2[] 
+ []
+
+
+Overfull \hbox (5.20848pt too wide) in paragraph at lines 65--65
+[]    \OT1/pcr/m/n/12 105c:       0007e0a7                vse32.v v1,(a5),v0.t[
+] 
+ []
+
+[16]
+Overfull \hbox (4.26285pt too wide) in paragraph at lines 119--120
 []\OT1/ptm/m/n/12 In all three cases, the vec-tor-ized cy-cle counts re-mained 
 ap-prox-i-mately con-stant ($\OMS/cmsy/m/n/12 ^^X$\OT1/ptm/m/n/12 5.3M
  []
 
-(./tables/table_cycles_unary.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
-[18] (./tables/table_ts_timediff.tex)
+Overfull \hbox (34.00847pt too wide) in paragraph at lines 137--137
+[]     \OT1/pcr/m/n/12 64c:       72011057                vmfne.vv        v0,v0
+,v2[] 
+ []
+
+
+Overfull \hbox (5.20848pt too wide) in paragraph at lines 137--137
+[]     \OT1/pcr/m/n/12 650:       00077087                vle64.v v1,(a4),v0.t[
+] 
+ []
+
+
+Overfull \hbox (34.00847pt too wide) in paragraph at lines 137--137
+[]     \OT1/pcr/m/n/12 656:       721110d7                vmfne.vv        v1,v1
+,v2[] 
+ []
+
+
+Overfull \hbox (5.20848pt too wide) in paragraph at lines 137--137
+[]     \OT1/pcr/m/n/12 65e:       0006e1a7                vse32.v v3,(a3),v0.t[
+] 
+ []
+
+
+Overfull \hbox (26.80847pt too wide) in paragraph at lines 137--137
+[]     \OT1/pcr/m/n/12 6a8:       2207f107                vlseg2e64.v     v2,(a
+5)[] 
+ []
+
+[17]
+Overfull \hbox (34.00847pt too wide) in paragraph at lines 137--137
+[]     \OT1/pcr/m/n/12 6bc:       72321057                vmfne.vv        v0,v3
+,v4[] 
+ []
+
+
+Overfull \hbox (34.00847pt too wide) in paragraph at lines 137--137
+[]     \OT1/pcr/m/n/12 6c0:       72221157                vmfne.vv        v2,v2
+,v4[] 
+ []
+
+
+Overfull \hbox (5.20848pt too wide) in paragraph at lines 137--137
+[]     \OT1/pcr/m/n/12 6c8:       00077087                vle64.v v1,(a4),v0.t[
+] 
+ []
+
+
+Overfull \hbox (34.00847pt too wide) in paragraph at lines 137--137
+[]     \OT1/pcr/m/n/12 6ce:       721210d7                vmfne.vv        v1,v1
+,v4[] 
+ []
+
+
+Overfull \hbox (5.20848pt too wide) in paragraph at lines 137--137
+[]     \OT1/pcr/m/n/12 6d6:       0006e2a7                vse32.v v5,(a3),v0.t[
+] 
+ []
+
+(./tables/table_cycles_unary.tex) [18] (./tables/table_ts_timediff.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
-Overfull \hbox (49.65594pt too wide) in paragraph at lines 130--131
+Overfull \hbox (49.65594pt too wide) in paragraph at lines 162--163
 \OT1/ptm/m/n/12 prove-ment --- $\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n
 /12 93%$ \OT1/ptm/m/n/12 on \OT1/pcr/m/n/12 SPEED[]big[]transpose \OT1/ptm/m/n/
 12 and $\OT1/cmr/m/n/12 26\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 75%$ \OT1/ptm/m/n/1
@@ -844,13 +933,13 @@ Overfull \hbox (49.65594pt too wide) in paragraph at lines 130--131
  []
 
 
-Overfull \hbox (26.6253pt too wide) in paragraph at lines 130--131
+Overfull \hbox (26.6253pt too wide) in paragraph at lines 162--163
 \OT1/ptm/m/n/12 While the num-bers seem tame, they tell a big-ger story of im-p
 rove-ment due to the \OT1/pcr/m/n/12 transposeM
  []
 
 [20])
-Overfull \hbox (38.34665pt too wide) in paragraph at lines 134--85
+Overfull \hbox (38.34665pt too wide) in paragraph at lines 166--85
 \OML/cmm/m/it/12 ABS[]TOL \OT1/cmr/m/n/12 = 5 \OMS/cmsy/m/n/12 ^^B \OT1/cmr/m/n
 /12 10[]$\OT1/ptm/m/n/12 , $[] \OT1/cmr/m/n/12 = 1$\OT1/ptm/m/n/12 ) is now wir
 ed into \OT1/pcr/m/n/12 tests[]C[]Octave/Makefile\OT1/ptm/m/n/12 's
@@ -910,10 +999,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20024 strings out of 467525
- 349625 string characters out of 5418982
+ 20026 strings out of 467525
+ 349685 string characters out of 5418982
  1251613 words of memory out of 5000000
- 48571 multiletter control sequences out of 15000+600000
+ 48573 multiletter control sequences out of 15000+600000
  660124 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,79p,1937b,1480s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -930,7 +1019,7 @@ al/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on main.pdf (34 pages, 445220 bytes).
+Output written on main.pdf (34 pages, 446962 bytes).
 PDF statistics:
  437 PDF objects out of 1000 (max. 8388607)
  370 compressed objects within 4 object streams

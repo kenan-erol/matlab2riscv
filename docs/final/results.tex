@@ -11,7 +11,7 @@ The Grace baseline shipped vectorized kernels for the full binary, arithmetic, a
 The ten new entry points land in April 2026. Accuracy tests pass for all of them at every size from $N=1$ to $N=1{,}050{,}625$ except for three tests at 127x127, 1023x1023, and 127x127 matrices respectively: \texttt{varM}, \texttt{stdM}, and \texttt{mtimesM} (a vectorized kernel written before this research) have their vec and ref outputs off by a factor of at most $8.941 \times 10^{-8}$, $2.444 \times 10^{-9}$ and $1.714 \times 10^{-7}$ respectively.
 
 The ten new functions have not all been vectorized for all possible dimensions and types. For \texttt{transposeM} and \texttt{ctransposeM}, all 2D types have been vectorized while all 1D inputs fall back to the reference implementation. For \texttt{meanM} and \texttt{varM}, 1D doubles and all 2D types have been vectorized. 
-For \texttt{minM/V} and \texttt{maxM/V}, all but 1D and 2D complex inputs have been vectorized due to the need for \texttt{carg} for complex comparison. \texttt{stdM} and \texttt{popstdM} inherit the exact same constraints as \texttt{varM}, remaining fully vectorized only for 1D doubles and all 2D matrix types.
+For \texttt{minM/V} and \texttt{maxM/V}, all but 1D and 2D complex inputs have been vectorized due to the need for \texttt{carg} for complex comparison. \texttt{stdM} and \texttt{popstdM} inherit the exact same constraints as \texttt{varM}, remaining fully vectorized for all 1D and 2D matrix types.
 % For \texttt{stdM} and \texttt{popstdM}, the variance is computed through the existing \texttt{varM\_vec}/\texttt{popvarM} dispatch, then an in-place \texttt{vfsqrt\_v\_f64m1} loop replaces the reference path's \texttt{scalarpowerM(\_, 0.5, DOUBLE)} (which trampolines through libc \texttt{pow}); INTEGER and DOUBLE only, COMPLEX falls back to ref because principal-branch complex sqrt is non-trivial in RVV.
 
 \section{Total Runtime Comparison}
@@ -48,7 +48,21 @@ While the vectorized implementations maintained approximately constant cycle cou
 
 \paragraph{Pattern 1: Integer memory operations.} The integer reference cycle counts dropped uniformly for the \texttt{ceil}, \texttt{floor}, \texttt{round}, \texttt{full\_duplicate}, and \texttt{ones} tests. Many of these tests saw their ratios jump by $\sim 29\%$ across int and double types. This is likely because GCC optimized memory load/store type operations since the Grace era.
 
-\paragraph{Pattern 2: Logical operations on non-integer types.} A similar ref speedup was observed for logical operations on double and complex types. The cycle count for \texttt{not} and \texttt{true} decreased by $\sim$65\% (e.g., \texttt{not} double ref: 10.3M $\rightarrow$ 3.6M), while the vectorized counts stayed at $\sim$3.1M. This caused the double/complex ratios to jump from $\sim$0.30 to $\sim$0.85. The GCC compiler now seems to optimize these operations more aggressively.
+\paragraph{Pattern 2: Logical operations on non-integer types.} A similar ref speedup was observed for logical operations on double and complex types. The cycle count for \texttt{not} and \texttt{true} decreased by $\sim$65\% (e.g., \texttt{not} double ref: 10.3M $\rightarrow$ 3.6M), while the vectorized counts stayed at $\sim$3.1M. This caused the double/complex ratios to jump from $\sim$0.30 to $\sim$0.85. The GCC compiler now optimizes these operations more aggressively, auto-vectorizing the scalar loops. Disassembling the compiled \texttt{notM\_ref} confirms the presence of RVV vector instructions:
+
+\begin{verbatim}
+    ...
+    1002:       22077107                vlseg2e64.v     v2,(a4)
+    1012:       62209057                vmfeq.vv        v0,v2,v1
+    1016:       62309157                vmfeq.vv        v2,v3,v1
+    101e:       0007e227                vse32.v v4,(a5),v0.t
+    1038:       5e003157                vmv.v.i v2,0
+    1040:       5e00b0d7                vmv.v.i v1,1
+    1048:       02077007                vle64.v v0,(a4)
+    1058:       62011057                vmfeq.vv        v0,v0,v2
+    105c:       0007e0a7                vse32.v v1,(a5),v0.t
+    ...
+\end{verbatim}
 
 \paragraph{Pattern 3: Binary operations.} Several binary operations exhibited compiler-driven ref improvements. \texttt{matlab\_ge} through \texttt{matlab\_lt} (dbl$\times$dbl), and \texttt{octave\_ge} through \texttt{octave\_lt} (dbl$\times$dbl) all showed reference speedups of 3---5$\times$, pushing their ratios from $\sim$0.25 to $\sim$0.83. The full details on binary operation cycles and ratios are available in the Appendix (Table~\ref{tab:ratio-binary-full}).
 
@@ -102,7 +116,25 @@ or & cpx $\times$ dbl & 0.477 & 11.4M & 2.392 & 2.2M \\
 \end{tabular}
 \end{table}
 
-In all three cases, the vectorized cycle counts remained approximately constant ($\sim$5.3M for \texttt{and}, $\sim$5.4M for \texttt{or}). The regressions are entirely driven by GCC's updated optimizer reducing the reference cycle counts by a factor of five to six. It is expected that the ``scalar'' reference is no longer scalar: GCC 15's RISC-V backend auto-vectorizes it, and the resulting code beats the library's hand-written kernel.
+In all three cases, the vectorized cycle counts remained approximately constant ($\sim$5.3M for \texttt{and}, $\sim$5.4M for \texttt{or}). The regressions are entirely driven by GCC's updated optimizer reducing the reference cycle counts by a factor of five to six. It is expected that the ``scalar'' reference is no longer scalar: GCC 15's RISC-V backend auto-vectorizes it, and the resulting code beats the library's hand-written kernel. For example, disassembling \texttt{andM\_internal\_ref} shows vector register operations:
+
+\begin{verbatim}
+     62c:       5e003157                vmv.v.i v2,0
+     634:       5e00b1d7                vmv.v.i v3,1
+     63c:       0207f007                vle64.v v0,(a5)
+     64c:       72011057                vmfne.vv        v0,v0,v2
+     650:       00077087                vle64.v v1,(a4),v0.t
+     656:       721110d7                vmfne.vv        v1,v1,v2
+     65e:       0006e1a7                vse32.v v3,(a3),v0.t
+     698:       5e003257                vmv.v.i v4,0
+     6a0:       5e00b2d7                vmv.v.i v5,1
+     6a8:       2207f107                vlseg2e64.v     v2,(a5)
+     6bc:       72321057                vmfne.vv        v0,v3,v4
+     6c0:       72221157                vmfne.vv        v2,v2,v4
+     6c8:       00077087                vle64.v v1,(a4),v0.t
+     6ce:       721210d7                vmfne.vv        v1,v1,v4
+     6d6:       0006e2a7                vse32.v v5,(a3),v0.t
+\end{verbatim}
 % because it fuses the compare and mask steps that the intrinsic version keeps separate.
 
 This has two implications. First, compiler evolution can erode the benefits of manual vectorization. Second, the hand-written kernels here use \texttt{LMUL=8}, which the RISCV-Matrix README warns will ``cause extra loads and stores to be called implicitly'' when the kernel uses more than a handful of live vector registers \cite{riscvmatrix}. Investigating the LMUL choice is therefore a suggested ratio recovery path for future work.
@@ -127,8 +159,8 @@ In terms of cycle count improvements, Table~\ref{tab:ts-timediff} summarizes the
 
 \input{tables/table_ts_timediff}
 
-The observed speed improvement was less than initially expected due to the fact that ts-traversal changes and tests focused on improving and checking correctness and not performance. There was a hypothesis that the further vectorization of some functions like \texttt{transposeM} and \texttt{varM} would lead to improvements for their respective test cases. While most SPEED tests did not show improvement, \texttt{transposeM} did show notable improvement --- $0.93\%$ on \texttt{SPEED\_big\_transpose} and $26.75\%$ on \texttt{SPEED\_medium\_transpose}. While the numbers seem tame, they tell a bigger story of improvement due to the \texttt{transposeM} calls in these test cases being made 1 and 100 times respectively. This suggests that with further vectorization, even if a heavy math function is called only a few times, having it vectorized enables quicker transition into desired idle states, saving power, reducing the need for battery replacement, and decreasing the thermal risk to surrounding brain tissue. The main reason for the tests that regressed in their cycle counts is the print statement heavy nature of the tests. The definition of \texttt{print} was changed to print more precise values in order to have accurate tolerance checking and get more tests passing, causing significant slowdown for these tests. The lack of change in the \texttt{SPEED\_big\_fourier} test case supports the \texttt{print} statement hypothesis, as it has no \texttt{print} statements and thus was unaffected by the change.
+The observed speed improvement was less than initially expected due to the fact that ts-traversal changes and tests focused on improving and checking correctness and not performance. There was a hypothesis that the further vectorization of some functions like \texttt{transposeM} and \texttt{varM} would lead to improvements for their respective test cases. While most SPEED tests did not show improvement, \texttt{transposeM} did show notable improvement --- $0.93\%$ on \texttt{SPEED\_big\_transpose} and $26.75\%$ on \texttt{SPEED\_medium\_transpose}. While the numbers seem tame, they tell a bigger story of improvement due to the \texttt{transposeM} calls in these test cases being made 1 and 100 times respectively. This suggests that with further vectorization, even if a heavy math function is called only a few times, having it vectorized enables quicker transition into desired idle states. Consequently, these transitions may contribute to saving power, reducing the need for battery replacement, and decreasing the thermal risk to surrounding brain tissue. The main reason for the tests that regressed in their cycle counts is the print statement heavy nature of the tests. The definition of \texttt{print} was changed to print more precise values in order to have accurate tolerance checking and get more tests passing, causing significant slowdown for these tests. The lack of change in the \texttt{SPEED\_big\_fourier} test case supports the \texttt{print} statement hypothesis, as it has no \texttt{print} statements and thus was unaffected by the change.
 
 \subsection{C-Octave Suite Residuals}
 
-There is a suite of Octave and C tests that mirror the same kernels tested in the MATLAB-vs-C comparison but use Octave instead of MATLAB, which causes certain behavioral differences. The same tolerance gate (\texttt{tolerant\_diff.py}, $MANTISSA\_TOL = ABS\_TOL = 5 \times 10^{-10}$, $\text{EXP\_JITTER} = 1$) is now wired into \texttt{tests\_C\_Octave/Makefile}'s \texttt{compare\_outputs} target so the same numerical contract governs both surfaces. Following recent fixes to display handling, the number of passing tests went from 66 to 71/79. The eight still-failing tests fail due to \emph{FFT library divergence} or \emph{error handling behavior differences}. 
+There is a suite of Octave and C tests that mirror the same kernels tested in the MATLAB-vs-C comparison but use Octave instead of MATLAB, which causes certain behavioral differences. The same tolerance gate (\texttt{tolerant\_diff.py}, $MANTISSA\_TOL = ABS\_TOL = 5 \times 10^{-10}$, $\text{EXP\_JITTER} = 1$) is now wired into \texttt{tests\_C\_Octave/Makefile}'s \texttt{compare\_outputs} target so the same numerical contract governs both surfaces. Following recent fixes to display handling, the number of passing tests went from 66 to 71/79. The eight still-failing tests fail due to \emph{FFT library divergence} between FFTW (RISCV-MATRIX) and fftpack (Octave) or \emph{error handling behavior differences}. As an example of error handling, the C implementation prints out a warning statement about matrix singularity whereas Octave does not. 
