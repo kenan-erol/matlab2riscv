@@ -1,36 +1,19 @@
 # matlab2riscv
 
-End-to-end MATLAB → RISC-V compilation pipeline for the HALO Brain-Computer Interface project. Walks any MATLAB `.m` file through type inference, C source generation, RVV-vectorized library linking, RISC-V cross-compilation, and Spike simulation.
+End-to-end MATLAB -> RISC-V compilation pipeline for the HALO Brain-Computer Interface project. Walks any MATLAB `.m` file through type inference, custom function identification, C source generation, RVV-vectorized library linking, RISC-V cross-compilation, and Spike simulation.
 
 This top-level repository pulls in two submodules that do the actual work:
-- **`ts-traversal/`** — TypeScript MATLAB-to-C source-to-source compiler (parses the `.m` via tree-sitter-matlab, infers static types, emits C against the matrix library's API).
+- **`ts-traversal/`** — TypeScript MATLAB-to-C source-to-source compiler (parses the `.m` via tree-sitter-matlab, infers static types, emits C against matrix.h).
 - **`RISCV-Matrix/`** — RVV-vectorized C matrix library (the runtime ts-traversal links against). Provides `_ref` and `_vec` paths for every supported kernel.
 
 The full thesis report is in [`docs/final/main.pdf`](docs/final/main.pdf).
 
 ---
 
-## Table of Contents
-
-- [Prerequisites](#prerequisites)
-- [Clone](#clone)
-- [Install the RISC-V toolchain](#install-the-risc-v-toolchain)
-- [Install Spike + the proxy kernel](#install-spike--the-proxy-kernel)
-- [Install host dependencies](#install-host-dependencies)
-- [Set environment variables](#set-environment-variables)
-- [Build the matrix library](#build-the-matrix-library)
-- [Set up ts-traversal](#set-up-ts-traversal)
-- [Translate a MATLAB file end-to-end](#translate-a-matlab-file-end-to-end)
-- [Run the test suites](#run-the-test-suites)
-- [Repository layout](#repository-layout)
-- [Troubleshooting](#troubleshooting)
-
----
-
 ## Prerequisites
 
-- macOS (Apple Silicon or Intel) or Linux. Tested on macOS 14 with Homebrew.
-- Approximately 4 GB free disk for the toolchain build, 2 GB for `node_modules` and FFTW/BLAS object files.
+- macOS or Linux. Tested on macOS 14 with Homebrew.
+- Approximately 4 GB free disk for the toolchain build, 2 GB for `ts-traversal/node_modules` and FFTW/BLAS object files.
 - `git`, `bash`, `make` (already shipped on macOS Command Line Tools and most Linux distros).
 
 If you are on the Yale Zoo cluster, replace the `brew install` lines below with `module load` equivalents (`module load binutils nodejs GCC ScaLAPACK/2.1.0-gompi-2020b FFTW`).
@@ -58,7 +41,7 @@ cd ~/riscv-gnu-toolchain
 make -j$(sysctl -n hw.ncpu)
 ```
 
-After this, `$HOME/riscv/bin/riscv64-unknown-elf-gcc --version` should print `gcc (g) 15.2.0` (or newer). If you have an older `riscv64-elf-gcc` from Homebrew or another source, make sure `$HOME/riscv/bin` is *first* on `PATH` so the right one is picked up.
+After this, `$HOME/riscv/bin/riscv64-unknown-elf-gcc --version` should print `gcc (g) 15.2.0` (or newer).
 
 ## Install Spike + the proxy kernel
 
@@ -82,24 +65,19 @@ mkdir build && cd build
 make && make install
 ```
 
-Sanity-check: `which spike` should show `~/riscv/bin/spike`, and `~/riscv/riscv64-unknown-elf/bin/pk` should exist.
+`which spike` should show `~/riscv/bin/spike`, and `~/riscv/riscv64-unknown-elf/bin/pk` should exist.
 
 ## Install host dependencies
 
-Octave (for golden-output generation), Node.js (ts-traversal runtime), FFTW (RISCV-Matrix's signal-processing kernels link against it cross-compiled), GNU coreutils (the test Makefiles use `gsed` and `gtimeout` on macOS):
-
 ```bash
 # macOS (Homebrew)
-brew install binutils node gcc fftw octave coreutils gnu-sed
-brew install openblas lapack scalapack       # for BLAS-backed kernels
+brew install node octave coreutils gnu-sed
 
-# Octave statistics package (required by tests_C_Octave/advanced_stats.m)
+# Octave statistics package (needed by tests_C_Octave/advanced_stats.m)
 octave --eval "pkg install -forge io"
-octave --eval "pkg install -forge datatypes" # if this asks for an octave update, skip
+octave --eval "pkg install -forge datatypes" # if it asks for an octave update, skip
 octave --eval "pkg install -forge statistics"
 ```
-
-`fftw` is also vendored in `RISCV-Matrix/fftw-3.3.10/` and is built cross-compiled for RISC-V during the matrix library build — the Homebrew install above is only used by Octave for reference output generation.
 
 ## Set environment variables
 
@@ -142,127 +120,48 @@ matlab -nodesktop -nosplash -nodisplay -r "disp('hello'); exit"
 cd ../..
 ```
 
-After this, you can use ts-node to run the transpiler against any .m file.
 
-## Translate a MATLAB file end-to-end
+### The standalone tool: `bin/translate`
 
-The two pieces of the pipeline are invoked separately:
-1. **Transpile**: `npx ts-node` against `ts-traversal/index.ts` produces `main.c` + `main.h`.
-2. **Compile + link**: `riscv64-unknown-elf-gcc` against `main.c` and a handful of helper objects (`convertSubscript.o`, `unknownTypes.o`, `wrapper.o`, `matrix.o`) produces a static RISC-V ELF.
-3. **Run**: `spike` + `pk` execute the ELF and write Spike's `BENCHMARK_INSTRET` trailer to stdout.
-
-You can do all three from the repository root without ever entering the `ts-traversal/` `make` system. Pick a name for your test (here `myscript`):
+The repo ships a single shell script that does the whole pipeline on any `.m` at any path:
 
 ```bash
-# Convenience handles
-GEN=$TS_TRAVERSAL/generatedCode
-WORKDIR=$GEN/myscript
-OCTAVEC=$(pwd)/RISCV-Matrix/src
-RISCVMAT=$(pwd)/RISCV-Matrix
-INC="-I. -I$OCTAVEC -I$GEN"
-CFLAGS="-std=gnu99 -DUSE_RISCV_VECTOR -march=rv64gcv1p0 -include $OCTAVEC/rvv_compat.h"
-LIBS="-L$OCTAVEC -L$RISCVMAT/riscv-blas -L$RISCVMAT/fftw-3.3.10/.libs \
-      -lmatrix -llapacke -llapack -lcblas -lrefblas -lf2c -lfftw3 -lm"
+# Translate, compile, run, and Octave-diff myscript.m
+bin/translate --compare myscript.m
 
-# 1. Drop your MATLAB file into a new per-test directory
-mkdir -p $WORKDIR
-cp /path/to/myscript.m $WORKDIR/
+# Just translate + compile (no run)
+bin/translate myscript.m
 
-# 2. Transpile MATLAB → C
-npx --prefix $TS_TRAVERSAL ts-node \
-    $TS_TRAVERSAL/index.ts \
-    $WORKDIR/myscript.m  $WORKDIR  $TS_TRAVERSAL  0  0
-# Produces: $WORKDIR/main.c, $WORKDIR/main.h
-
-# 3. (One-time) compile the helper objects shared by every translated test
-riscv64-unknown-elf-gcc -c -o $GEN/matrix.o           $OCTAVEC/matrix.c           $CFLAGS $INC
-riscv64-unknown-elf-gcc -c -o $GEN/convertSubscript.o $GEN/convertSubscript.c     $CFLAGS $INC
-riscv64-unknown-elf-gcc -c -o $GEN/unknownTypes.o     $GEN/unknownTypes.c         $CFLAGS $INC
-riscv64-unknown-elf-gcc -c -o $GEN/wrapper.o          $GEN/wrapper.c              $CFLAGS $INC
-
-# 4. Compile and link your test
-riscv64-unknown-elf-gcc -c -o $WORKDIR/main.o  $WORKDIR/main.c  $CFLAGS -Dmain=generated_main $INC
-riscv64-unknown-elf-gcc -o $WORKDIR/test \
-    $WORKDIR/main.o \
-    $GEN/convertSubscript.o $GEN/unknownTypes.o $GEN/wrapper.o $GEN/matrix.o \
-    $CFLAGS $INC $LIBS
-
-# 5. Run on Spike
-spike -m4096 --isa=rv64gcv_zvl1024b_zicntr $RISCV/riscv64-unknown-elf/bin/pk $WORKDIR/test
+# Translate + compile + run on Spike (no Octave diff)
+bin/translate --run myscript.m
 ```
 
-The helper-object compilation in step 3 is one-time per checkout (re-run only if `RISCV-Matrix/src` or the helper sources change). For subsequent tests, only steps 1, 2, 4, and 5 are needed.
-
-### Smoke-test the pipeline
-
-A 7-line MATLAB script that exercises matrix literal construction, scalar broadcast, elementwise add, and a column-wise reduction:
+A top-level Makefile mirrors the same operations:
 
 ```bash
-mkdir -p $TS_TRAVERSAL/generatedCode/myscript
-cat > $TS_TRAVERSAL/generatedCode/myscript/myscript.m <<'EOF'
-a = [1, 2, 3; 4, 5, 6];
-disp(a);
-
-b = 10*ones(2,3);
-c = a + b;
-disp(c);
-
-m = mean(a);
-disp(m);
-EOF
-
-WORKDIR=$TS_TRAVERSAL/generatedCode/myscript
-
-# Transpile
-npx --prefix $TS_TRAVERSAL ts-node \
-    $TS_TRAVERSAL/index.ts \
-    $WORKDIR/myscript.m $WORKDIR $TS_TRAVERSAL 0 0
-
-# Compile (helper objects assumed already built per Step 3 above)
-GEN=$TS_TRAVERSAL/generatedCode
-OCTAVEC=$(pwd)/RISCV-Matrix/src
-RISCVMAT=$(pwd)/RISCV-Matrix
-CFLAGS="-std=gnu99 -DUSE_RISCV_VECTOR -march=rv64gcv1p0 -include $OCTAVEC/rvv_compat.h"
-INC="-I. -I$OCTAVEC -I$GEN"
-LIBS="-L$OCTAVEC -L$RISCVMAT/riscv-blas -L$RISCVMAT/fftw-3.3.10/.libs \
-      -lmatrix -llapacke -llapack -lcblas -lrefblas -lf2c -lfftw3 -lm"
-
-riscv64-unknown-elf-gcc -c -o $WORKDIR/main.o $WORKDIR/main.c $CFLAGS -Dmain=generated_main $INC
-riscv64-unknown-elf-gcc -o $WORKDIR/test \
-    $WORKDIR/main.o \
-    $GEN/convertSubscript.o $GEN/unknownTypes.o $GEN/wrapper.o $GEN/matrix.o \
-    $CFLAGS $INC $LIBS
-
-# Run
-spike -m4096 --isa=rv64gcv_zvl1024b_zicntr $RISCV/riscv64-unknown-elf/bin/pk $WORKDIR/test
+make translate ARGS=myscript.m
+make run       ARGS=myscript.m
+make compare   ARGS=myscript.m
+make matrix
+make clean
 ```
 
-Expected output (verified on a fresh checkout, April 2026):
+The `--compare` flow uses the same `tolerant_diff.py` (5e-10 frexp gate) as the C-Octave and ts-traversal test suites.
 
-```
-1   2   3
-4   5   6
+### Falling back to the legacy ts-traversal `make` flow
 
+If `bin/translate` doesn't fit your workflow (e.g. you want to inspect the per-test `Makefile` recipes, or you're running the full `compareall` regression suite), the original ts-traversal flow still works:
 
-11  12  13
-14  15  16
-
-
-2.5  3.5  4.5
-
-
-BENCHMARK_INSTRET: 217523
+```bash
+mkdir -p ts-traversal/generatedCode/myscript
+cp myscript.m ts-traversal/generatedCode/myscript/
+cd ts-traversal/generatedCode
+make genone     ARGS=myscript   # MATLAB -> main.c
+make compileone ARGS=myscript   # main.c -> test (RISC-V ELF)
+make compareone ARGS=myscript   # spike + MATLAB diff
 ```
 
-The trailing `BENCHMARK_INSTRET` line is emitted by the `wrapper.o` shim and reports the retired-instruction count for the entire `main()` — useful for cycle-budget analysis. Strip it if you need byte-clean output.
-
-### Notes on what ts-traversal accepts as input
-
-The transpiler handles a subset of MATLAB. For a fresh `.m` to compile cleanly without manual cleanup:
-- Use `disp(...)` for output. The Octave-only helpers `intDisp`/`doubleDisp`/`complexDisp` are mapped to `disp` only inside the `tests_C_Octave/` regression suite (via `cleanUp.ts`); for arbitrary user `.m`s, write `disp` directly.
-- Avoid Octave-only directives (`more off`, `format short`, `source ...;`). The transpiler treats those as identifier statements and emits invalid C.
-- Avoid scalar-broadcast on `Matrix*` (e.g., `b = a + 10`). Construct an explicit `10*ones(rows,cols)` and use `Matrix + Matrix` instead — that path is properly mapped to `plusM(...)`.
-- Avoid `endwhile`, multi-function `.m` files, and `classdef`. See [`ts-traversal/README.md`](ts-traversal/README.md) § "Current limitations" for the full list.
+`make compareone` requires MATLAB on the host. `bin/translate --compare` uses Octave instead.
 
 ## Run the test suites
 
@@ -279,7 +178,7 @@ make -C RISCV-Matrix/tests_C_Octave runOctave # run all .m tests, capture stdout
 make -C RISCV-Matrix/tests_C_Octave compare_outputs > \
     RISCV-Matrix/tests_C_Octave/outputs/output_comparison.txt
 
-# 3. ts-traversal end-to-end (every .m → main.c → .riscv → output, against MATLAB reference)
+# 3. ts-traversal end-to-end (every .m -> main.c -> .riscv -> output, against MATLAB reference)
 ( cd ts-traversal/generatedCode && make compareall )
 ( cd ts-traversal/generatedCode && make timeall_fast  )
 ```

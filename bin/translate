@@ -1,0 +1,148 @@
+#!/usr/bin/env bash
+
+DO_RUN=0
+DO_COMPARE=0
+OCTAVE_BIN=""
+SPIKE_MEM="4096"
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --run)         DO_RUN=1; shift ;;
+        --compare)     DO_RUN=1; DO_COMPARE=1; shift ;;
+        --octave)      OCTAVE_BIN="$2"; shift 2 ;;
+        --spike-mem)   SPIKE_MEM="$2"; shift 2 ;;
+        --)            shift; break ;;
+        -*)            echo "unknown flag: $1" >&2; exit 2 ;;
+        *)             break ;;
+    esac
+done
+
+if [[ $# -lt 1 ]]; then
+    echo "usage: $0 [--run|--compare] <path-to-script.m>" >&2
+    exit 2
+fi
+
+INPUT_M="$1"
+if [[ ! -f "$INPUT_M" ]]; then
+    echo "error: file not found: $INPUT_M" >&2
+    exit 2
+fi
+
+# --- Locate the toolkit ---------------------------------------------------
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+M2R_REPO="${M2R_REPO:-$(cd "$SCRIPT_DIR/.." && pwd)}"
+TS_TRAVERSAL="${TS_TRAVERSAL:-$M2R_REPO/ts-traversal}"
+RISCV="${RISCV:-$HOME/riscv}"
+
+GEN="$TS_TRAVERSAL/generatedCode"
+RISCVMAT="$M2R_REPO/RISCV-Matrix"
+OCTAVEC_SRC="$RISCVMAT/src"
+
+# --- Resolve input ---------------------------------------------------------
+INPUT_M_ABS="$(cd "$(dirname "$INPUT_M")" && pwd)/$(basename "$INPUT_M")"
+INPUT_DIR="$(dirname "$INPUT_M_ABS")"
+NAME="$(basename "$INPUT_M_ABS" .m)"
+
+# index.ts hardcodes its output to $TS_TRAVERSAL/generatedCode/<name>/.
+# We have to honor that; we just don't make the user think about it.
+WORKSPACE="$GEN/$NAME"
+
+# --- Transpile ------------------------------------------------------------
+echo "[1/3 transpile] $INPUT_M_ABS"
+echo "                -> $WORKSPACE/main.c"
+mkdir -p "$WORKSPACE"
+# index.ts requires running from a cwd where Makefile_template is reachable
+# (ts-traversal/), and reads the .m from args[0] verbatim.
+( cd "$TS_TRAVERSAL" && \
+  npx --quiet --prefix "$TS_TRAVERSAL" ts-node \
+      "$TS_TRAVERSAL/index.ts" \
+      "$INPUT_M_ABS" "$WORKSPACE" "$TS_TRAVERSAL" 0 0 ) || true
+
+if [[ ! -f "$WORKSPACE/main.c" ]]; then
+    echo "error: transpile did not produce $WORKSPACE/main.c" >&2
+    echo "(this usually means the .m uses Octave-only syntax — see" >&2
+    echo " README § 'Notes on what ts-traversal accepts as input')" >&2
+    exit 1
+fi
+
+# --- Compile flags --------------------------------------------------------
+INC="-I. -I$OCTAVEC_SRC -I$GEN"
+CFLAGS="-std=gnu99 -DUSE_RISCV_VECTOR -march=rv64gcv1p0 -include $OCTAVEC_SRC/rvv_compat.h"
+LIBS="-L$OCTAVEC_SRC -L$RISCVMAT/riscv-blas -L$RISCVMAT/fftw-3.3.10/.libs \
+      -lmatrix -llapacke -llapack -lcblas -lrefblas -lf2c -lfftw3 -lm"
+
+# --- One-time helper objects (live in $GEN, reused across all translates) -
+for stub in convertSubscript unknownTypes wrapper; do
+    if [[ ! -f "$GEN/${stub}.o" ]] || [[ "$GEN/${stub}.o" -ot "$GEN/${stub}.c" ]]; then
+        riscv64-unknown-elf-gcc -c -o "$GEN/${stub}.o" "$GEN/${stub}.c" $CFLAGS $INC
+    fi
+done
+if [[ ! -f "$GEN/matrix.o" ]] || [[ "$GEN/matrix.o" -ot "$OCTAVEC_SRC/matrix.c" ]]; then
+    riscv64-unknown-elf-gcc -c -o "$GEN/matrix.o" "$OCTAVEC_SRC/matrix.c" $CFLAGS $INC
+fi
+
+# --- Compile + link -------------------------------------------------------
+OUT_RISCV="$INPUT_DIR/${NAME}.riscv"
+echo "[2/3 compile  ] -> $OUT_RISCV"
+riscv64-unknown-elf-gcc -c -o "$WORKSPACE/main.o" "$WORKSPACE/main.c" $CFLAGS -Dmain=generated_main $INC
+riscv64-unknown-elf-gcc -o "$OUT_RISCV" \
+    "$WORKSPACE/main.o" \
+    "$GEN/convertSubscript.o" "$GEN/unknownTypes.o" "$GEN/wrapper.o" "$GEN/matrix.o" \
+    $CFLAGS $INC $LIBS
+
+# --- Run on Spike (optional) ---------------------------------------------
+if [[ "$DO_RUN" -eq 1 ]]; then
+    echo "[3/3 run      ] spike $OUT_RISCV"
+    SPIKE_OUT="$WORKSPACE/spike_output.txt"
+    spike -m"$SPIKE_MEM" --isa=rv64gcv_zvl1024b_zicntr "$RISCV/riscv64-unknown-elf/bin/pk" \
+          "$OUT_RISCV" \
+        | tee "$SPIKE_OUT"
+fi
+
+# --- Compare against Octave (optional) -----------------------------------
+if [[ "$DO_COMPARE" -eq 1 ]]; then
+    if [[ -z "$OCTAVE_BIN" ]]; then
+        OCTAVE_BIN="$(command -v octave || true)"
+    fi
+    if [[ -z "$OCTAVE_BIN" ]]; then
+        echo "error: --compare needs octave on PATH (or pass --octave /path/to/octave)" >&2
+        exit 2
+    fi
+
+    echo "[+ compare    ] octave on $INPUT_M_ABS"
+    OCTAVE_OUT="$WORKSPACE/octave_output.txt"
+    "$OCTAVE_BIN" -q "$INPUT_M_ABS" > "$OCTAVE_OUT" 2>&1 || true
+
+    SED_BIN="$(command -v gsed || command -v sed)"
+    norm() { # similar format as the other test suites in the submodules
+        "$SED_BIN" -z 's/-nan/inf/gi' \
+        | "$SED_BIN" -z 's/nan/inf/gi' \
+        | grep -v "BENCHMARK_INSTRET" \
+        | grep -vE '[a-z_]+\.c:' \
+        | tr -s ' \t\n' \
+        | "$SED_BIN" -z 's/\n/ \n/g' \
+        | "$SED_BIN" -z -E 's/-\s*(0+(\.0+)?(-|\+|\s))/\1/g' \
+        | "$SED_BIN" -z -E 's/\+0i//g' \
+        | grep "\S" || true
+    }
+    cat "$SPIKE_OUT"  | norm > "$WORKSPACE/f1"
+    cat "$OCTAVE_OUT" | norm > "$WORKSPACE/f2"
+
+    if python3 "$GEN/tolerant_diff.py" "$WORKSPACE/f1" "$WORKSPACE/f2"; then
+        echo "[+ compare    ] OK (Spike output matches Octave within 5e-10)"
+    else
+        echo "[+ compare    ] DIFF ERROR — see $WORKSPACE/f1 and $WORKSPACE/f2"
+        exit 1
+    fi
+fi
+
+echo
+echo "Done."
+echo "  Input      : $INPUT_M_ABS"
+echo "  Generated C: $WORKSPACE/main.c"
+echo "  RISC-V ELF : $OUT_RISCV"
+[[ "$DO_RUN" -eq 1 ]] && echo "  Spike out  : $WORKSPACE/spike_output.txt"
+echo
+echo "Re-run on Spike anytime with:"
+echo "  spike -m$SPIKE_MEM --isa=rv64gcv_zvl1024b_zicntr \\"
+echo "        $RISCV/riscv64-unknown-elf/bin/pk $OUT_RISCV"
