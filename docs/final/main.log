@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  28 APR 2026 12:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  28 APR 2026 21:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -850,9 +850,10 @@ rove-ment due to the \OT1/pcr/m/n/12 transposeM
  []
 
 [20])
-Overfull \hbox (9.36906pt too wide) in paragraph at lines 134--85
-\OT1/ptm/m/n/12 dif-fer-ences to be dis-cussed in this sec-tion. The same tol-e
-r-ance gate (\OT1/pcr/m/n/12 tolerant[]diff.py\OT1/ptm/m/n/12 ,
+Overfull \hbox (38.34665pt too wide) in paragraph at lines 134--85
+\OML/cmm/m/it/12 ABS[]TOL \OT1/cmr/m/n/12 = 5 \OMS/cmsy/m/n/12 ^^B \OT1/cmr/m/n
+/12 10[]$\OT1/ptm/m/n/12 , $[] \OT1/cmr/m/n/12 = 1$\OT1/ptm/m/n/12 ) is now wir
+ed into \OT1/pcr/m/n/12 tests[]C[]Octave/Makefile\OT1/ptm/m/n/12 's
  []
 
 [21]
@@ -862,22 +863,18 @@ Chapter 5.
 ]) [23]
 Chapter 6.
 (./conclusion.tex
-Overfull \hbox (50.36308pt too wide) in paragraph at lines 17--18
-[] []\OT1/ptm/b/n/12 In-te-ger over-flow in \OT1/pcr/b/n/12 powM\OT1/ptm/b/n/12
- .[] \OT1/ptm/m/n/12 As noted in the C-Octave Suite Resid-u-als dis-cus-sion, \
-OT1/pcr/m/n/12 power[]matrix
- []
+Underfull \vbox (badness 1231) has occurred while \output is active []
 
-[24
+ [24
 
 ]
-Overfull \hbox (10.84595pt too wide) in paragraph at lines 23--24
+Overfull \hbox (10.84595pt too wide) in paragraph at lines 25--26
 \OT1/ptm/m/n/12 EEGLAB: the \OT1/pcr/m/n/12 getClasses \OT1/ptm/m/n/12 pass dis
 -cov-ers prop-er-ties and meth-ods but emits \OT1/pcr/m/n/12 initVar()
  []
 
 
-Overfull \hbox (5.62341pt too wide) in paragraph at lines 23--24
+Overfull \hbox (5.62341pt too wide) in paragraph at lines 25--26
 \OT1/ptm/m/n/12 calls in-side C \OT1/pcr/m/n/12 struct \OT1/ptm/m/n/12 def-i-ni
 -tions, which is il-le-gal C. Sep-a-rat-ing struct dec-la-ra-tion (header)
  []
@@ -919,7 +916,7 @@ Here is how much of TeX's memory you used:
  48571 multiletter control sequences out of 15000+600000
  660124 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,1636b,1480s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,1937b,1480s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -933,7 +930,7 @@ al/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on main.pdf (34 pages, 444196 bytes).
+Output written on main.pdf (34 pages, 445220 bytes).
 PDF statistics:
  437 PDF objects out of 1000 (max. 8388607)
  370 compressed objects within 4 object streams

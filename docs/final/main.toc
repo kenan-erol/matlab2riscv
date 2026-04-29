@@ -20,7 +20,7 @@
 \contentsline {chapter}{\numberline {6}Conclusions}{24}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Future Work}{24}{section.6.1}%
 \contentsline {paragraph}{Continued vectorization.}{24}{section.6.1}%
-\contentsline {paragraph}{Integer overflow in \texttt {powM}.}{24}{section.6.1}%
+\contentsline {paragraph}{Integer overflow in \texttt {mpowerM}.}{25}{section.6.1}%
 \contentsline {paragraph}{LMUL audit.}{25}{section.6.1}%
 \contentsline {paragraph}{Transpiler improvements.}{25}{section.6.1}%
 \contentsline {paragraph}{HALO deployment.}{25}{section.6.1}%
