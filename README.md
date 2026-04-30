@@ -15,6 +15,7 @@ The full thesis report is in [`docs/final/main.pdf`](docs/final/main.pdf).
 - macOS or Linux. Tested on macOS 14 with Homebrew.
 - Approximately 4 GB free disk for the toolchain build, 2 GB for `ts-traversal/node_modules` and FFTW/BLAS object files.
 - `git`, `bash`, `make` (already shipped on macOS Command Line Tools and most Linux distros).
+- Octave 10.3.0, Matlab 2024a
 
 If you are on the Yale Zoo cluster, replace the `brew install` lines below with `module load` equivalents (`module load binutils nodejs GCC ScaLAPACK/2.1.0-gompi-2020b FFTW`).
 
